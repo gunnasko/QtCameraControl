@@ -9,22 +9,24 @@
 
 #include "abstractcamera.h"
 
-class LocalCamera : AbstractCamera
+class LocalCamera : public AbstractCamera
 {
+    Q_OBJECT
 public:
+
     LocalCamera(const QByteArray &deviceName, QObject *parent = 0);
     LocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
 
-    QString name() = 0;
-    bool available() = 0;
+    QString name();
+    bool available();
 
-    void startCamera() = 0;
-    void stopCamera() = 0;
+    void startCamera();
+    void stopCamera();
 
-    void startRecording() = 0;
-    void stopRecording() = 0;
+    void startRecording();
+    void stopRecording();
 
-    void captureImage() = 0;
+    void captureImage();
 private:
     void init();
 

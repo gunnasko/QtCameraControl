@@ -4,10 +4,11 @@
 #include <QObject>
 #include <QString>
 
-class AbstractCamera : QObject
+class AbstractCamera : public QObject
 {
     Q_OBJECT
 public:
+
     virtual QString name() = 0;
     virtual bool available() = 0;
 

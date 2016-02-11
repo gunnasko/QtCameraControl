@@ -1,6 +1,6 @@
 #include "localcamera.h"
 
-LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent) :
+LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
 {
     setParent(parent);
     camera_ = new QCamera(deviceName, this);

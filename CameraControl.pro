@@ -8,14 +8,18 @@ QT       += core gui multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+CONFIG += c++11
+
 TARGET = CameraControl
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    localcamera.cpp
+    localcamera.cpp \
+    cameras.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
-    localcamera.h
+    localcamera.h \
+    cameras.h
