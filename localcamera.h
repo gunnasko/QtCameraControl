@@ -6,7 +6,6 @@
 #include <QMediaRecorder>
 #include <QCameraImageCapture>
 
-
 #include "abstractcamera.h"
 
 class LocalCamera : public AbstractCamera
@@ -31,7 +30,7 @@ private:
     void init();
 
     QCamera *camera_;
-    QByteArray name_;
+    QString name_;
 
     QMediaRecorder *videoRecorder_;
     QCameraImageCapture *imageCapture_;
