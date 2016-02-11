@@ -16,10 +16,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
+    abstractcamera.cpp \
     localcamera.cpp \
-    cameras.cpp
+    cameras.cpp \
+    cameramodel.cpp \
+    cameraselectwidget.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
     localcamera.h \
-    cameras.h
+    cameras.h \
+    cameramodel.h \
+    cameraselectwidget.h

@@ -6,7 +6,7 @@
 #include "abstractcamera.h"
 #include "localcamera.h"
 
-class Cameras : QObject
+class Cameras : public QObject
 {
     Q_OBJECT
 public:
@@ -14,7 +14,11 @@ public:
 
     void searchAndAddLocalCameras();
     QSharedPointer<AbstractCamera> getCamera(QByteArray name);
+    QList <QSharedPointer<AbstractCamera>> getCameras() const;
     QStringList getCameraNames();
+
+signals:
+    void listChanged();
 
 private:
     QList <QSharedPointer<AbstractCamera> > cameras_;

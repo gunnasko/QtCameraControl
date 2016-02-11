@@ -9,7 +9,11 @@ class AbstractCamera : public QObject
     Q_OBJECT
 public:
 
-    virtual QString name() = 0;
+    QString deviceName() const;
+    QString userDefinedName() const;
+
+    void setUserDefinedName(QString name);
+
     virtual bool available() = 0;
 
     virtual void startCamera() = 0;
@@ -19,6 +23,16 @@ public:
     virtual void stopRecording() = 0;
 
     virtual void captureImage() = 0;
+
+    bool operator==(const AbstractCamera& other);
+
+signals:
+    void userDefinedNameChanged();
+
+protected:
+    QString deviceName_;
+    QString userDefinedName_;
+
 };
 
 #endif // ABSTRACTCAMERA_H

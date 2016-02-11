@@ -16,7 +16,6 @@ public:
     LocalCamera(const QByteArray &deviceName, QObject *parent = 0);
     LocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
 
-    QString name();
     bool available();
 
     void startCamera();
@@ -30,8 +29,6 @@ private:
     void init();
 
     QCamera *camera_;
-    QString name_;
-
     QMediaRecorder *videoRecorder_;
     QCameraImageCapture *imageCapture_;
 

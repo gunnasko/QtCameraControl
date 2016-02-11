@@ -4,7 +4,7 @@ LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
 {
     setParent(parent);
     camera_ = new QCamera(deviceName, this);
-    name_ = QString(deviceName);
+    deviceName_ = QString(deviceName);
     init();
 }
 
@@ -12,7 +12,7 @@ LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent)
 {
     setParent(parent);
     camera_ = new QCamera(camInfo, this);
-    name_ = camInfo.deviceName();
+    deviceName_ = camInfo.deviceName();
     init();
 }
 
@@ -20,12 +20,7 @@ void LocalCamera::init()
 {
     videoRecorder_ = new QMediaRecorder(camera_, this);
     imageCapture_ = new QCameraImageCapture(camera_, this);
-}
-
-
-QString LocalCamera::name()
-{
-    return name_;
+    userDefinedName_ = deviceName_;
 }
 
 bool LocalCamera::available()
