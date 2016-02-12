@@ -31,15 +31,18 @@ public:
 
 private slots:
     void refreshModel();
+    void updateModel();
 
 private:
     enum CameraModelEnum {
         DeviceNameRole = Qt::UserRole + 1,
         UserDefinedNameRole
     };
-
+    void addCameras(QSharedPointer<Cameras> cameras);
+    void clearModel();
     void appendCamera(QSharedPointer<CameraModelElement> camera);
     QList<QSharedPointer<CameraModelElement>> elements_;
+    QSharedPointer<Cameras> cameras_;
 };
 
 #endif // CAMERAMODEL_H

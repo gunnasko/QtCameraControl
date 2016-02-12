@@ -1,6 +1,12 @@
 #include "cameramodel.h"
 
-CameraModel::CameraModel(QSharedPointer<Cameras> cameras)
+CameraModel::CameraModel(QSharedPointer<Cameras> cameras) : cameras_(cameras)
+{
+    addCameras(cameras_);
+    connect(cameras_.data(), &Cameras::listChanged, this, &CameraModel::updateModel);
+}
+
+void CameraModel::addCameras(QSharedPointer<Cameras> cameras)
 {
     foreach(auto cam, cameras->getCameras()) {
         auto element = QSharedPointer<CameraModelElement>(new CameraModelElement(cam, QModelIndex()));
@@ -16,6 +22,22 @@ void CameraModel::refreshModel()
     emit dataChanged(element->index_, element->index_);
 }
 
+void CameraModel::clearModel()
+{
+    if (rowCount() > 0) {
+        int count = (rowCount()-1) > 0 ? (rowCount()-1) : 0;
+        beginRemoveRows(QModelIndex(), 0, count);
+        elements_.clear();
+        endRemoveRows();
+    }
+}
+
+void CameraModel::updateModel()
+{
+    clearModel();
+    addCameras(cameras_);
+}
+
 int CameraModel::rowCount(const QModelIndex & parent) const
 {
     Q_UNUSED(parent);
@@ -27,6 +49,8 @@ QVariant CameraModel::data(const QModelIndex & index, int role) const
     if (!index.isValid() || index.row() >= elements_.count())
         return QVariant();
     switch(role) {
+        case Qt::DisplayRole:
+            return elements_.at(index.row())->camera_->userDefinedName();
         case DeviceNameRole:
             return elements_.at(index.row())->camera_->deviceName();
         case UserDefinedNameRole:

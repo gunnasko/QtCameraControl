@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     cameras_->searchAndAddLocalCameras();
     qDebug()<<cameras_->getCameraNames();
 
-    setCentralWidget(cameraSelectWidget_);
+    setCentralWidget(cameraSelectWidget_.data());
 }
 
 MainWindow::~MainWindow()
