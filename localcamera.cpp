@@ -20,9 +20,9 @@ void LocalCamera::init()
 {
     videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data()));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data()));
-    auto localCameraGUI = QSharedPointer<LocalCameraGUI>(new LocalCameraGUI());
-    localCameraGUI->setCurrentCamera(camera_);
-    localCameraGUI_ = localCameraGUI;
+    auto localCamGUI = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
+    camera_->setViewfinder(localCamGUI.data());
+    localCameraGUI_ = localCamGUI;
     userDefinedName_ = deviceName_;
 }
 
@@ -64,7 +64,7 @@ void LocalCamera::captureImage()
     camera_->unlock();
 }
 
-QSharedPointer<AbstractCameraGUI> LocalCamera::getCameraGUI()
+QSharedPointer<QVideoWidget> LocalCamera::getCameraGUI()
 {
     return localCameraGUI_;
 }

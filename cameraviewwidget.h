@@ -2,8 +2,8 @@
 #define CAMERAVIEWWIDGET_H
 
 #include <QWidget>
+#include <QVBoxLayout>
 #include "cameras.h"
-#include "abstractcameragui.h"
 
 class CameraViewWidget : public QWidget
 {
@@ -11,9 +11,16 @@ class CameraViewWidget : public QWidget
 public:
     CameraViewWidget(QSharedPointer<Cameras> cameras, QWidget *parent = 0);
 
+public slots:
+    void changeCameraView(int index);
+
 private:
     QSharedPointer<Cameras> cameras_;
-    QSharedPointer<AbstractCameraGUI> currentGUI_;
+    QSharedPointer<QVideoWidget> currentCamView_;
+    QSharedPointer<AbstractCamera> currentCam_;
+
+    QVBoxLayout *layout_;
+
 
 };
 
