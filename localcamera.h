@@ -6,6 +6,7 @@
 #include <QMediaRecorder>
 #include <QCameraImageCapture>
 
+#include "localcameragui.h"
 #include "abstractcamera.h"
 
 class LocalCamera : public AbstractCamera
@@ -25,12 +26,16 @@ public:
     void stopRecording();
 
     void captureImage();
+    QSharedPointer<AbstractCameraGUI> getCameraGUI();
+
 private:
     void init();
 
-    QCamera *camera_;
-    QMediaRecorder *videoRecorder_;
-    QCameraImageCapture *imageCapture_;
+    QSharedPointer<QCamera> camera_;
+    QSharedPointer<QMediaRecorder> videoRecorder_;
+    QSharedPointer<QCameraImageCapture> imageCapture_;
+
+    QSharedPointer<AbstractCameraGUI> localCameraGUI_;
 
 
 

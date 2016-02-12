@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QString>
 
+#include <QVideoWidget>
+
 class AbstractCamera : public QObject
 {
     Q_OBJECT
@@ -23,6 +25,8 @@ public:
     virtual void stopRecording() = 0;
 
     virtual void captureImage() = 0;
+
+    virtual QSharedPointer<QVideoWidget> getCameraGUI() = 0;
 
     bool operator==(const AbstractCamera& other);
 

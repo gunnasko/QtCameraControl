@@ -3,7 +3,7 @@
 LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
 {
     setParent(parent);
-    camera_ = new QCamera(deviceName, this);
+    camera_ = QSharedPointer<QCamera>(new QCamera(deviceName));
     deviceName_ = QString(deviceName);
     init();
 }
@@ -11,15 +11,18 @@ LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
 LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent)
 {
     setParent(parent);
-    camera_ = new QCamera(camInfo, this);
+    camera_ = QSharedPointer<QCamera>(new QCamera(camInfo));
     deviceName_ = camInfo.deviceName();
     init();
 }
 
 void LocalCamera::init()
 {
-    videoRecorder_ = new QMediaRecorder(camera_, this);
-    imageCapture_ = new QCameraImageCapture(camera_, this);
+    videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data()));
+    imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data()));
+    auto localCameraGUI = QSharedPointer<LocalCameraGUI>(new LocalCameraGUI());
+    localCameraGUI->setCurrentCamera(camera_);
+    localCameraGUI_ = localCameraGUI;
     userDefinedName_ = deviceName_;
 }
 
@@ -59,4 +62,9 @@ void LocalCamera::captureImage()
     //Add wait timer or a new function
     imageCapture_->capture();
     camera_->unlock();
+}
+
+QSharedPointer<AbstractCameraGUI> LocalCamera::getCameraGUI()
+{
+    return localCameraGUI_;
 }

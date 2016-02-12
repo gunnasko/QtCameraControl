@@ -17,6 +17,14 @@ void Cameras::searchAndAddLocalCameras()
     }
 }
 
+QSharedPointer<AbstractCamera> Cameras::getCamera(int index)
+{
+    if(cameras_.count() > index)
+        return cameras_.at(index);
+    else
+        return QSharedPointer<AbstractCamera>();
+}
+
 QList<QSharedPointer<AbstractCamera> > Cameras::getCameras() const
 {
     return cameras_;

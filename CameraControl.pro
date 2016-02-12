@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui multimedia
+QT       += core gui multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,11 +20,14 @@ SOURCES += main.cpp\
     localcamera.cpp \
     cameras.cpp \
     cameramodel.cpp \
-    cameraselectwidget.cpp
+    cameraselectwidget.cpp \
+    cameraviewwidget.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
     localcamera.h \
     cameras.h \
     cameramodel.h \
-    cameraselectwidget.h
+    cameraselectwidget.h \
+    localcameragui.h \
+    cameraviewwidget.h

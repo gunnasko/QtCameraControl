@@ -14,6 +14,7 @@ public:
 
     void searchAndAddLocalCameras();
     QSharedPointer<AbstractCamera> getCamera(QByteArray name);
+    QSharedPointer<AbstractCamera> getCamera(int index);
     QList <QSharedPointer<AbstractCamera>> getCameras() const;
     QStringList getCameraNames();
 

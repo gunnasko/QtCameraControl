@@ -7,6 +7,7 @@
 #include "cameras.h"
 #include "cameramodel.h"
 #include "cameraselectwidget.h"
+#include "cameraviewwidget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -20,6 +21,7 @@ private:
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
+    QSharedPointer<CameraViewWidget> cameraViewWidget_;
 
 };
 
