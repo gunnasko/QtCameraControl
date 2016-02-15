@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     cameraselectwidget.cpp \
     cameraviewwidget.cpp \
     cameranamelabel.cpp \
-    camerasettingsdialog.cpp
+    camerasettingsdialog.cpp \
+    cameracontrolwidget.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -34,7 +35,8 @@ HEADERS  += mainwindow.h \
     localcameragui.h \
     cameraviewwidget.h \
     cameranamelabel.h \
-    camerasettingsdialog.h
+    camerasettingsdialog.h \
+    cameracontrolwidget.h
 
 RESOURCES += \
     images.qrc

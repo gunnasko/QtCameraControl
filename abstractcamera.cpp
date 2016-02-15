@@ -21,7 +21,5 @@ void AbstractCamera::setUserDefinedName(QString name)
 
 bool AbstractCamera::operator==(const AbstractCamera &other)
 {
-    qDebug()<<deviceName_;
-    qDebug()<< "Diff: " << QString::compare(deviceName_, other.deviceName(), Qt::CaseSensitive);
     return (QString::compare(deviceName_, other.deviceName(), Qt::CaseSensitive) == 0);
 }

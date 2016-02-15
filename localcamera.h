@@ -18,6 +18,7 @@ public:
     LocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
 
     bool available();
+    bool isRunning();
 
     void startCamera();
     void stopCamera();

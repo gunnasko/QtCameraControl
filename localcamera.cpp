@@ -34,6 +34,12 @@ bool LocalCamera::available()
         return false;
 }
 
+bool LocalCamera::isRunning()
+{
+    return !((camera_->state() == QCamera::UnavailableStatus) | (camera_->state() == QCamera::UnloadedState));
+}
+
+
 void LocalCamera::startCamera()
 {
     camera_->start();

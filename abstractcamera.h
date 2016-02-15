@@ -17,6 +17,7 @@ public:
     void setUserDefinedName(QString name);
 
     virtual bool available() = 0;
+    virtual bool isRunning() = 0;
 
     virtual void startCamera() = 0;
     virtual void stopCamera() = 0;

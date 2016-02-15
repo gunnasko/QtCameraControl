@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/toolbar">
         <file>images/refresh_original.png</file>
+        <file>images/power_off_540px.png</file>
+        <file>images/power_on_540px.png</file>
     </qresource>
 </RCC>

@@ -6,6 +6,7 @@
 #include "cameras.h"
 
 #include "cameranamelabel.h"
+#include "cameracontrolwidget.h"
 
 class CameraViewWidget : public QWidget
 {
@@ -18,12 +19,15 @@ public slots:
     void update();
 
 private:
-    void cleanOldView();
+    void initView();
+    void cleanView();
+    void rebuildLayouts();
 
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<QVideoWidget> currentCamView_;
     QSharedPointer<AbstractCamera> currentCam_;
     QSharedPointer<CameraNameLabel> currentCamName_;
+    QSharedPointer<CameraControlWidget> currentCamControl_;
 
     QVBoxLayout *layout_;
     int currentIndex_;
