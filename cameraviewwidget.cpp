@@ -25,10 +25,11 @@ void CameraViewWidget::change(int index)
     auto cam = cameras_->getCamera(index);
     if(cam) {
         cleanView();
+        cleanName();
+
         currentIndex_ = index;
         currentCam_ = cam;
-        update();
-        connect(currentCam_.data(), &AbstractCamera::dataChanged, this, &CameraViewWidget::update);
+        updateName();
 
         QSharedPointer<QVideoWidget> newGUI = currentCam_->cameraGUI();
         layout_->insertWidget(1, newGUI.data());
@@ -39,9 +40,10 @@ void CameraViewWidget::change(int index)
     }
 }
 
-void CameraViewWidget::update()
+void CameraViewWidget::updateName()
 {
     currentCamName_->update(currentCam_->userDefinedName());
+    connect(currentCam_.data(), &AbstractCamera::dataChanged, this, &CameraViewWidget::updateName);
 }
 
 void CameraViewWidget::initView()
@@ -57,9 +59,15 @@ void CameraViewWidget::initView()
 void CameraViewWidget::cleanView()
 {
     if(currentCam_) {
-        disconnect(currentCam_.data(), &AbstractCamera::dataChanged, this, &CameraViewWidget::update);
         currentCamView_->hide();
         layout_->removeWidget(currentCamView_.data());
     }
 
+}
+
+void CameraViewWidget::cleanName()
+{
+    if(currentCam_) {
+        disconnect(currentCam_.data(), &AbstractCamera::dataChanged, this, &CameraViewWidget::updateName);
+    }
 }

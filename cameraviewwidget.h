@@ -16,11 +16,12 @@ public:
 
 public slots:
     void change(int index);
-    void update();
+    void updateName();
 
 private:
     void initView();
     void cleanView();
+    void cleanName();
     void rebuildLayouts();
 
     QSharedPointer<Cameras> cameras_;
