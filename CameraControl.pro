@@ -35,3 +35,6 @@ HEADERS  += mainwindow.h \
     cameraviewwidget.h \
     cameranamelabel.h \
     camerasettingsdialog.h
+
+RESOURCES += \
+    images.qrc

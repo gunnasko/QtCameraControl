@@ -30,7 +30,7 @@ void CameraViewWidget::change(int index)
         currentCamView_ = currentCam_->cameraGUI();
         layout_->addWidget(currentCamView_.data());
         currentCamView_->show();
-        currentCam_->startCamera();
+        //currentCam_->startCamera();
     }
 }
 
@@ -44,7 +44,7 @@ void CameraViewWidget::cleanOldView()
     if(currentCam_)
     {
         disconnect(currentCam_.data(), &AbstractCamera::dataChanged, this, &CameraViewWidget::update);
-        currentCam_->stopCamera();
+        //currentCam_->stopCamera();
         currentCamView_->hide();
         layout_->removeWidget(currentCamView_.data());
     }

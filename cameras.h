@@ -12,11 +12,14 @@ class Cameras : public QObject
 public:
     Cameras(QObject *parent = 0);
 
-    void searchAndAddLocalCameras();
     QSharedPointer<AbstractCamera> getCamera(QByteArray name);
     QSharedPointer<AbstractCamera> getCamera(int index);
     QList <QSharedPointer<AbstractCamera>> getCameras() const;
     QStringList getCameraNames();
+    bool containsCamera(const QSharedPointer<AbstractCamera> camera);
+
+public slots:
+    void searchAndAddLocalCameras();
 
 signals:
     void listChanged();

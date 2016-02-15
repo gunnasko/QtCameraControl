@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QToolBar>
 
 #include "cameras.h"
 #include "cameramodel.h"
@@ -21,11 +21,14 @@ private slots:
     void openCamSettings(int index);
 
 private:
+    void buildToolbar(QSharedPointer<Cameras> cameras);
 
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<CameraViewWidget> cameraViewWidget_;
+
+    QToolBar *toolbar_;
 
 };
 

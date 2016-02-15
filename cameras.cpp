@@ -7,10 +7,11 @@ Cameras::Cameras(QObject *parent) : QObject(parent)
 
 void Cameras::searchAndAddLocalCameras()
 {
+    cameras_.clear();
     auto cameras = QCameraInfo::availableCameras();
     foreach (auto cameraInfo, cameras) {
         auto newCam = QSharedPointer<AbstractCamera>(new LocalCamera(cameraInfo));
-        if(!cameras_.contains(newCam)) {
+        if(!containsCamera(newCam)) {
             cameras_.append(newCam);
             emit(listChanged());
         }
@@ -37,6 +38,16 @@ QStringList Cameras::getCameraNames()
         ret.append(QString(cam->deviceName()));
     }
     return ret;
+}
+
+bool Cameras::containsCamera(const QSharedPointer<AbstractCamera> camera)
+{
+    foreach(auto cam, cameras_)
+    {
+        if(*cam == *camera)
+            return true;
+    }
+    return false;
 }
 
 
