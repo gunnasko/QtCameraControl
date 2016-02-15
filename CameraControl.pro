@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     cameras.cpp \
     cameramodel.cpp \
     cameraselectwidget.cpp \
-    cameraviewwidget.cpp
+    cameraviewwidget.cpp \
+    cameranamelabel.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -30,4 +31,5 @@ HEADERS  += mainwindow.h \
     cameramodel.h \
     cameraselectwidget.h \
     localcameragui.h \
-    cameraviewwidget.h
+    cameraviewwidget.h \
+    cameranamelabel.h

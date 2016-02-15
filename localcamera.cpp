@@ -64,7 +64,7 @@ void LocalCamera::captureImage()
     camera_->unlock();
 }
 
-QSharedPointer<QVideoWidget> LocalCamera::getCameraGUI()
+QSharedPointer<QVideoWidget> LocalCamera::cameraGUI()
 {
     return localCameraGUI_;
 }

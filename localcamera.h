@@ -26,7 +26,7 @@ public:
     void stopRecording();
 
     void captureImage();
-    QSharedPointer<QVideoWidget> getCameraGUI();
+    QSharedPointer<QVideoWidget> cameraGUI();
 
 private:
     void init();

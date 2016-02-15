@@ -5,6 +5,8 @@
 CameraViewWidget::CameraViewWidget(QSharedPointer<Cameras> cameras, QWidget *parent) : QWidget(parent), cameras_(cameras)
 {
     layout_ = new QVBoxLayout(this);
+    currentCamName_ = QSharedPointer<CameraNameLabel>(new CameraNameLabel(this));
+    layout_->addWidget(currentCamName_.data());
     changeCameraView(0);
     this->setLayout(layout_);
 }
@@ -16,7 +18,8 @@ void CameraViewWidget::changeCameraView(int index)
     {
         cleanOldView();
         currentCam_ = cam;
-        currentCamView_ = currentCam_->getCameraGUI();
+        currentCamName_->changeCurrentCam(cam->userDefinedName());
+        currentCamView_ = currentCam_->cameraGUI();
         layout_->addWidget(currentCamView_.data());
         currentCamView_->show();
         currentCam_->startCamera();
@@ -28,6 +31,7 @@ void CameraViewWidget::cleanOldView()
     if(currentCam_)
     {
         currentCam_->stopCamera();
+        currentCamView_->hide();
         layout_->removeWidget(currentCamView_.data());
     }
 
