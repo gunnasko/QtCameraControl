@@ -14,7 +14,8 @@ public:
     explicit CameraViewWidget(QSharedPointer<Cameras> cameras, QWidget *parent = 0);
 
 public slots:
-    void changeCameraView(int index);
+    void change(int index);
+    void update();
 
 private:
     void cleanOldView();
@@ -25,6 +26,7 @@ private:
     QSharedPointer<CameraNameLabel> currentCamName_;
 
     QVBoxLayout *layout_;
+    int currentIndex_;
 
 
 };

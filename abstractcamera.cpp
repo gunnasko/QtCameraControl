@@ -14,8 +14,9 @@ QString AbstractCamera::userDefinedName() const
 void AbstractCamera::setUserDefinedName(QString name)
 {
     if(name != userDefinedName_) {
-        emit(userDefinedNameChanged());
         userDefinedName_ = name;
+        emit(userDefinedNameChanged());
+        emit(dataChanged());
     }
 }
 

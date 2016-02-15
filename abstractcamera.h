@@ -31,6 +31,7 @@ public:
     bool operator==(const AbstractCamera& other);
 
 signals:
+    void dataChanged();
     void userDefinedNameChanged();
 
 protected:

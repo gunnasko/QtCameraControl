@@ -12,7 +12,7 @@ public:
     explicit CameraNameLabel(QString currentCam, QWidget *parent = 0);
 
 public:
-    void changeCurrentCam(QString name);
+    void update(QString name);
 
 private:
     void init();

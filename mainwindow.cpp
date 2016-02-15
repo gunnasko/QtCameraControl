@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     cameraViewWidget_ = QSharedPointer<CameraViewWidget>(new CameraViewWidget(cameras_));
 
-    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, cameraViewWidget_.data(), &CameraViewWidget::changeCameraView);
+    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, cameraViewWidget_.data(), &CameraViewWidget::change);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
 
     auto layout = new QHBoxLayout();

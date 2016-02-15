@@ -24,7 +24,7 @@ void CameraNameLabel::init()
     this->setLayout(layout);
 }
 
-void CameraNameLabel::changeCurrentCam(QString name)
+void CameraNameLabel::update(QString name)
 {
     nameLabel_->setText(name);
 }
