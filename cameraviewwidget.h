@@ -15,6 +15,8 @@ public slots:
     void changeCameraView(int index);
 
 private:
+    void cleanOldView();
+
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<QVideoWidget> currentCamView_;
     QSharedPointer<AbstractCamera> currentCam_;

@@ -17,8 +17,6 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private slots:
-    void cameraChange(const QModelIndex &current, const QModelIndex &previous);
 private:
 
     QSharedPointer<Cameras> cameras_;

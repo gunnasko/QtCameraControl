@@ -14,7 +14,7 @@ public:
     explicit CameraSelectWidget(QSharedPointer <CameraModel> camModel, QWidget *parent = 0);
 
 signals:
-    void selectionChanged(const QModelIndex & current, const QModelIndex & previous);
+    void selectionChanged(int index);
 public slots:
 
 private:

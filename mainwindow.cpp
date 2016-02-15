@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     cameraViewWidget_ = QSharedPointer<CameraViewWidget>(new CameraViewWidget(cameras_));
 
-    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::cameraChange);
+    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, cameraViewWidget_.data(), &CameraViewWidget::changeCameraView);
 
     auto layout = new QHBoxLayout();
     layout->addWidget(cameraViewWidget_.data());
@@ -29,9 +29,3 @@ MainWindow::~MainWindow()
 
 }
 
-void MainWindow::cameraChange(const QModelIndex &current, const QModelIndex &previous)
-{
-    Q_UNUSED(previous);
-    qDebug()<<"Changing to: " << current.row();
-    cameraViewWidget_->changeCameraView(current.row());
-}
