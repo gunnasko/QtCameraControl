@@ -13,9 +13,9 @@ void Cameras::searchAndAddLocalCameras()
         auto newCam = QSharedPointer<AbstractCamera>(new LocalCamera(cameraInfo));
         if(!containsCamera(newCam)) {
             cameras_.append(newCam);
-            emit(listChanged());
         }
     }
+    emit(listChanged());
 }
 
 QSharedPointer<AbstractCamera> Cameras::getCamera(int index)
