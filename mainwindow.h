@@ -17,6 +17,9 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void openCamSettings(int index);
+
 private:
 
     QSharedPointer<Cameras> cameras_;

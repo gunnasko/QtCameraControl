@@ -2,10 +2,10 @@
 #define CAMERASELECTWIDGET_H
 
 #include <QWidget>
-#include "cameramodel.h"
-
 #include <QStyledItemDelegate>
 #include <QItemSelectionModel>
+
+#include "cameramodel.h"
 
 class CameraSelectWidget : public QWidget
 {
@@ -15,10 +15,11 @@ public:
 
 signals:
     void selectionChanged(int index);
-public slots:
+    void openSettings(int index);
 
 private:
     QSharedPointer<CameraModel> camModel_;
+
 };
 
 #endif // CAMERASELECTWIDGET_H
