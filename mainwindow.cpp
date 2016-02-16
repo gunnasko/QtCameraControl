@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
     currentView_ = QSharedPointer<QWidget>(new QWidget(this));
-    initView(currentView_);
     buildToolbar(cameras_);
 
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
@@ -60,15 +59,6 @@ void MainWindow::buildToolbar(QSharedPointer<Cameras> cameras)
     connect(searchCameras, SIGNAL(triggered()), cameras.data(), SLOT(searchAndAddLocalCameras()));
 }
 
-void MainWindow::initView(QSharedPointer<QWidget> view)
-{
-    QPalette pal(palette());
-    pal.setColor(QPalette::Background, Qt::black);
-    view->setAutoFillBackground(true);
-    view->setMinimumSize(400, 400);
-    view->setPalette(pal);
-    view->show();
-}
 
 MainWindow::~MainWindow()
 {

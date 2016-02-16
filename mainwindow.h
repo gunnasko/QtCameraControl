@@ -23,7 +23,6 @@ private slots:
 
 private:
     void buildToolbar(QSharedPointer<Cameras> cameras);
-    void initView(QSharedPointer<QWidget> view);
 
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<CameraModel> camerasModel_;
