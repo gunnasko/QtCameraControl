@@ -12,17 +12,19 @@ MainWindow::MainWindow(QWidget *parent)
     cameras_  = QSharedPointer<Cameras>(new Cameras());
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
-    cameras_->searchAndAddLocalCameras();
+    currentView_ = QSharedPointer<QWidget>(new QWidget(this));
+    initView(currentView_);
     buildToolbar(cameras_);
-    cameraViewWidget_ = QSharedPointer<CameraViewWidget>(new CameraViewWidget(cameras_));
 
-    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, cameraViewWidget_.data(), &CameraViewWidget::change);
+    connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
 
-    auto layout = new QHBoxLayout();
-    layout->addWidget(cameraViewWidget_.data());
-    layout->addWidget(cameraSelectWidget_.data());
+    cameras_->searchAndAddLocalCameras();
+
     auto mainWindowWidget = new QWidget(this);
+    layout_ = new QHBoxLayout(mainWindowWidget);
+    layout_->addWidget(currentView_.data());
+    layout_->addWidget(cameraSelectWidget_.data());
     mainWindowWidget->setLayout(layout);
     setCentralWidget(mainWindowWidget);
 }
@@ -30,11 +32,21 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::openCamSettings(int index)
 {
     auto cam = cameras_->getCamera(index);
-    if(cam)
-    {
+    if(cam) {
         auto settingsDialog = new CameraSettingsDialog(cam, this);
         settingsDialog->setAttribute( Qt::WA_DeleteOnClose, true);
         settingsDialog->show();
+    }
+}
+
+void MainWindow::changeView(int index)
+{
+    qDebug()<<"Changed to index: " << index;
+    auto cam = cameras_->getCamera(index);
+    if(cam) {
+        auto newView = cam->cameraGUI();
+        layout_->replaceWidget(currentView_.data(), newView.data());
+        currentView_ = newView;
     }
 }
 
@@ -44,6 +56,16 @@ void MainWindow::buildToolbar(QSharedPointer<Cameras> cameras)
     auto searchCameras = new QAction(QIcon(":/toolbar/images/refresh_original.png"), "Search...", this);
     toolbar_->addAction(searchCameras);
     connect(searchCameras, SIGNAL(triggered()), cameras.data(), SLOT(searchAndAddLocalCameras()));
+}
+
+void MainWindow::initView(QSharedPointer<QWidget> view)
+{
+    QPalette pal(palette());
+    pal.setColor(QPalette::Background, Qt::black);
+    view->setAutoFillBackground(true);
+    view->setMinimumSize(400, 400);
+    view->setPalette(pal);
+    view->show();
 }
 
 MainWindow::~MainWindow()

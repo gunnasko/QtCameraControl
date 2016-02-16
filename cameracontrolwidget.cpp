@@ -1,6 +1,6 @@
 #include "cameracontrolwidget.h"
 
-CameraControlWidget::CameraControlWidget(QSharedPointer<Cameras> cameras, QWidget *parent) : QWidget(parent), cameras_(cameras)
+CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
 {
     layout_ = new QHBoxLayout(this);
     QIcon ico = QIcon();
@@ -11,29 +11,9 @@ CameraControlWidget::CameraControlWidget(QSharedPointer<Cameras> cameras, QWidge
     enableCam_->setIcon(ico);
     enableCam_->setCheckable(true);
 
-    change(0);
+    connect(enableCam_, &QToolButton::toggled, this, &CameraControlWidget::toggleCam );
+
     layout_->addWidget(enableCam_);
     setLayout(layout_);
 }
 
-void CameraControlWidget::change(int index)
-{
-    auto cam = cameras_->getCamera(index);
-    if(cam)
-    {
-        currentCam_ = cam;
-        enableCam_->setChecked(currentCam_->isRunning());
-        connect(enableCam_, &QToolButton::toggled, this, &CameraControlWidget::startStopCam );
-    }
-}
-
-void CameraControlWidget::startStopCam(bool enabled)
-{
-    if(!currentCam_)
-        return;
-
-    if(enabled)
-        currentCam_->startCamera();
-    else
-        currentCam_->stopCamera();
-}

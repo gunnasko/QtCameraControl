@@ -3,8 +3,15 @@
 LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
 {
     setParent(parent);
-    camera_ = QSharedPointer<QCamera>(new QCamera(deviceName));
     deviceName_ = QString(deviceName);
+
+    camera_ = QSharedPointer<QCamera>(new QCamera(deviceName));
+    localCameraView_ = QSharedPointer<QWidget>(new LocalCameraView(this));
+    camera_->setViewfinder(localCameraView_->camView().data());
+
+    connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
+    connect(this, &AbstractCamera::userDefinedNameChanged, localCameraView_, &LocalCameraView::update(deviceName_));
+
     init();
 }
 
@@ -70,7 +77,15 @@ void LocalCamera::captureImage()
     camera_->unlock();
 }
 
-QSharedPointer<QVideoWidget> LocalCamera::cameraGUI()
+QSharedPointer<QWidget> LocalCamera::cameraGUI()
 {
-    return localCameraGUI_;
+    return localCameraView_;
+}
+
+void LocalCamera::onOffCamera(bool on)
+{
+    if(on)
+        startCamera();
+    else
+        stopCamera();
 }

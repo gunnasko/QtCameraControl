@@ -27,7 +27,7 @@ public:
 
     virtual void captureImage() = 0;
 
-    virtual QSharedPointer<QVideoWidget> cameraGUI() = 0;
+    virtual QSharedPointer<QWidget> cameraGUI() = 0;
 
     bool operator==(const AbstractCamera& other);
 

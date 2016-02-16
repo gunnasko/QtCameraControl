@@ -8,6 +8,7 @@
 #include <QCameraViewfinder>
 
 #include "abstractcamera.h"
+#include "localcameraview.h"
 
 class LocalCamera : public AbstractCamera
 {
@@ -27,7 +28,10 @@ public:
     void stopRecording();
 
     void captureImage();
-    QSharedPointer<QVideoWidget> cameraGUI();
+    QSharedPointer<QWidget> cameraGUI();
+
+private slots:
+    void onOffCamera(bool);
 
 private:
     void init();
@@ -36,9 +40,7 @@ private:
     QSharedPointer<QMediaRecorder> videoRecorder_;
     QSharedPointer<QCameraImageCapture> imageCapture_;
 
-    QSharedPointer<QVideoWidget> localCameraGUI_;
-
-
+    QSharedPointer<LocalCameraView> localCameraView_;
 
 };
 
