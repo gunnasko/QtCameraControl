@@ -8,7 +8,6 @@
 #include "cameras.h"
 #include "cameramodel.h"
 #include "cameraselectwidget.h"
-#include "cameraviewwidget.h"
 
 class MainWindow : public QMainWindow
 {

@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout_ = new QHBoxLayout(mainWindowWidget);
     layout_->addWidget(currentView_.data());
     layout_->addWidget(cameraSelectWidget_.data());
-    mainWindowWidget->setLayout(layout);
+    mainWindowWidget->setLayout(layout_);
     setCentralWidget(mainWindowWidget);
 }
 
@@ -44,9 +44,11 @@ void MainWindow::changeView(int index)
     qDebug()<<"Changed to index: " << index;
     auto cam = cameras_->getCamera(index);
     if(cam) {
-        auto newView = cam->cameraGUI();
-        layout_->replaceWidget(currentView_.data(), newView.data());
-        currentView_ = newView;
+        currentView_->hide();
+        layout_->removeWidget(currentView_.data());
+        currentView_= cam->cameraGUI();
+        layout_->insertWidget(0, currentView_.data());
+        currentView_->show();
     }
 }
 

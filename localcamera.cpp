@@ -6,11 +6,6 @@ LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
     deviceName_ = QString(deviceName);
 
     camera_ = QSharedPointer<QCamera>(new QCamera(deviceName));
-    localCameraView_ = QSharedPointer<QWidget>(new LocalCameraView(this));
-    camera_->setViewfinder(localCameraView_->camView().data());
-
-    connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
-    connect(this, &AbstractCamera::userDefinedNameChanged, localCameraView_, &LocalCameraView::update(deviceName_));
 
     init();
 }
@@ -27,10 +22,14 @@ void LocalCamera::init()
 {
     videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data()));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data()));
-    auto localCamGUI = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
-    camera_->setViewfinder(localCamGUI.data());
-    localCameraGUI_ = localCamGUI;
+    auto tmp = QSharedPointer<LocalCameraView>(new LocalCameraView());
+    camera_->setViewfinder(tmp->camView().data());
+    localCameraView_ = tmp;
     userDefinedName_ = deviceName_;
+
+    connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
+    connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
+
 }
 
 bool LocalCamera::available()

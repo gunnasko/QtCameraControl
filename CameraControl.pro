@@ -21,7 +21,6 @@ SOURCES += main.cpp\
     cameras.cpp \
     cameramodel.cpp \
     cameraselectwidget.cpp \
-    cameraviewwidget.cpp \
     cameranamelabel.cpp \
     camerasettingsdialog.cpp \
     cameracontrolwidget.cpp \
@@ -33,7 +32,6 @@ HEADERS  += mainwindow.h \
     cameras.h \
     cameramodel.h \
     cameraselectwidget.h \
-    cameraviewwidget.h \
     cameranamelabel.h \
     camerasettingsdialog.h \
     cameracontrolwidget.h \
