@@ -26,6 +26,7 @@ void LocalCamera::init()
     camera_->setViewfinder(tmp->camView().data());
     localCameraView_ = tmp;
     userDefinedName_ = deviceName_;
+    localCameraView_->updateName(userDefinedName_);
 
     connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
@@ -46,7 +47,6 @@ bool LocalCamera::isRunning()
 {
     return (camera_->state() == QCamera::ActiveState);
 }
-
 
 void LocalCamera::startCamera()
 {
