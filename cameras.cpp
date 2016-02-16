@@ -38,7 +38,7 @@ QSharedPointer<AbstractCamera> Cameras::getCamera(QString deviceName)
 
 QSharedPointer<AbstractCamera> Cameras::getCamera(int index)
 {
-    if(cameras_.count() > index)
+    if(cameras_.count() > index && index >= 0)
         return cameras_.at(index);
     else
         return QSharedPointer<AbstractCamera>();
