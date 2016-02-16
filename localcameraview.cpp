@@ -1,4 +1,4 @@
-#include "LocalCameraView.h"
+#include "localcameraview.h"
 
 #include <QVBoxLayout>
 #include <QPushButton>
