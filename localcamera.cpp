@@ -44,7 +44,7 @@ bool LocalCamera::available()
 
 bool LocalCamera::isRunning()
 {
-    return !((camera_->state() == QCamera::UnavailableStatus) | (camera_->state() == QCamera::UnloadedState));
+    return (camera_->state() == QCamera::ActiveState);
 }
 
 

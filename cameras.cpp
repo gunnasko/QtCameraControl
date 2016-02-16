@@ -7,7 +7,7 @@ Cameras::Cameras(QObject *parent) : QObject(parent)
 
 void Cameras::searchAndAddLocalCameras()
 {
-    clearNotAvailable();
+    clearNotRunning();
     auto cameras = QCameraInfo::availableCameras();
     foreach (auto cameraInfo, cameras) {
         auto newCam = QSharedPointer<AbstractCamera>(new LocalCamera(cameraInfo));
@@ -18,13 +18,11 @@ void Cameras::searchAndAddLocalCameras()
     emit(listChanged());
 }
 
-void Cameras::clearNotAvailable()
+void Cameras::clearNotRunning()
 {
-    auto camerasInfo = QCameraInfo::availableCameras();
-    foreach(auto camInfo, camerasInfo) {
-        qDebug()<<camInfo.deviceName();
-        if(!containsCamera(camInfo.deviceName()))
-            cameras_.removeAll(getCamera(camInfo.deviceName()));
+    foreach(auto cam, cameras_) {
+        if(!cam->isRunning())
+            cameras_.removeAll(cam);
     }
 
 }
@@ -59,6 +57,7 @@ QStringList Cameras::getCameraNames()
     }
     return ret;
 }
+
 bool Cameras::containsCamera(const QString deviceName)
 {
     foreach(auto cam, cameras_) {

@@ -26,7 +26,7 @@ signals:
     void listChanged();
 
 private:
-    void clearNotAvailable();
+    void clearNotRunning();
     QList <QSharedPointer<AbstractCamera> > cameras_;
 };
 
