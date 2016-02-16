@@ -1,12 +1,15 @@
 #include "database.h"
 #include <QMetaProperty>
 #include <QDebug>
+#include <QSqlQuery>
+#include <QSqlError>
 
 #define DB_NAME "cameracontrol"
 
 DataBase::DataBase()
 {
-    openDatabase();
+    if(!openDatabase())
+        qDebug()<<"Failed to open database!" << db_.lastError();
 }
 
 bool DataBase::openDatabase()
@@ -18,7 +21,7 @@ bool DataBase::openDatabase()
 
 void DataBase::createTableFromProperties(const QString tableName, const QObject *object)
 {
-    QString query = "create table if not exists " + tableName + "(TableId integer primary key autoincrement,";
+    QString query = "create table if not exists " + tableName + "(TableId integer primary key autoincrement";
     const QMetaObject *metaObject = object->metaObject();
     //First property is inherited from Q_OBJECT so start at index 1
     for(int i = 1; metaObject->propertyCount() > i; i++) {
@@ -38,5 +41,9 @@ void DataBase::createTableFromProperties(const QString tableName, const QObject 
             qDebug()<<"DataBase::createTableFromProperties: Cannot add property " << prop.name();
         }
     }
+    query.append(")");
     qDebug()<<query;
+
+    QSqlQuery createTableQuery(query, db_);
+    createTableQuery.exec();
 }
