@@ -7,31 +7,31 @@
 LocalCameraView::LocalCameraView(QWidget *parent) : QWidget(parent)
 {
     layout_ = new QVBoxLayout(this);
-    camName_ = QSharedPointer<CameraNameLabel>(new CameraNameLabel(this));
-    camView_ = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder(this));
-    camControl_ = QSharedPointer<CameraControlWidget>(new CameraControlWidget(this));
-    placeHolder_ = QSharedPointer<QWidget>(new QWidget(this));
+    camName_ = new CameraNameLabel(this);
+    camView_ = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
+    camControl_ = new CameraControlWidget(this);
+    placeHolder_ = new QWidget(this);
     LocalCameraView::initView(placeHolder_);
 
-    viewStack_ = QSharedPointer<QStackedWidget>(new QStackedWidget(this));
-    viewStack_->addWidget(placeHolder_.data());
+    viewStack_ = new QStackedWidget(this);
+    viewStack_->addWidget(placeHolder_);
     viewStack_->addWidget(camView_.data());
 
-    connect(camControl_.data(), &CameraControlWidget::toggleCam, this, &LocalCameraView::toggleCam);
-    connect(camControl_.data(), &CameraControlWidget::toggleCam, this, &LocalCameraView::changeViewStack);
+    connect(camControl_, &CameraControlWidget::toggleCam, this, &LocalCameraView::toggleCam);
+    connect(camControl_, &CameraControlWidget::toggleCam, this, &LocalCameraView::changeViewStack);
 
-    layout_->addWidget(camName_.data());
-    layout_->addWidget(viewStack_.data());
-    layout_->addWidget(camControl_.data());
+    layout_->addWidget(camName_);
+    layout_->addWidget(viewStack_);
+    layout_->addWidget(camControl_);
     this->setLayout(layout_);
 }
 
 QSharedPointer<QCameraViewfinder> LocalCameraView::camView()
 {
-    return camView_;
+    return QSharedPointer<QCameraViewfinder>(camView_);
 }
 
-void LocalCameraView::initView(QSharedPointer<QWidget> view)
+void LocalCameraView::initView(QWidget *view)
 {
     QPalette pal(palette());
     pal.setColor(QPalette::Background, Qt::black);

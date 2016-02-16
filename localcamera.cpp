@@ -30,6 +30,8 @@ void LocalCamera::init()
     connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
 
+    connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error),
+        [=](QCamera::Error value){ qDebug()<<value;});
 }
 
 bool LocalCamera::available()

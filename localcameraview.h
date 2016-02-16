@@ -14,7 +14,7 @@ class LocalCameraView : public QWidget
 public:
     explicit LocalCameraView(QWidget *parent = 0);
     QSharedPointer<QCameraViewfinder> camView();
-    void initView(QSharedPointer<QWidget> widget);
+    void initView(QWidget *widget);
 signals:
     void toggleCam(bool);
 
@@ -24,10 +24,10 @@ public slots:
 
 private:
     QSharedPointer<QCameraViewfinder> camView_;
-    QSharedPointer<CameraNameLabel> camName_;
-    QSharedPointer<CameraControlWidget> camControl_;
-    QSharedPointer<QWidget> placeHolder_;
-    QSharedPointer<QStackedWidget> viewStack_;
+    CameraNameLabel *camName_;
+    CameraControlWidget *camControl_;
+    QWidget *placeHolder_;
+    QStackedWidget *viewStack_;
 
 
     QVBoxLayout *layout_;
