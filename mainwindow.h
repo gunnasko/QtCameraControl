@@ -8,6 +8,8 @@
 #include "cameras.h"
 #include "cameramodel.h"
 #include "cameraselectwidget.h"
+#include "database.h"
+#include "camerarepository.h"
 
 class MainWindow : public QMainWindow
 {
@@ -28,6 +30,10 @@ private:
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<QWidget> currentView_;
+
+    QSharedPointer<DataBase> db_;
+    QSharedPointer<CameraRepository> camerasDb_;
+
     QToolBar *toolbar_;
     QHBoxLayout *layout_;
 

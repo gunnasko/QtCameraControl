@@ -7,7 +7,7 @@
 CameraSettingsDialog::CameraSettingsDialog(QSharedPointer<AbstractCamera> camera, QWidget *parent) : QDialog(parent), camera_(camera)
 {
     auto deviceNameLabel = new QLabel("Device ID:", this);
-    auto deviceNameValueLabel = new QLabel(camera_->deviceName(), this);
+    auto deviceNameValueLabel = new QLabel(camera_->deviceId(), this);
     deviceNameValueLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
 
     auto deviceUserLabel = new QLabel("Camera Name:", this);

@@ -1,11 +1,11 @@
 #include "localcamera.h"
 
-LocalCamera::LocalCamera(const QByteArray &deviceName, QObject *parent)
+LocalCamera::LocalCamera(const QByteArray &deviceId, QObject *parent)
 {
     setParent(parent);
-    deviceName_ = QString(deviceName);
+    deviceId_ = QString(deviceId);
 
-    camera_ = QSharedPointer<QCamera>(new QCamera(deviceName));
+    camera_ = QSharedPointer<QCamera>(new QCamera(deviceId));
 
     init();
 }
@@ -14,7 +14,7 @@ LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent)
 {
     setParent(parent);
     camera_ = QSharedPointer<QCamera>(new QCamera(camInfo));
-    deviceName_ = camInfo.deviceName();
+    deviceId_ = camInfo.deviceName();
     init();
 }
 
@@ -25,7 +25,7 @@ void LocalCamera::init()
     auto tmp = QSharedPointer<LocalCameraView>(new LocalCameraView());
     camera_->setViewfinder(tmp->camView().data());
     localCameraView_ = tmp;
-    userDefinedName_ = deviceName_;
+    userDefinedName_ = deviceId_;
     localCameraView_->updateName(userDefinedName_);
 
     connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);

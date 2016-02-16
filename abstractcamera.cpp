@@ -1,8 +1,8 @@
 #include "abstractcamera.h"
 #include <QDebug>
-QString AbstractCamera::deviceName() const
+QString AbstractCamera::deviceId() const
 {
-    return deviceName_;
+    return deviceId_;
 }
 
 QString AbstractCamera::userDefinedName() const
@@ -21,5 +21,5 @@ void AbstractCamera::setUserDefinedName(QString name)
 
 bool AbstractCamera::operator==(const AbstractCamera &other)
 {
-    return (QString::compare(deviceName_, other.deviceName(), Qt::CaseSensitive) == 0);
+    return (QString::compare(deviceId_, other.deviceId(), Qt::CaseSensitive) == 0);
 }

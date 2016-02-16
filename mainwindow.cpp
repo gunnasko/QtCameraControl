@@ -11,9 +11,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
     cameras_  = QSharedPointer<Cameras>(new Cameras());
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
+
+    db_ = QSharedPointer<DataBase>(new DataBase());
+    camerasDb_ = QSharedPointer<CameraRepository>(new CameraRepository(db_, cameras_));
+
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
     currentView_ = QSharedPointer<QWidget>(new QWidget(this));
     buildToolbar(cameras_);
+
 
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);

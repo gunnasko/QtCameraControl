@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui multimedia multimediawidgets
+QT       += core gui multimedia multimediawidgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,7 +24,9 @@ SOURCES += main.cpp\
     cameranamelabel.cpp \
     camerasettingsdialog.cpp \
     cameracontrolwidget.cpp \
-    localcameraview.cpp
+    localcameraview.cpp \
+    database.cpp \
+    camerarepository.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -35,7 +37,9 @@ HEADERS  += mainwindow.h \
     cameranamelabel.h \
     camerasettingsdialog.h \
     cameracontrolwidget.h \
-    localcameraview.h
+    localcameraview.h \
+    database.h \
+    camerarepository.h
 
 RESOURCES += \
     images.qrc

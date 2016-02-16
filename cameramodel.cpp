@@ -52,7 +52,7 @@ QVariant CameraModel::data(const QModelIndex & index, int role) const
         case Qt::DisplayRole:
             return elements_.at(index.row())->camera_->userDefinedName();
         case DeviceNameRole:
-            return elements_.at(index.row())->camera_->deviceName();
+            return elements_.at(index.row())->camera_->deviceId();
         case UserDefinedNameRole:
             return elements_.at(index.row())->camera_->userDefinedName();
         default:

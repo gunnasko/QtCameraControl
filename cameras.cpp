@@ -30,7 +30,7 @@ void Cameras::clearNotRunning()
 QSharedPointer<AbstractCamera> Cameras::getCamera(QString deviceName)
 {
     foreach(auto cam, cameras_) {
-        if(QString::compare(cam->deviceName(), deviceName) == 0)
+        if(QString::compare(cam->deviceId(), deviceName) == 0)
             return cam;
     }
     return QSharedPointer<AbstractCamera>();
@@ -53,7 +53,7 @@ QStringList Cameras::getCameraNames()
 {
     QStringList ret;
     foreach(auto cam, cameras_) {
-        ret.append(QString(cam->deviceName()));
+        ret.append(QString(cam->deviceId()));
     }
     return ret;
 }
@@ -61,7 +61,7 @@ QStringList Cameras::getCameraNames()
 bool Cameras::containsCamera(const QString deviceName)
 {
     foreach(auto cam, cameras_) {
-        if(QString::compare(cam->deviceName(), deviceName) == 0)
+        if(QString::compare(cam->deviceId(), deviceName) == 0)
             return true;
     }
     return false;

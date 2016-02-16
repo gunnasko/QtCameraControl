@@ -3,15 +3,17 @@
 
 #include <QObject>
 #include <QString>
-
 #include <QVideoWidget>
 
 class AbstractCamera : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString deviceId READ deviceId)
+    Q_PROPERTY(QString userDefinedName READ userDefinedName WRITE setUserDefinedName NOTIFY userDefinedNameChanged)
+
 public:
 
-    QString deviceName() const;
+    QString deviceId() const;
     QString userDefinedName() const;
 
     void setUserDefinedName(QString name);
@@ -36,7 +38,7 @@ signals:
     void userDefinedNameChanged();
 
 protected:
-    QString deviceName_;
+    QString deviceId_;
     QString userDefinedName_;
 
 };
