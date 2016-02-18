@@ -6,7 +6,6 @@
 #include <QMessageBox>
 
 #define DB_NAME "cameracontrol.db"
-#define TABLE_ID "TableId"
 
 DataBase::DataBase()
 {
@@ -86,7 +85,7 @@ QString DataBase::createColumnsFromProperties(const QMetaObject &metaObject)
     return query;
 }
 
-QString DataBase::createColumnsAndTypesFromProperties(const QMetaObject &metaObject)
+QString DataBase::createColumnsAndTypesFromProperties(const QMetaProperty primaryKey, const QMetaObject metaObject)
 {
     QString query;
     //First property is inherited from Q_OBJECT so start at index 1
@@ -110,15 +109,20 @@ QString DataBase::createColumnsAndTypesFromProperties(const QMetaObject &metaObj
         default:
             qDebug() << "DataBase::createTableStringFromProperties: Cannot add property " << prop.name();
         }
+
+        if(strcmp(prop.name(), primaryKey.name()) == 0)
+            query.append(" primary key");
+
     }
     return query;
 }
 
-void DataBase::createTableFromProperties(const QString tableName, const QMetaObject &metaObject)
+void DataBase::createTableFromProperties(const QString tableName, const QMetaProperty primaryKey, const QMetaObject metaObject)
 {
-    QString query = "create table if not exists " + tableName + "(" TABLE_ID " integer primary key autoincrement,";
-    query.append(createColumnsAndTypesFromProperties(metaObject));
+    QString query = "create table if not exists " + tableName + "(";
+    query.append(createColumnsAndTypesFromProperties(primaryKey, metaObject));
     query.append(")");
+    qDebug()<<query;
     QSqlQuery createTableQuery(db_);
     createTableQuery.prepare(query);
     execute(createTableQuery);
@@ -157,9 +161,9 @@ bool DataBase::saveObject(const QString tableName, const QMetaProperty id, const
         query.append(createBindColumnsForIdFromProperties(id, *metaObject));
     }
     else {
-        query.append("insert into " + tableName + "(" TABLE_ID ", ");
+        query.append("insert into " + tableName + " (");
         query.append(createColumnsFromProperties(*metaObject));
-        query.append(") values (:" TABLE_ID ", ");
+        query.append(") values (");
         query.append(createBindColumnsFromProperties(*metaObject));
         query.append(")");
     }
@@ -198,7 +202,7 @@ void DataBase::fillObject(QObject &objectToFill, QSqlQuery result) const
 
 QSqlQuery DataBase::queryObjects(const QString tableName, const QMetaObject &metaObject)
 {
-    QString query = "select " TABLE_ID ", ";
+    QString query = "select ";
     query.append(createColumnsFromProperties(metaObject));
     query.append(" from ");
     query.append(tableName);
@@ -212,7 +216,7 @@ QSqlQuery DataBase::queryObjects(const QString tableName, const QMetaObject &met
 QSqlQuery DataBase::queryObject(const QString tableName, const QMetaProperty id, const QObject &object)
 {
     auto metaObject = object.metaObject();
-    QString query = "select " TABLE_ID ", ";
+    QString query = "select ";
     query.append(createColumnsFromProperties(*metaObject));
     query.append(" from ");
     query.append(tableName);

@@ -10,7 +10,7 @@ class DataBase
 public:
     DataBase();
 
-    void createTableFromProperties(const QString tableName, const QMetaObject &metaObject);
+    void createTableFromProperties(const QString tableName, const QMetaProperty, const QMetaObject metaObject);
     void bindAllPropertiesToQuery(QSqlQuery &queryStatement,const QObject &object) const;
     bool execute(QSqlQuery &query);
 
@@ -29,7 +29,7 @@ private:
     QSqlDatabase db_;
 
     QString createColumnsFromProperties(const QMetaObject &metaObject);
-    QString createColumnsAndTypesFromProperties(const QMetaObject &metaObject);
+    QString createColumnsAndTypesFromProperties(const QMetaProperty primaryKey, const QMetaObject metaObject);
     QString createBindColumnsFromProperties(const QMetaObject &metaObject);
     QString createBindColumnsForIdFromProperties(const QMetaProperty id, const QMetaObject &metaObject);
 

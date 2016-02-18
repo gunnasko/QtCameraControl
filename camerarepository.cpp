@@ -4,8 +4,9 @@
 
 CameraRepository::CameraRepository(QSharedPointer<DataBase> db) : db_(db)
 {
-
-    db_->createTableFromProperties(TABLE_NAME, AbstractCamera::staticMetaObject);
+    auto staticCam = AbstractCamera::staticMetaObject;
+    int primaryKey =AbstractCamera::staticMetaObject.indexOfProperty("deviceId");
+    db_->createTableFromProperties(TABLE_NAME, staticCam.property(primaryKey), staticCam);
 }
 
 void CameraRepository::saveCamera(QSharedPointer<AbstractCamera> cam)
