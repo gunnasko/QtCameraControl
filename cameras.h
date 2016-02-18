@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QSharedPointer>
+
+#include "camerarepository.h"
 #include "abstractcamera.h"
 #include "localcamera.h"
 
@@ -10,7 +12,7 @@ class Cameras : public QObject
 {
     Q_OBJECT
 public:
-    Cameras(QObject *parent = 0);
+    Cameras(QSharedPointer<DataBase> db, QObject *parent = 0);
 
     QSharedPointer<AbstractCamera> getCamera(QString deviceName);
     QSharedPointer<AbstractCamera> getCamera(int index);
@@ -26,8 +28,10 @@ signals:
     void listChanged();
 
 private:
+    void addCamera(const QSharedPointer<AbstractCamera> camera);
     void clearNotRunning();
     QList <QSharedPointer<AbstractCamera> > cameras_;
+    QSharedPointer<CameraRepository> camDb_;
 };
 
 #endif // CAMERAS_H

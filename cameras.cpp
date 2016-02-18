@@ -1,8 +1,8 @@
 #include "cameras.h"
 
-Cameras::Cameras(QObject *parent) : QObject(parent)
+Cameras::Cameras(QSharedPointer<DataBase> db, QObject *parent) : QObject(parent)
 {
-
+    camDb_ = QSharedPointer<CameraRepository>(new CameraRepository(db));
 }
 
 void Cameras::searchAndAddLocalCameras()
@@ -12,10 +12,18 @@ void Cameras::searchAndAddLocalCameras()
     foreach (auto cameraInfo, cameras) {
         auto newCam = QSharedPointer<AbstractCamera>(new LocalCamera(cameraInfo));
         if(!containsCamera(newCam)) {
-            cameras_.append(newCam);
+            camDb_->updateCamera(newCam);
+            addCamera(newCam);
         }
     }
     emit(listChanged());
+}
+
+void Cameras::addCamera(const QSharedPointer<AbstractCamera> camera)
+{
+    cameras_.append(camera);
+    camDb_->saveCamera(camera);
+    connect(camera.data(), &AbstractCamera::dataChanged, [=] {camDb_->saveCamera(camera);});
 }
 
 void Cameras::clearNotRunning()

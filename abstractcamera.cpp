@@ -28,3 +28,10 @@ bool AbstractCamera::operator==(const AbstractCamera &other)
 {
     return (QString::compare(deviceId_, other.deviceId(), Qt::CaseSensitive) == 0);
 }
+
+void AbstractCamera::copy(const AbstractCamera *other)
+{
+    if(*this == *other) {
+        setUserDefinedName(other->userDefinedName());
+    }
+}

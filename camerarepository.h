@@ -1,7 +1,7 @@
 #ifndef CAMERAREPOSITORY_H
 #define CAMERAREPOSITORY_H
 
-#include "cameras.h"
+#include "abstractcamera.h"
 #include "database.h"
 
 
@@ -10,11 +10,12 @@
 class CameraRepository
 {
 public:
-    CameraRepository(QSharedPointer<DataBase> db, QSharedPointer<Cameras> cameras);
+    CameraRepository(QSharedPointer<DataBase> db);
+    void saveCamera(QSharedPointer<AbstractCamera> cam);
+    void updateCamera(QSharedPointer<AbstractCamera> cam);
 
 private:
     QSharedPointer<DataBase> db_;
-    QSharedPointer<Cameras> cameras_;
 };
 
 #endif // CAMERAREPOSITORY_H

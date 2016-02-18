@@ -16,21 +16,25 @@ public:
 
     bool saveObject(const QString tableName, const QMetaProperty id, const QObject &object);
     bool getObject(const QString tableName, QMetaProperty id, QObject &objectToFill);
+    QList<QSharedPointer<QObject> > getObjects(const QString tableName, const QMetaObject &metaObject);
 
 
     bool open();
     void close();
 
 private:
-    QSqlQuery queryObject(const QString tableName, QMetaProperty id, const QObject &object);
     void fillObject(QObject& objectToFill, QSqlQuery result) const;
 
-    QString createColumnsFromProperties(const QMetaObject &metaObject);
     void error(const QSqlQuery &query) const;
     QSqlDatabase db_;
+
+    QString createColumnsFromProperties(const QMetaObject &metaObject);
     QString createColumnsAndTypesFromProperties(const QMetaObject &metaObject);
     QString createBindColumnsFromProperties(const QMetaObject &metaObject);
     QString createBindColumnsForIdFromProperties(const QMetaProperty id, const QMetaObject &metaObject);
+
+    QSqlQuery queryObject(const QString tableName, QMetaProperty id, const QObject &object);
+    QSqlQuery queryObjects(const QString tableName, const QMetaObject &metaObject);
 };
 
 #endif // DATABASE_H

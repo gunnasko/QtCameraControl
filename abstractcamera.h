@@ -32,6 +32,7 @@ public:
     virtual QSharedPointer<QWidget> cameraGUI() = 0;
 
     bool operator==(const AbstractCamera& other);
+    void copy(const AbstractCamera *other);
 
 signals:
     void dataChanged();

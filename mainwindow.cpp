@@ -9,7 +9,7 @@
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     : QMainWindow(parent), db_(db)
 {
-    cameras_  = QSharedPointer<Cameras>(new Cameras());
+    cameras_  = QSharedPointer<Cameras>(new Cameras(db_));
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
 
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
@@ -21,9 +21,6 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
 
     cameras_->searchAndAddLocalCameras();
-
-    camerasDb_ = QSharedPointer<CameraRepository>(new CameraRepository(db_, cameras_));
-
 
     auto mainWindowWidget = new QWidget(this);
     layout_ = new QHBoxLayout(mainWindowWidget);

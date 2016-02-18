@@ -6,6 +6,7 @@
 #include <QMessageBox>
 
 #define DB_NAME "cameracontrol.db"
+#define TABLE_ID "TableId"
 
 DataBase::DataBase()
 {
@@ -38,12 +39,19 @@ QString DataBase::createBindColumnsForIdFromProperties(const QMetaProperty id, c
 {
     QString query;
     QString idName = QString(id.name());
+    bool firstEntry = true;
     //First property is inherited from Q_OBJECT so start at index 1
     for(int i = 1; metaObject.propertyCount() > i; i++) {
         auto prop = metaObject.property(i);
         QString propName = QString(prop.name());
-        if(QString::compare(idName, propName) != 0)
-            query.append("," + propName + "=:" + propName);
+        if(QString::compare(idName, propName) != 0) {
+            if(firstEntry) {
+                query.append(propName + "=:" + propName);
+                firstEntry = false;
+            } else {
+                query.append("," + propName + "=:" + propName);
+            }
+        }
     }
     query.append(" where " + idName + "=:" + idName);
     return query;
@@ -56,7 +64,10 @@ QString DataBase::createBindColumnsFromProperties(const QMetaObject &metaObject)
     //First property is inherited from Q_OBJECT so start at index 1
     for(int i = 1; metaObject.propertyCount() > i; i++) {
         auto prop = metaObject.property(i);
-        query.append(", :" + QString(prop.name()));
+        if(i == 1)
+            query.append(":" + QString(prop.name()));
+        else
+            query.append(", :" + QString(prop.name()));
     }
     return query;
 }
@@ -67,7 +78,10 @@ QString DataBase::createColumnsFromProperties(const QMetaObject &metaObject)
     //First property is inherited from Q_OBJECT so start at index 1
     for(int i = 1; metaObject.propertyCount() > i; i++) {
         auto prop = metaObject.property(i);
-        query.append(", " + QString(prop.name()));
+        if(i == 1)
+            query.append(QString(prop.name()));
+        else
+            query.append(", " + QString(prop.name()));
     }
     return query;
 }
@@ -78,7 +92,11 @@ QString DataBase::createColumnsAndTypesFromProperties(const QMetaObject &metaObj
     //First property is inherited from Q_OBJECT so start at index 1
     for(int i = 1; metaObject.propertyCount() > i; i++) {
         auto prop = metaObject.property(i);
-        query.append(", " + QString(prop.name()));
+        if(i == 1)
+            query.append(QString(prop.name()));
+        else
+            query.append(", " + QString(prop.name()));
+
         switch(prop.type()) {
         case QVariant::String:
             query.append(" text");
@@ -98,10 +116,9 @@ QString DataBase::createColumnsAndTypesFromProperties(const QMetaObject &metaObj
 
 void DataBase::createTableFromProperties(const QString tableName, const QMetaObject &metaObject)
 {
-    QString query = "create table if not exists " + tableName + "(TableId integer primary key autoincrement";
+    QString query = "create table if not exists " + tableName + "(" TABLE_ID " integer primary key autoincrement,";
     query.append(createColumnsAndTypesFromProperties(metaObject));
     query.append(")");
-    qDebug() << "DataBase::createTableFromProperties: " << query;
     QSqlQuery createTableQuery(db_);
     createTableQuery.prepare(query);
     execute(createTableQuery);
@@ -132,17 +149,17 @@ bool DataBase::saveObject(const QString tableName, const QMetaProperty id, const
 {
     if(!db_.isOpen())
         return false;
+    auto metaObject = object.metaObject();
     QSqlQuery result = queryObject(tableName, id, object);
     QString query;
-    auto metaObject = object.metaObject();
     if(result.first()) {
-        query.append("update " + tableName + "set TableId=:TableId");
+        query.append("update " + tableName + " set ");
         query.append(createBindColumnsForIdFromProperties(id, *metaObject));
     }
     else {
-        query.append("insert into " + tableName + "(TableId");
+        query.append("insert into " + tableName + "(" TABLE_ID ", ");
         query.append(createColumnsFromProperties(*metaObject));
-        query.append(") values (:TableId");
+        query.append(") values (:" TABLE_ID ", ");
         query.append(createBindColumnsFromProperties(*metaObject));
         query.append(")");
     }
@@ -161,30 +178,65 @@ void DataBase::fillObject(QObject &objectToFill, QSqlQuery result) const
     if(!db_.isOpen())
         return;
 
-    for(int i = 0; result.record().count() > i; i++) {
+    //Start at 1 to ignore TableID
+    auto metaObject = objectToFill.metaObject();
+    for(int i = 1; result.record().count() > i; i++) {
         auto propName = result.record().fieldName(i).toStdString().c_str();
         auto value = result.value(i);
-        if(!objectToFill.setProperty(propName, value))
-            qDebug() << "DataBase::fillObject() setProperty failed: " << propName << ":" << value;
+
+        auto propIndex = metaObject->indexOfProperty(propName);
+        auto prop = metaObject->property(propIndex);
+
+        if(prop.isWritable()) {
+            if(!objectToFill.setProperty(propName, value)) {
+                qDebug() << "DataBase::fillObject() setProperty failed: " << propName << ":" << value;
+            }
+        }
     }
 
 }
 
-QSqlQuery DataBase::queryObject(const QString tableName, const QMetaProperty id, const QObject &object)
+QSqlQuery DataBase::queryObjects(const QString tableName, const QMetaObject &metaObject)
 {
-    QString query = "select TableId";
-    auto metaObject = object.metaObject();
-    query.append(createColumnsFromProperties(*metaObject));
+    QString query = "select " TABLE_ID ", ";
+    query.append(createColumnsFromProperties(metaObject));
     query.append(" from ");
     query.append(tableName);
-    query.append(" where ");
 
-    auto idName = QString(id.name());
-    query.append(idName + "=:" + idName);
     QSqlQuery results(db_);
     results.prepare(query);
     execute(results);
     return results;
+}
+
+QSqlQuery DataBase::queryObject(const QString tableName, const QMetaProperty id, const QObject &object)
+{
+    auto metaObject = object.metaObject();
+    QString query = "select " TABLE_ID ", ";
+    query.append(createColumnsFromProperties(*metaObject));
+    query.append(" from ");
+    query.append(tableName);
+    query.append(" where ");
+    auto idName = QString(id.name());
+    query.append(idName + "=:" + idName);
+
+    QSqlQuery results(db_);
+    results.prepare(query);
+    results.bindValue(":" + idName, object.property(idName.toStdString().c_str()));
+    execute(results);
+    return results;
+}
+
+QList<QSharedPointer<QObject>> DataBase::getObjects(const QString tableName, const QMetaObject &metaObject)
+{
+    QList<QSharedPointer<QObject>> ret;
+    auto results = queryObjects(tableName, metaObject);
+    while(results.next()) {
+        auto object = QSharedPointer<QObject>(new QObject());
+        fillObject(*object, results);
+        ret.append(object);
+    }
+    return ret;
 }
 
 bool DataBase::getObject(const QString tableName, const QMetaProperty id, QObject &objectToFill)
@@ -192,6 +244,8 @@ bool DataBase::getObject(const QString tableName, const QMetaProperty id, QObjec
     if(!db_.isOpen())
         return false;
     QSqlQuery results = queryObject(tableName, id, objectToFill);
+    if(!results.first())
+        return false;
     fillObject(objectToFill, results);
     return true;
 }
@@ -201,4 +255,5 @@ void DataBase::error(const QSqlQuery &query) const
     qDebug() << "Last DB Error: " << db_.lastError();
     qDebug() << "Last query error: " << query.lastError();
     qDebug() << "Last query: " << query.lastQuery();
+    qDebug() << "Bound values: " << query.boundValues();
 }
