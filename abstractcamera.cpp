@@ -1,5 +1,10 @@
 #include "abstractcamera.h"
 #include <QDebug>
+AbstractCamera::AbstractCamera()
+{
+
+}
+
 QString AbstractCamera::deviceId() const
 {
     return deviceId_;

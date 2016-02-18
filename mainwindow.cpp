@@ -6,8 +6,8 @@
 #include <QHBoxLayout>
 #include <QAction>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
+    : QMainWindow(parent), db_(db)
 {
     cameras_  = QSharedPointer<Cameras>(new Cameras());
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     cameras_->searchAndAddLocalCameras();
 
-    db_ = QSharedPointer<DataBase>(new DataBase());
     camerasDb_ = QSharedPointer<CameraRepository>(new CameraRepository(db_, cameras_));
 
 

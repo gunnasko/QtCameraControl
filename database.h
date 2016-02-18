@@ -2,6 +2,7 @@
 #define DATABASE_H
 
 #include <QObject>
+#include <QtSql>
 #include <QSqlDatabase>
 
 class DataBase
@@ -9,10 +10,12 @@ class DataBase
 public:
     DataBase();
 
-    void createTableFromProperties(const QString tableName, const QObject *object);
+    void createTableFromProperties(const QString tableName, const QMetaObject &metaObject);
+    bool openDatabase();
 
 private:
-    bool openDatabase();
+    QString createColumnsFromProperties(const QMetaObject &metaObject);
+    void execute(QSqlQuery &query);
     QSqlDatabase db_;
 };
 

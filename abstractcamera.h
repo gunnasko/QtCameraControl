@@ -12,7 +12,7 @@ class AbstractCamera : public QObject
     Q_PROPERTY(QString userDefinedName READ userDefinedName WRITE setUserDefinedName NOTIFY userDefinedNameChanged)
 
 public:
-
+    AbstractCamera();
     QString deviceId() const;
     QString userDefinedName() const;
 

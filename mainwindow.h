@@ -8,7 +8,6 @@
 #include "cameras.h"
 #include "cameramodel.h"
 #include "cameraselectwidget.h"
-#include "database.h"
 #include "camerarepository.h"
 
 class MainWindow : public QMainWindow
@@ -16,7 +15,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QSharedPointer<DataBase> db, QWidget *parent = 0);
     ~MainWindow();
 
 private slots:
@@ -31,8 +30,8 @@ private:
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<QWidget> currentView_;
 
-    QSharedPointer<DataBase> db_;
     QSharedPointer<CameraRepository> camerasDb_;
+    QSharedPointer<DataBase> db_;
 
     QToolBar *toolbar_;
     QHBoxLayout *layout_;

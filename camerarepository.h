@@ -5,7 +5,7 @@
 #include "database.h"
 
 
-#define TABLE_NAME cameras
+#define TABLE_NAME "cameras"
 
 class CameraRepository
 {
