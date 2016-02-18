@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     auto db = QSharedPointer<DataBase>(new DataBase());
-    if(!db->openDatabase())
+    if(!db->open())
         return 1;
 
     MainWindow w(db);
