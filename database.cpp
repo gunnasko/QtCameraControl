@@ -181,14 +181,14 @@ void DataBase::fillObject(QObject &objectToFill, QSqlQuery result) const
     //Start at 1 to ignore TableID
     auto metaObject = objectToFill.metaObject();
     for(int i = 1; result.record().count() > i; i++) {
-        auto propName = result.record().fieldName(i).toStdString().c_str();
+        auto propName = result.record().fieldName(i).toUtf8();
         auto value = result.value(i);
 
-        auto propIndex = metaObject->indexOfProperty(propName);
+        auto propIndex = metaObject->indexOfProperty(propName.constData());
         auto prop = metaObject->property(propIndex);
 
         if(prop.isWritable()) {
-            if(!objectToFill.setProperty(propName, value)) {
+            if(!objectToFill.setProperty(propName.constData(), value)) {
                 qDebug() << "DataBase::fillObject() setProperty failed: " << propName << ":" << value;
             }
         }
@@ -222,7 +222,7 @@ QSqlQuery DataBase::queryObject(const QString tableName, const QMetaProperty id,
 
     QSqlQuery results(db_);
     results.prepare(query);
-    results.bindValue(":" + idName, object.property(idName.toStdString().c_str()));
+    results.bindValue(":" + idName, object.property(idName.toUtf8().constData()));
     execute(results);
     return results;
 }
