@@ -122,7 +122,6 @@ void DataBase::createTableFromProperties(const QString tableName, const QMetaPro
     QString query = "create table if not exists " + tableName + "(";
     query.append(createColumnsAndTypesFromProperties(primaryKey, metaObject));
     query.append(")");
-    qDebug()<<query;
     QSqlQuery createTableQuery(db_);
     createTableQuery.prepare(query);
     execute(createTableQuery);
