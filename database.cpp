@@ -181,9 +181,8 @@ void DataBase::fillObject(QObject &objectToFill, QSqlQuery result) const
     if(!db_.isOpen())
         return;
 
-    //Start at 1 to ignore TableID
     auto metaObject = objectToFill.metaObject();
-    for(int i = 1; result.record().count() > i; i++) {
+    for(int i = 0; result.record().count() > i; i++) {
         auto propName = result.record().fieldName(i).toUtf8();
         auto value = result.value(i);
 
