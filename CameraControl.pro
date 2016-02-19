@@ -4,6 +4,11 @@
 #
 #-------------------------------------------------
 
+contains( CONFIG, RPI ) {
+    target.path = /home/root
+    INSTALLS += target
+}
+
 QT       += sql core gui multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -12,7 +17,6 @@ CONFIG += c++11
 
 TARGET = CameraControl
 TEMPLATE = app
-
 
 SOURCES += main.cpp\
         mainwindow.cpp \
