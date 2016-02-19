@@ -15,10 +15,13 @@ public:
 signals:
     void toggleCam(bool);
     void toggleRecord(bool);
+    void picturePressed();
+    void pictureReleased();
 
 private:
     QToolButton *enableCam_;
     QToolButton *startRecord_;
+    QToolButton *picture_;
 
 
 };

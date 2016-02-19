@@ -6,5 +6,7 @@
         <file>images/settings.png</file>
         <file>images/StartRecord.png</file>
         <file>images/StopRecord.png</file>
+        <file>images/camera.png</file>
+        <file>images/cameraInverted.png</file>
     </qresource>
 </RCC>
