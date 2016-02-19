@@ -16,6 +16,9 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+protected:
+    void closeEvent(QCloseEvent *event) Q_DECL_OVERRIDE;
+
 public:
     MainWindow(QSharedPointer<DataBase> db, QWidget *parent = 0);
     ~MainWindow();
@@ -25,6 +28,8 @@ private slots:
     void changeView(int index);
 
 private:
+    void readSettings();
+    void writeSettings();
     void buildToolbar();
 
     QSharedPointer<Cameras> cameras_;

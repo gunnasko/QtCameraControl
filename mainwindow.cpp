@@ -5,10 +5,14 @@
 #include <QDebug>
 #include <QHBoxLayout>
 #include <QAction>
+#include <QCloseEvent>
+
 
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     : QMainWindow(parent), db_(db)
 {
+    readSettings();
+
     cameras_  = QSharedPointer<Cameras>(new Cameras(db_));
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
 
@@ -56,6 +60,20 @@ void MainWindow::changeView(int index)
     }
 }
 
+void MainWindow::writeSettings()
+{
+    QSettings settings;
+    settings.setValue(MAIN_WINDOW_SIZE, size());
+    settings.setValue(MAIN_WINDOW_POS, pos());
+}
+
+void MainWindow::readSettings()
+{
+    QSettings settings;
+    resize(settings.value(MAIN_WINDOW_SIZE, QSize(100, 200)).toSize());
+    move(settings.value(MAIN_WINDOW_POS, QPoint(0, 0)).toPoint());
+}
+
 void MainWindow::buildToolbar()
 {
     auto searchCameras = new QAction(QIcon(":/toolbar/images/refresh_original.png"), "Search...", this);
@@ -69,6 +87,11 @@ void MainWindow::buildToolbar()
     toolbar_->addAction(openSettings);
 }
 
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    writeSettings();
+    event->accept();
+}
 
 MainWindow::~MainWindow()
 {
