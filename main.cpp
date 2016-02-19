@@ -9,6 +9,10 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
+    QCoreApplication::setOrganizationName("Data Respons AS");
+    QCoreApplication::setOrganizationDomain("datarespons.no");
+    QCoreApplication::setApplicationName("Camera Control");
+
     auto db = QSharedPointer<DataBase>(new DataBase());
     if(!db->open())
         return 1;

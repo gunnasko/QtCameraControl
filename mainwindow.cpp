@@ -14,7 +14,10 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
     currentView_ = QSharedPointer<QWidget>(new QWidget(this));
-    buildToolbar(cameras_);
+
+    appSettings_ = QSharedPointer<AppSettingsDialog>(new AppSettingsDialog(this));
+
+    buildToolbar();
 
 
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
@@ -53,12 +56,17 @@ void MainWindow::changeView(int index)
     }
 }
 
-void MainWindow::buildToolbar(QSharedPointer<Cameras> cameras)
+void MainWindow::buildToolbar()
 {
-    toolbar_ = addToolBar("Camera Menu");
     auto searchCameras = new QAction(QIcon(":/toolbar/images/refresh_original.png"), "Search...", this);
+    connect(searchCameras, &QAction::triggered, cameras_.data(), &Cameras::searchAndAddLocalCameras);
+
+    auto openSettings = new QAction(QIcon(":/toolbar/images/settings.png"), "Settings", this);
+    connect(openSettings, &QAction::triggered, appSettings_.data(), &AppSettingsDialog::show);
+
+    toolbar_ = addToolBar("Camera Menu");
     toolbar_->addAction(searchCameras);
-    connect(searchCameras, SIGNAL(triggered()), cameras.data(), SLOT(searchAndAddLocalCameras()));
+    toolbar_->addAction(openSettings);
 }
 
 

@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     cameracontrolwidget.cpp \
     localcameraview.cpp \
     database.cpp \
-    camerarepository.cpp
+    camerarepository.cpp \
+    appsettingsdialog.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -43,7 +44,9 @@ HEADERS  += mainwindow.h \
     cameracontrolwidget.h \
     localcameraview.h \
     database.h \
-    camerarepository.h
+    camerarepository.h \
+    appsettingsdialog.h \
+    settingskeys.h
 
 RESOURCES += \
     images.qrc

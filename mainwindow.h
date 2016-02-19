@@ -10,6 +10,8 @@
 #include "cameraselectwidget.h"
 #include "camerarepository.h"
 
+#include "appsettingsdialog.h"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -23,7 +25,7 @@ private slots:
     void changeView(int index);
 
 private:
-    void buildToolbar(QSharedPointer<Cameras> cameras);
+    void buildToolbar();
 
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<CameraModel> camerasModel_;
@@ -32,6 +34,8 @@ private:
 
     QSharedPointer<CameraRepository> camerasDb_;
     QSharedPointer<DataBase> db_;
+
+    QSharedPointer<AppSettingsDialog> appSettings_;
 
     QToolBar *toolbar_;
     QHBoxLayout *layout_;
