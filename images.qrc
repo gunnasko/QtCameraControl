@@ -4,5 +4,7 @@
         <file>images/power_off_540px.png</file>
         <file>images/power_on_540px.png</file>
         <file>images/settings.png</file>
+        <file>images/StartRecord.png</file>
+        <file>images/StopRecord.png</file>
     </qresource>
 </RCC>

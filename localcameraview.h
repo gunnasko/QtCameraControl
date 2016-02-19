@@ -14,9 +14,11 @@ class LocalCameraView : public QWidget
 public:
     explicit LocalCameraView(QWidget *parent = 0);
     QSharedPointer<QCameraViewfinder> camView();
+
     void initView(QWidget *widget);
 signals:
     void toggleCam(bool);
+    void toggleRecord(bool);
 
 public slots:
     void updateName(QString);

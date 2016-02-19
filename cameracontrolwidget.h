@@ -14,10 +14,12 @@ public:
 
 signals:
     void toggleCam(bool);
+    void toggleRecord(bool);
 
 private:
-    QHBoxLayout *layout_;
     QToolButton *enableCam_;
+    QToolButton *startRecord_;
+
 
 };
 

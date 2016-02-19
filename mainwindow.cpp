@@ -70,7 +70,7 @@ void MainWindow::writeSettings()
 void MainWindow::readSettings()
 {
     QSettings settings;
-    resize(settings.value(MAIN_WINDOW_SIZE, QSize(100, 200)).toSize());
+    resize(settings.value(MAIN_WINDOW_SIZE, QSize(200, 300)).toSize());
     move(settings.value(MAIN_WINDOW_POS, QPoint(0, 0)).toPoint());
 }
 

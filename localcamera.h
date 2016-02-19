@@ -32,6 +32,7 @@ public:
 
 private slots:
     void onOffCamera(bool);
+    void startStopRecording(bool);
 
 private:
     void init();

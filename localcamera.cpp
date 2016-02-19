@@ -1,5 +1,10 @@
 #include "localcamera.h"
 
+#include <QDir>
+#include <QUrl>
+#include <QSettings>
+#include "settingskeys.h"
+
 LocalCamera::LocalCamera(const QByteArray &deviceId, QObject *parent)
 {
     setParent(parent);
@@ -27,12 +32,16 @@ void LocalCamera::init()
     localCameraView_ = tmp;
     userDefinedName_ = deviceId_;
     localCameraView_->updateName(userDefinedName_);
-
     connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
+    connect(localCameraView_.data(), &LocalCameraView::toggleRecord, this, &LocalCamera::startStopRecording);
+
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
 
     connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error),
-        [=](QCamera::Error value){ qDebug()<<value;});
+        [=]{ qDebug()<<camera_->errorString();});
+
+    connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error),
+        [=]{ qDebug()<<videoRecorder_->errorString();});
 }
 
 bool LocalCamera::available()
@@ -60,7 +69,10 @@ void LocalCamera::stopCamera()
 
 void LocalCamera::startRecording()
 {
+    QSettings settings;
     camera_->setCaptureMode(QCamera::CaptureVideo);
+    auto vidLocation = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    videoRecorder_->setOutputLocation(vidLocation);
     videoRecorder_->record();
 }
 
@@ -89,4 +101,12 @@ void LocalCamera::onOffCamera(bool on)
         startCamera();
     else
         stopCamera();
+}
+
+void LocalCamera::startStopRecording(bool on)
+{
+    if(isRunning() && on)
+        startRecording();
+    else
+        stopRecording();
 }
