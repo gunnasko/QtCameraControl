@@ -97,9 +97,9 @@ void LocalCamera::imageFocus()
 void LocalCamera::captureImage()
 {
     QSettings settings;
-    auto imageLocation = settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString();
     imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
-    imageCapture_->capture(imageLocation+"/IMG");
+    auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
+    imageCapture_->capture(getNewFileName("IMG", imageLocation));
     camera_->unlock();
 }
 
