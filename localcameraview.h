@@ -19,6 +19,8 @@ public:
 signals:
     void toggleCam(bool);
     void toggleRecord(bool);
+    void picturePressed();
+    void pictureReleased();
 
 public slots:
     void updateName(QString);

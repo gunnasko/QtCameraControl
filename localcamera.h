@@ -6,6 +6,7 @@
 #include <QMediaRecorder>
 #include <QCameraImageCapture>
 #include <QCameraViewfinder>
+#include <QDir>
 
 #include "abstractcamera.h"
 #include "localcameraview.h"
@@ -27,12 +28,15 @@ public:
     void startRecording();
     void stopRecording();
 
+    void imageFocus();
     void captureImage();
     QSharedPointer<QWidget> cameraGUI();
 
 private slots:
     void onOffCamera(bool);
     void startStopRecording(bool);
+    void focusPicture();
+    void takePicture();
 
 private:
     void init();
@@ -40,7 +44,6 @@ private:
     QSharedPointer<QCamera> camera_;
     QSharedPointer<QMediaRecorder> videoRecorder_;
     QSharedPointer<QCameraImageCapture> imageCapture_;
-
     QSharedPointer<LocalCameraView> localCameraView_;
 
 };

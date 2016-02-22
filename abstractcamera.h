@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QVideoWidget>
-
+#include <QDir>
 class AbstractCamera : public QObject
 {
     Q_OBJECT
@@ -27,12 +27,15 @@ public:
     virtual void startRecording() = 0;
     virtual void stopRecording() = 0;
 
+    virtual void imageFocus() = 0;
     virtual void captureImage() = 0;
 
     virtual QSharedPointer<QWidget> cameraGUI() = 0;
 
     bool operator==(const AbstractCamera& other);
     void copy(const AbstractCamera *other);
+
+    static QString getNewFileName(QString filePrefix, QDir dirLocation);
 
 signals:
     void dataChanged();

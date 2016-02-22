@@ -34,6 +34,8 @@ void LocalCamera::init()
     localCameraView_->updateName(userDefinedName_);
     connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
     connect(localCameraView_.data(), &LocalCameraView::toggleRecord, this, &LocalCamera::startStopRecording);
+    connect(localCameraView_.data(), &LocalCameraView::picturePressed, this, &LocalCamera::focusPicture);
+    connect(localCameraView_.data(), &LocalCameraView::pictureReleased, this, &LocalCamera::takePicture);
 
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
 
@@ -42,7 +44,12 @@ void LocalCamera::init()
 
     connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error),
         [=]{ qDebug()<<videoRecorder_->errorString();});
+
+    connect(imageCapture_.data(), &QCameraImageCapture::imageSaved,
+            [=](int id, const QString &fileName){qDebug()<<"Image: " << id << " saved to: " << fileName;});
 }
+
+
 
 bool LocalCamera::available()
 {
@@ -81,12 +88,18 @@ void LocalCamera::stopRecording()
     videoRecorder_->stop();
 }
 
-void LocalCamera::captureImage()
+void LocalCamera::imageFocus()
 {
     camera_->setCaptureMode(QCamera::CaptureStillImage);
     camera_->searchAndLock();
-    //Add wait timer or a new function
-    imageCapture_->capture();
+}
+
+void LocalCamera::captureImage()
+{
+    QSettings settings;
+    auto imageLocation = settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString();
+    imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
+    imageCapture_->capture(imageLocation+"/IMG");
     camera_->unlock();
 }
 
@@ -109,4 +122,16 @@ void LocalCamera::startStopRecording(bool on)
         startRecording();
     else
         stopRecording();
+}
+
+void LocalCamera::focusPicture()
+{
+    if(isRunning())
+        imageFocus();
+}
+
+void LocalCamera::takePicture()
+{
+    if(isRunning())
+        captureImage();
 }

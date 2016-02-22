@@ -35,3 +35,17 @@ void AbstractCamera::copy(const AbstractCamera *other)
         setUserDefinedName(other->userDefinedName());
     }
 }
+
+QString AbstractCamera::getNewFileName(QString filePrefix, QDir dirLocation)
+{
+    auto files = dirLocation.entryList(QRegExp(filePrefix + "*.jpg"));
+    files.replace(QRegExp(filePrefix),"");
+    files.replace(QRegExp(".jpg"),"");
+    int largestNum = 0;
+    foreach(file, files) {
+        int num = file.toInt();
+        if(num > largestNum)
+            largestNum = num;
+    }
+    return filePrefix + QString::number(largestNum);
+}
