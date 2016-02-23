@@ -18,8 +18,15 @@ CameraSelectWidget::CameraSelectWidget(QSharedPointer <CameraModel> camModel, QW
 
 
 
-    connect(selectCamButton, &QPushButton::clicked, [=]{emit(selectionChanged(camListView->currentIndex().row()));});
-    connect(openSettingsButton, &QPushButton::clicked, [=]{emit(openSettings(camListView->currentIndex().row()));});
+    connect(selectCamButton, &QPushButton::clicked, [=] {
+        emit(selectionChanged(camListView->currentIndex().row()));
+    } );
+    connect(camListView, &QListView::doubleClicked, [=](const QModelIndex &index) {
+        emit(selectionChanged(index.row()));
+    } );
+    connect(openSettingsButton, &QPushButton::clicked, [=] {
+        emit(openSettings(camListView->currentIndex().row()));
+    } );
 
     auto layout = new QVBoxLayout(this);
     layout->addWidget(camSelectLabel);
