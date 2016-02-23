@@ -47,13 +47,21 @@ AppSettingsDialog::AppSettingsDialog(QWidget *parent) : QDialog(parent)
 
 void AppSettingsDialog::openVideoFileDialog()
 {
-    videoLocation_ = QDir(QFileDialog::getExistingDirectory(this, "Select location for saved videos", videoLocation_.absolutePath(), QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks));
+    auto path = QFileDialog::getExistingDirectory(this, "Select location for saved videos", videoLocation_.absolutePath(), QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    if(path.isEmpty())
+        return;
+
+    videoLocation_ = QDir(path);
     videoLocationValue_->setText(videoLocation_.absolutePath());
 }
 
 void AppSettingsDialog::openImageFileDialog()
 {
-    imageLocation_ = QDir(QFileDialog::getExistingDirectory(this, "Select location for saved images", imageLocation_.absolutePath(), QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks));
+    auto path = QFileDialog::getExistingDirectory(this, "Select location for saved images", imageLocation_.absolutePath(), QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    if(path.isEmpty())
+        return;
+
+    imageLocation_ = QDir(path);
     imageLocationValue_->setText(imageLocation_.absolutePath());
 }
 

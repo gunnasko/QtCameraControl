@@ -14,14 +14,13 @@ CameraSettingsDialog::CameraSettingsDialog(QSharedPointer<AbstractCamera> camera
 
     auto deviceUserLabel = new QLabel("Camera Name:", this);
     deviceUserValueLabel_ = new QLineEdit(camera_->userDefinedName(), this);
-
     auto imageCaptureSettings = new QGroupBox("Image Capture Settings:", this);
     auto imageCaptureLayout = new QGridLayout();
     auto resLabel = new QLabel("Resolution:", this);
     resComboBox_ = new QComboBox(this);
     resComboBox_->addItems(resolutionToStrings());
     int index = currentResolutionIndex();
-    if(index > 0 && index < resComboBox_->count())
+    if(index >= 0 && index < resComboBox_->count())
         resComboBox_->setCurrentIndex(index);
 
     imageCaptureLayout->addWidget(resLabel, 0, 0);
