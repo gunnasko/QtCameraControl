@@ -3,8 +3,6 @@
 
 #include <QCameraInfo>
 #include <QCamera>
-#include <QMediaRecorder>
-#include <QCameraImageCapture>
 #include <QCameraViewfinder>
 #include <QImageEncoderSettings>
 
@@ -25,13 +23,8 @@ public:
     void startCamera();
     void stopCamera();
 
-    void startRecording();
-    void stopRecording();
-
     void imageFocus();
-    void captureImage();
 
-    QList<QSize> supportedResolutions();
     QSharedPointer<QWidget> cameraGUI();
 
 private slots:
@@ -43,8 +36,6 @@ private slots:
 private:
     void init();
     QSharedPointer<QCamera> camera_;
-    QSharedPointer<QMediaRecorder> videoRecorder_;
-    QSharedPointer<QCameraImageCapture> imageCapture_;
     QSharedPointer<LocalCameraView> localCameraView_;
 
 };

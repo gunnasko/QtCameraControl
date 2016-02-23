@@ -1,5 +1,10 @@
 #include "abstractcamera.h"
+#include "settingskeys.h"
+
 #include <QDebug>
+#include <QSettings>
+#include <QUrl>
+
 AbstractCamera::AbstractCamera()
 {
 
@@ -86,6 +91,11 @@ void AbstractCamera::setImageResolutionW(int width)
     }
 }
 
+QList<QSize> AbstractCamera::supportedResolutions()
+{
+    return imageCapture_->supportedResolutions();
+}
+
 void AbstractCamera::setImageResolutionH(int height)
 {
     if(height != imageEncodeSettings_.resolution().height()) {
@@ -94,3 +104,25 @@ void AbstractCamera::setImageResolutionH(int height)
         emit(dataChanged());
     }
 }
+
+void AbstractCamera::startRecording()
+{
+    QSettings settings;
+    auto vidLocation = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    videoRecorder_->setOutputLocation(vidLocation);
+    videoRecorder_->record();
+}
+
+void AbstractCamera::stopRecording()
+{
+    videoRecorder_->stop();
+}
+
+void AbstractCamera::captureImage()
+{
+    QSettings settings;
+    imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
+    auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
+    imageCapture_->capture(getNewFileName("IMG", imageLocation));
+}
+

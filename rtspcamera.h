@@ -3,10 +3,24 @@
 
 #include "abstractcamera.h"
 
+#include <QUrl>
+#include <QMediaPlayer>
+
 class RtspCamera : public AbstractCamera
 {
+    Q_OBJECT
 public:
-    RtspCamera();
+    RtspCamera(QUrl cameraAddress, QObject *parent = 0);
+    bool available();
+    bool isRunning();
+
+    void startCamera();
+    void stopCamera();
+    QSharedPointer<QWidget> cameraGUI();
+
+private:
+    QUrl cameraAddress_;
+    QSharedPointer<QMediaPlayer> mediaPlayer_;
 };
 
 #endif // RTSPCAMERA_H

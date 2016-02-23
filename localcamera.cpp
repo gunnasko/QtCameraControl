@@ -94,38 +94,10 @@ void LocalCamera::stopCamera()
     camera_->stop();
 }
 
-void LocalCamera::startRecording()
-{
-    QSettings settings;
-    camera_->setCaptureMode(QCamera::CaptureVideo);
-    auto vidLocation = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
-    videoRecorder_->setOutputLocation(vidLocation);
-    videoRecorder_->record();
-}
-
-void LocalCamera::stopRecording()
-{
-    videoRecorder_->stop();
-}
-
 void LocalCamera::imageFocus()
 {
     camera_->setCaptureMode(QCamera::CaptureStillImage);
     camera_->searchAndLock();
-}
-
-void LocalCamera::captureImage()
-{
-    QSettings settings;
-    imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
-    auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
-    imageCapture_->capture(getNewFileName("IMG", imageLocation));
-    camera_->unlock();
-}
-
-QList<QSize> LocalCamera::supportedResolutions()
-{
-    return imageCapture_->supportedResolutions();
 }
 
 QSharedPointer<QWidget> LocalCamera::cameraGUI()
@@ -143,10 +115,12 @@ void LocalCamera::onOffCamera(bool on)
 
 void LocalCamera::startStopRecording(bool on)
 {
-    if(isRunning() && on)
+    if(isRunning() && on) {
+        camera_->setCaptureMode(QCamera::CaptureVideo);
         startRecording();
-    else
+    } else {
         stopRecording();
+    }
 }
 
 void LocalCamera::focusPicture()
@@ -157,6 +131,8 @@ void LocalCamera::focusPicture()
 
 void LocalCamera::takePicture()
 {
-    if(isRunning())
+    if(isRunning()) {
         captureImage();
+        camera_->unlock();
+    }
 }

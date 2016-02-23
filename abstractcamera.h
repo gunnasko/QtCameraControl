@@ -6,6 +6,9 @@
 #include <QDir>
 
 #include <QImageEncoderSettings>
+#include <QMediaRecorder>
+#include <QCameraImageCapture>
+
 
 class AbstractCamera : public QObject
 {
@@ -30,7 +33,7 @@ public:
     void setImageResolutionH(int);
     void setImageResolutionW(int);
 
-    virtual QList<QSize> supportedResolutions() = 0;
+    QList<QSize> supportedResolutions();
 
     virtual bool available() = 0;
     virtual bool isRunning() = 0;
@@ -38,11 +41,10 @@ public:
     virtual void startCamera() = 0;
     virtual void stopCamera() = 0;
 
-    virtual void startRecording() = 0;
-    virtual void stopRecording() = 0;
+    void startRecording();
+    void stopRecording();
 
-    virtual void imageFocus() = 0;
-    virtual void captureImage() = 0;
+    void captureImage();
 
     virtual QSharedPointer<QWidget> cameraGUI() = 0;
 
@@ -60,6 +62,8 @@ protected:
     QString deviceId_;
     QString userDefinedName_;
     QImageEncoderSettings imageEncodeSettings_;
+    QSharedPointer<QMediaRecorder> videoRecorder_;
+    QSharedPointer<QCameraImageCapture> imageCapture_;
 };
 
 #endif // ABSTRACTCAMERA_H
