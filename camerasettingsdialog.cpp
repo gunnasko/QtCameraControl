@@ -8,7 +8,6 @@
 CameraSettingsDialog::CameraSettingsDialog(QSharedPointer<AbstractCamera> camera, QWidget *parent) : QDialog(parent), camera_(camera)
 {
     resolutions_ = camera_->supportedResolutions();
-    qDebug()<<resolutions_;
     auto deviceNameLabel = new QLabel("Device ID:", this);
     auto deviceNameValueLabel = new QLabel(camera_->deviceId(), this);
     deviceNameValueLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -21,6 +20,9 @@ CameraSettingsDialog::CameraSettingsDialog(QSharedPointer<AbstractCamera> camera
     auto resLabel = new QLabel("Resolution:", this);
     resComboBox_ = new QComboBox(this);
     resComboBox_->addItems(resolutionToStrings());
+    int index = currentResolutionIndex();
+    if(index > 0 && index < resComboBox_->count())
+        resComboBox_->setCurrentIndex(index);
 
     imageCaptureLayout->addWidget(resLabel, 0, 0);
     imageCaptureLayout->addWidget(resComboBox_, 0, 1);
@@ -69,4 +71,9 @@ QSize CameraSettingsDialog::selectedResolution()
         return resolutions_.first();
 
     return resolutions_.at(index);
+}
+
+int CameraSettingsDialog::currentResolutionIndex()
+{
+    return resolutions_.indexOf(camera_->imageResolution());
 }

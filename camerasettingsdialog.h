@@ -19,6 +19,7 @@ private slots:
 private:
     const QStringList resolutionToStrings();
     QSize selectedResolution();
+    int currentResolutionIndex();
 
     QSharedPointer<AbstractCamera> camera_;
     QComboBox *resComboBox_;

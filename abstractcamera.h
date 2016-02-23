@@ -12,7 +12,8 @@ class AbstractCamera : public QObject
     Q_OBJECT
     Q_PROPERTY(QString deviceId READ deviceId)
     Q_PROPERTY(QString userDefinedName READ userDefinedName WRITE setUserDefinedName NOTIFY userDefinedNameChanged)
-    Q_PROPERTY(QSize imageResolution READ imageResolution WRITE setImageResolution NOTIFY imageResolutionChanged)
+    Q_PROPERTY(int imageResolutionH READ imageResolutionH WRITE setImageResolutionH NOTIFY imageResolutionChanged)
+    Q_PROPERTY(int imageResolutionW READ imageResolutionW WRITE setImageResolutionW NOTIFY imageResolutionChanged)
 
 public:
     AbstractCamera();
@@ -22,7 +23,12 @@ public:
     void setUserDefinedName(QString name);
 
     QSize imageResolution();
-    void setImageResolution(QSize);
+    int imageResolutionH();
+    int imageResolutionW();
+
+    void setImageResolution(QSize res);
+    void setImageResolutionH(int);
+    void setImageResolutionW(int);
 
     virtual QList<QSize> supportedResolutions() = 0;
 

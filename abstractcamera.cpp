@@ -20,6 +20,7 @@ void AbstractCamera::setUserDefinedName(QString name)
     if(name != userDefinedName_) {
         userDefinedName_ = name;
         emit(userDefinedNameChanged());
+        emit(dataChanged());
     }
 }
 
@@ -57,10 +58,39 @@ QSize AbstractCamera::imageResolution()
     return imageEncodeSettings_.resolution();
 }
 
+int AbstractCamera::imageResolutionH()
+{
+    return imageEncodeSettings_.resolution().height();
+}
+
+int AbstractCamera::imageResolutionW()
+{
+    return imageEncodeSettings_.resolution().width();
+}
+
 void AbstractCamera::setImageResolution(QSize res)
 {
     if(res != imageEncodeSettings_.resolution()) {
         imageEncodeSettings_.setResolution(res);
         emit(imageResolutionChanged());
+        emit(dataChanged());
+    }
+}
+
+void AbstractCamera::setImageResolutionW(int width)
+{
+    if(width != imageEncodeSettings_.resolution().width()) {
+        imageEncodeSettings_.setResolution(width, imageEncodeSettings_.resolution().height());
+        emit(imageResolutionChanged());
+        emit(dataChanged());
+    }
+}
+
+void AbstractCamera::setImageResolutionH(int height)
+{
+    if(height != imageEncodeSettings_.resolution().height()) {
+        imageEncodeSettings_.setResolution(imageEncodeSettings_.resolution().width(), height);
+        emit(imageResolutionChanged());
+        emit(dataChanged());
     }
 }

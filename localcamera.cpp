@@ -33,13 +33,20 @@ void LocalCamera::init()
     camera_->setViewfinder(tmp->camView().data());
     localCameraView_ = tmp;
     userDefinedName_ = deviceId_;
+
     localCameraView_->updateName(userDefinedName_);
     connect(localCameraView_.data(), &LocalCameraView::camClicked, this, &LocalCamera::onOffCamera);
     connect(localCameraView_.data(), &LocalCameraView::toggleRecord, this, &LocalCamera::startStopRecording);
     connect(localCameraView_.data(), &LocalCameraView::picturePressed, this, &LocalCamera::focusPicture);
     connect(localCameraView_.data(), &LocalCameraView::pictureReleased, this, &LocalCamera::takePicture);
 
-    connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
+    connect(this, &AbstractCamera::userDefinedNameChanged, [=] {
+        localCameraView_->updateName(userDefinedName());
+    } );
+
+    connect(this, &AbstractCamera::imageResolutionChanged, [=] {
+        imageCapture_->setEncodingSettings(imageEncodeSettings_);
+    } );
 
     connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged);
     connect(camera_.data(), &QCamera::stateChanged, [=] {
@@ -58,6 +65,8 @@ void LocalCamera::init()
         Q_UNUSED(id);
         localCameraView_->updateMessageLabel("Saved image in: " + fileName);
     } );
+
+    camera_->load();
 }
 
 
