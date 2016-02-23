@@ -6,7 +6,7 @@
 #include <QMediaRecorder>
 #include <QCameraImageCapture>
 #include <QCameraViewfinder>
-#include <QDir>
+#include <QImageEncoderSettings>
 
 #include "abstractcamera.h"
 #include "localcameraview.h"
@@ -30,6 +30,8 @@ public:
 
     void imageFocus();
     void captureImage();
+
+    QList<QSize> supportedResolutions();
     QSharedPointer<QWidget> cameraGUI();
 
 private slots:

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QLineEdit>
+#include <QComboBox>
 
 #include "abstractcamera.h"
 
@@ -16,8 +17,13 @@ private slots:
     void save();
 
 private:
+    const QStringList resolutionToStrings();
+    QSize selectedResolution();
+
     QSharedPointer<AbstractCamera> camera_;
+    QComboBox *resComboBox_;
     QLineEdit *deviceUserValueLabel_;
+    QList<QSize> resolutions_;
 };
 
 #endif // CAMERASETTINGSDIALOG_H

@@ -27,6 +27,8 @@ void LocalCamera::init()
 {
     videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data()));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data()));
+    imageCapture_->setEncodingSettings(imageEncodeSettings_);
+
     auto tmp = QSharedPointer<LocalCameraView>(new LocalCameraView());
     camera_->setViewfinder(tmp->camView().data());
     localCameraView_ = tmp;
@@ -110,6 +112,11 @@ void LocalCamera::captureImage()
     auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
     imageCapture_->capture(getNewFileName("IMG", imageLocation));
     camera_->unlock();
+}
+
+QList<QSize> LocalCamera::supportedResolutions()
+{
+    return imageCapture_->supportedResolutions();
 }
 
 QSharedPointer<QWidget> LocalCamera::cameraGUI()

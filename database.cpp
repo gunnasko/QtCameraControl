@@ -106,6 +106,8 @@ QString DataBase::createColumnsAndTypesFromProperties(const QMetaProperty primar
         case QVariant::UInt:
             query.append(" integer");
             break;
+        case QVariant::Size:
+            query.append (" text");
         default:
             qDebug() << "DataBase::createTableStringFromProperties: Cannot add property " << prop.name();
         }

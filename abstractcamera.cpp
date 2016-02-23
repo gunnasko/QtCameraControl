@@ -50,3 +50,17 @@ QString AbstractCamera::getNewFileName(QString filePrefix, QDir dirLocation)
     largestNum++;
     return dirLocation.absolutePath() + "/" + filePrefix + QString::number(largestNum);
 }
+
+
+QSize AbstractCamera::imageResolution()
+{
+    return imageEncodeSettings_.resolution();
+}
+
+void AbstractCamera::setImageResolution(QSize res)
+{
+    if(res != imageEncodeSettings_.resolution()) {
+        imageEncodeSettings_.setResolution(res);
+        emit(imageResolutionChanged());
+    }
+}
