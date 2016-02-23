@@ -20,7 +20,6 @@ public:
 signals:
     void camClicked(bool);
     void camToggled(bool);
-
     void toggleRecord(bool);
     void picturePressed();
     void pictureReleased();

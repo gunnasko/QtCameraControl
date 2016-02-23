@@ -13,7 +13,6 @@ class Cameras : public QObject
     Q_OBJECT
 public:
     Cameras(QSharedPointer<DataBase> db, QObject *parent = 0);
-
     QSharedPointer<AbstractCamera> getCamera(QString deviceName);
     QSharedPointer<AbstractCamera> getCamera(int index);
     QList <QSharedPointer<AbstractCamera>> getCameras() const;

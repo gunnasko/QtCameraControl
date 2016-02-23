@@ -36,10 +36,8 @@ private:
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<QWidget> currentView_;
-
     QSharedPointer<CameraRepository> camerasDb_;
     QSharedPointer<DataBase> db_;
-
     QSharedPointer<AppSettingsDialog> appSettings_;
 
     QToolBar *toolbar_;

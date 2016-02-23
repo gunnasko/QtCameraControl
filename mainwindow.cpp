@@ -49,7 +49,6 @@ void MainWindow::openCamSettings(int index)
 
 void MainWindow::changeView(int index)
 {
-    qDebug()<<"Changed to index: " << index;
     auto cam = cameras_->getCamera(index);
     if(cam) {
         currentView_->hide();

@@ -18,9 +18,7 @@ CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
     picture_ = createToolButton(cameraIco);
     connect(picture_, &QToolButton::pressed, this, &CameraControlWidget::picturePressed );
     connect(picture_, &QToolButton::released, this, &CameraControlWidget::pictureReleased );
-
     layout->addWidget(picture_);
-
 
 #ifndef Q_OS_WIN
     QIcon recordIcon = QIcon();
@@ -32,6 +30,7 @@ CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
     connect(startRecord_, &QToolButton::toggled, this, &CameraControlWidget::toggleRecord );
     layout->addWidget(startRecord_);
 #endif
+
     setLayout(layout);
 }
 

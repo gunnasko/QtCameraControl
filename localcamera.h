@@ -42,7 +42,6 @@ private slots:
 
 private:
     void init();
-
     QSharedPointer<QCamera> camera_;
     QSharedPointer<QMediaRecorder> videoRecorder_;
     QSharedPointer<QCameraImageCapture> imageCapture_;

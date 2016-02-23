@@ -56,7 +56,6 @@ signals:
     void userDefinedNameChanged();
     void imageResolutionChanged();
 
-
 protected:
     QString deviceId_;
     QString userDefinedName_;

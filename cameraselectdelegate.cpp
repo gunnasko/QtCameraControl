@@ -26,10 +26,8 @@ void CameraSelectDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         button = button.scaledToHeight(option.rect.height(), Qt::SmoothTransformation);
 
         painter->drawText(option.rect, Qt::AlignLeft, name);
-
         QPointF imagePoint(option.rect.topRight().x() - button.width(), option.rect.topRight().y());
         painter->drawImage(imagePoint, button);
-
         painter->restore();
     }
 }

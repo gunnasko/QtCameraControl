@@ -22,7 +22,6 @@ private slots:
     void openImageFileDialog();
     void save();
 
-
 private:
     QSettings settings_;
     QDir videoLocation_;

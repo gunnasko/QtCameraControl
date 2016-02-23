@@ -40,7 +40,6 @@ private slots:
     void updateModel();
 
 private:
-
     void addCameras(QSharedPointer<Cameras> cameras);
     void clearModel();
     void appendCamera(QSharedPointer<CameraModelElement> camera);

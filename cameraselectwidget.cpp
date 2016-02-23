@@ -16,8 +16,6 @@ CameraSelectWidget::CameraSelectWidget(QSharedPointer <CameraModel> camModel, QW
     camListView->setItemDelegate(new CameraSelectDelegate);
     camListView->setModel(camModel_.data());
 
-
-
     connect(selectCamButton, &QPushButton::clicked, [=] {
         emit(selectionChanged(camListView->currentIndex().row()));
     } );
