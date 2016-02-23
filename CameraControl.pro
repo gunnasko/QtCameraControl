@@ -31,7 +31,7 @@ SOURCES += main.cpp\
     localcameraview.cpp \
     database.cpp \
     camerarepository.cpp \
-    appsettingsdialog.cpp
+    appsettingsdialog.cpp \
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \

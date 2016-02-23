@@ -3,8 +3,8 @@
 
 #include <QObject>
 #include <QString>
-#include <QVideoWidget>
 #include <QDir>
+
 class AbstractCamera : public QObject
 {
     Q_OBJECT
