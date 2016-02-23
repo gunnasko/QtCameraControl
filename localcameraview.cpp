@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QDateTime>
 
 LocalCameraView::LocalCameraView(QWidget *parent) : QWidget(parent)
 {
@@ -12,6 +13,11 @@ LocalCameraView::LocalCameraView(QWidget *parent) : QWidget(parent)
     camControl_ = new CameraControlWidget(this);
     placeHolder_ = new QWidget(this);
     LocalCameraView::initView(placeHolder_);
+    messageLabel_ = new QLabel(this);
+    messageLabel_->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    messageCleaner_ = QSharedPointer<QTimer>(new QTimer(this));
+    messageCleaner_->setSingleShot(true);
+    connect(messageCleaner_.data(), &QTimer::timeout, messageLabel_, &QLabel::clear);
 
     viewStack_ = new QStackedWidget(this);
     viewStack_->addWidget(placeHolder_);
@@ -27,6 +33,7 @@ LocalCameraView::LocalCameraView(QWidget *parent) : QWidget(parent)
     layout_->addWidget(camName_);
     layout_->addWidget(viewStack_);
     layout_->addWidget(camControl_);
+    layout_->addWidget(messageLabel_);
     this->setLayout(layout_);
 }
 
@@ -48,6 +55,13 @@ void LocalCameraView::initView(QWidget *view)
 void LocalCameraView::updateName(QString name)
 {
     camName_->update(name);
+}
+
+void LocalCameraView::updateMessageLabel(QString msg)
+{
+    msg.prepend(QDateTime::currentDateTime().toString("(dd.MM.yyyy-hh:mm:ss) - "));
+    messageLabel_->setText(msg);
+    messageCleaner_->start(5000); //Clears after 5 seconds
 }
 
 void LocalCameraView::changeViewStack(bool enabled)

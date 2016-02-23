@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QCameraViewfinder>
 #include <QStackedWidget>
+#include <QTimer>
 
 #include "cameranamelabel.h"
 #include "cameracontrolwidget.h"
@@ -24,6 +25,7 @@ signals:
 
 public slots:
     void updateName(QString);
+    void updateMessageLabel(QString msg);
     void changeViewStack(bool enabled);
 
 private:
@@ -32,7 +34,8 @@ private:
     CameraControlWidget *camControl_;
     QWidget *placeHolder_;
     QStackedWidget *viewStack_;
-
+    QLabel *messageLabel_;
+    QSharedPointer<QTimer> messageCleaner_;
 
     QVBoxLayout *layout_;
     int currentIndex_;

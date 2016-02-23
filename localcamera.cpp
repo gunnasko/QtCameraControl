@@ -39,14 +39,18 @@ void LocalCamera::init()
 
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
 
-    connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error),
-        [=]{ qDebug()<<camera_->errorString();});
+    connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
+        localCameraView_->updateMessageLabel(camera_->errorString());
+    } );
 
-    connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error),
-        [=]{ qDebug()<<videoRecorder_->errorString();});
+    connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error), [=] {
+        localCameraView_->updateMessageLabel(videoRecorder_->errorString());
+    } );
 
-    connect(imageCapture_.data(), &QCameraImageCapture::imageSaved,
-            [=](int id, const QString &fileName){qDebug()<<"Image: " << id << " saved to: " << fileName;});
+    connect(imageCapture_.data(), &QCameraImageCapture::imageSaved,[=](int id, const QString &fileName) {
+        Q_UNUSED(id);
+        localCameraView_->updateMessageLabel("Saved image in: " + fileName);
+    } );
 }
 
 
