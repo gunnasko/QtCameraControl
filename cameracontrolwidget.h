@@ -18,7 +18,12 @@ signals:
     void picturePressed();
     void pictureReleased();
 
+public slots:
+    void setToggleCam(bool);
+
 private:
+    QToolButton *createToolButton(QIcon icon);
+
     QToolButton *enableCam_;
     QToolButton *startRecord_;
     QToolButton *picture_;

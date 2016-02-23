@@ -2,7 +2,6 @@
 #define CAMERASELECTWIDGET_H
 
 #include <QWidget>
-#include <QStyledItemDelegate>
 #include <QItemSelectionModel>
 
 #include "cameramodel.h"

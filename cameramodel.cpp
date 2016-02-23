@@ -55,6 +55,8 @@ QVariant CameraModel::data(const QModelIndex & index, int role) const
             return elements_.at(index.row())->camera_->deviceId();
         case UserDefinedNameRole:
             return elements_.at(index.row())->camera_->userDefinedName();
+        case EnabledRole:
+            return elements_.at(index.row())->camera_->isRunning();
         default:
             return QVariant();
     }
@@ -70,17 +72,11 @@ bool CameraModel::setData (const QModelIndex & index, const QVariant & value, in
         case UserDefinedNameRole:
             elements_.at(index.row())->camera_->setUserDefinedName(value.toString());
             return true;
+        case EnabledRole:
+            return true;
         default:
             return false;
     }
-}
-
-QHash<int, QByteArray> CameraModel::roleNames() const
-{
-    QHash<int, QByteArray> roles;
-    roles[DeviceNameRole] = "deviceName";
-    roles[UserDefinedNameRole] = "userDefinedName";
-    return roles;
 }
 
 void CameraModel::appendCamera(QSharedPointer<CameraModelElement> camera)

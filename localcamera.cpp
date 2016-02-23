@@ -32,12 +32,17 @@ void LocalCamera::init()
     localCameraView_ = tmp;
     userDefinedName_ = deviceId_;
     localCameraView_->updateName(userDefinedName_);
-    connect(localCameraView_.data(), &LocalCameraView::toggleCam, this, &LocalCamera::onOffCamera);
+    connect(localCameraView_.data(), &LocalCameraView::camClicked, this, &LocalCamera::onOffCamera);
     connect(localCameraView_.data(), &LocalCameraView::toggleRecord, this, &LocalCamera::startStopRecording);
     connect(localCameraView_.data(), &LocalCameraView::picturePressed, this, &LocalCamera::focusPicture);
     connect(localCameraView_.data(), &LocalCameraView::pictureReleased, this, &LocalCamera::takePicture);
 
     connect(this, &AbstractCamera::userDefinedNameChanged, [=]{localCameraView_->updateName(userDefinedName());});
+
+    connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged);
+    connect(camera_.data(), &QCamera::stateChanged, [=] {
+            emit(localCameraView_->camToggled(isRunning()));
+    } );
 
     connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
         localCameraView_->updateMessageLabel(camera_->errorString());

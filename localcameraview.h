@@ -18,7 +18,9 @@ public:
 
     void initView(QWidget *widget);
 signals:
-    void toggleCam(bool);
+    void camClicked(bool);
+    void camToggled(bool);
+
     void toggleRecord(bool);
     void picturePressed();
     void pictureReleased();

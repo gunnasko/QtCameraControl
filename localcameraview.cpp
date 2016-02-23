@@ -23,10 +23,13 @@ LocalCameraView::LocalCameraView(QWidget *parent) : QWidget(parent)
     viewStack_->addWidget(placeHolder_);
     viewStack_->addWidget(camView_.data());
 
-    connect(camControl_, &CameraControlWidget::toggleCam, this, &LocalCameraView::toggleCam);
+    connect(camControl_, &CameraControlWidget::toggleCam, this, &LocalCameraView::camClicked);
+    connect(this, &LocalCameraView::camToggled, camControl_, &CameraControlWidget::setToggleCam);
+
     connect(camControl_, &CameraControlWidget::toggleRecord, this, &LocalCameraView::toggleRecord);
     connect(camControl_, &CameraControlWidget::picturePressed, this, &LocalCameraView::picturePressed);
     connect(camControl_, &CameraControlWidget::pictureReleased, this, &LocalCameraView::pictureReleased);
+
 
     connect(camControl_, &CameraControlWidget::toggleCam, this, &LocalCameraView::changeViewStack);
 

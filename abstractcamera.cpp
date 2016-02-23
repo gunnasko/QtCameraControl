@@ -20,7 +20,6 @@ void AbstractCamera::setUserDefinedName(QString name)
     if(name != userDefinedName_) {
         userDefinedName_ = name;
         emit(userDefinedNameChanged());
-        emit(dataChanged());
     }
 }
 
