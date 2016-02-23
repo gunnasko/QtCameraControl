@@ -7,6 +7,7 @@
 #include "camerarepository.h"
 #include "abstractcamera.h"
 #include "localcamera.h"
+#include "rtspcamera.h"
 
 class Cameras : public QObject
 {
@@ -22,6 +23,7 @@ public:
 
 public slots:
     void searchAndAddLocalCameras();
+    void addNetworkCamera(QUrl address);
 
 signals:
     void listChanged();

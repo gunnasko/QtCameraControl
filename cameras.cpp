@@ -19,6 +19,13 @@ void Cameras::searchAndAddLocalCameras()
     emit(listChanged());
 }
 
+void Cameras::addNetworkCamera(QUrl address)
+{
+    auto newCam = QSharedPointer<AbstractCamera>(new RtspCamera(address));
+    camDb_->updateCamera(newCam);
+    addCamera(newCam);
+}
+
 void Cameras::addCamera(const QSharedPointer<AbstractCamera> camera)
 {
     cameras_.append(camera);

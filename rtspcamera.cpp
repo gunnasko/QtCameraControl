@@ -7,10 +7,11 @@
 RtspCamera::RtspCamera(QUrl cameraAddress, QObject *parent) : cameraAddress_(cameraAddress)
 {
     setParent(parent);
+    deviceId_ = cameraAddress.toString();
+    userDefinedName_ = deviceId_;
     mediaPlayer_ = QSharedPointer<QMediaPlayer>(new QMediaPlayer(this));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(mediaPlayer_.data()));
     mediaPlayer_->setMedia(cameraAddress_);
-
 
     auto tmp = QSharedPointer<RtspCameraView>(new RtspCameraView());
     mediaPlayer_->setVideoOutput(tmp->rtspStreamView().data());

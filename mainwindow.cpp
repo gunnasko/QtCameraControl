@@ -23,7 +23,6 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 
     buildToolbar();
 
-
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
 
@@ -45,6 +44,7 @@ void MainWindow::openCamSettings(int index)
         settingsDialog->setAttribute( Qt::WA_DeleteOnClose, true);
         settingsDialog->show();
     }
+    cameras_->addNetworkCamera(QUrl("rtps://localhost"));
 }
 
 void MainWindow::changeView(int index)
