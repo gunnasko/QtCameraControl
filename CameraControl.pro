@@ -34,7 +34,8 @@ SOURCES += main.cpp\
     appsettingsdialog.cpp \
     cameraselectdelegate.cpp \
     rtspcamera.cpp \
-    abstractcameraview.cpp
+    abstractcameraview.cpp \
+    rtspcameraview.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -52,7 +53,8 @@ HEADERS  += mainwindow.h \
     settingskeys.h \
     cameraselectdelegate.h \
     rtspcamera.h \
-    abstractcameraview.h
+    abstractcameraview.h \
+    rtspcameraview.h
 
 RESOURCES += \
     images.qrc

@@ -10,6 +10,11 @@ RtspCamera::RtspCamera(QUrl cameraAddress, QObject *parent) : cameraAddress_(cam
     mediaPlayer_ = QSharedPointer<QMediaPlayer>(new QMediaPlayer(this));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(mediaPlayer_.data()));
     mediaPlayer_->setMedia(cameraAddress_);
+
+
+    auto tmp = QSharedPointer<RtspCameraView>(new RtspCameraView());
+    mediaPlayer_->setVideoOutput(tmp->rtspStreamView().data());
+    rtspCameraView_ = tmp;
 }
 
 bool RtspCamera::available()
@@ -34,5 +39,5 @@ void RtspCamera::stopCamera()
 
 QSharedPointer<QWidget> RtspCamera::cameraGUI()
 {
-    return QSharedPointer<QWidget>();
+    return rtspCameraView_;
 }
