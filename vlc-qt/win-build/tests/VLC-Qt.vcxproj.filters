@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\Tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\MetaManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\Recorder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\dual\DualInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\dual\DualPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\MediaList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\EqualizerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\tests\VLC-Qt_automoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\tests\CMakeFiles\VLC-Qt.dir\qrc_logo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\tests\CMakeFiles\VLC-Qt.dir\qrc_qml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\Tests.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\MetaManager.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\Recorder.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\common\dual\Dual.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\MediaList.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\Player.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\widgets\EqualizerDialog.ui" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\resources\logo.qrc" />
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\tests\qml\qml.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\platform\windows\tests.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AEF547BB-5348-3FFE-9093-E6D217F7BB0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

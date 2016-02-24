@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\painter\GlPainter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\painter\GlslPainter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\src\qml\Qml_automoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\SharedExportQml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\platform\windows\qml.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AEF547BB-5348-3FFE-9093-E6D217F7BB0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E79CAD1B-C863-33A7-8E80-87286D9A5A0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

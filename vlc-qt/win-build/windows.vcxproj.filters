@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\CMakeFiles\b917aa9fba863ba09c08dea7f9e2cec4\windows.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build\CMakeFiles\windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{44AA18BA-DE7A-3A15-8D1A-EFE91AA83B65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
