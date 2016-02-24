@@ -26,6 +26,7 @@ public:
 private slots:
     void openCamSettings(int index);
     void changeView(int index);
+    void openAddNetworkCameraDialog();
 
 private:
     void readSettings();

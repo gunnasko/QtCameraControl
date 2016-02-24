@@ -19,6 +19,10 @@ public:
     void stopCamera();
     QSharedPointer<QWidget> cameraGUI();
 
+private slots:
+    void onOffStream(bool);
+
+
 private:
     QUrl cameraAddress_;
     QSharedPointer<QMediaPlayer> mediaPlayer_;

@@ -58,7 +58,7 @@ void AbstractCameraView::updateMessageLabel(QString msg)
 {
     msg.prepend(QDateTime::currentDateTime().toString("(dd.MM.yyyy-hh:mm:ss) - "));
     messageLabel_->setText(msg);
-    messageCleaner_->start(5000); //Clears after 5 seconds
+    messageCleaner_->start(10000);
 }
 
 void AbstractCameraView::changeViewStack(bool enabled)

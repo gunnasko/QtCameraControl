@@ -24,6 +24,7 @@ void Cameras::addNetworkCamera(QUrl address)
     auto newCam = QSharedPointer<AbstractCamera>(new RtspCamera(address));
     camDb_->updateCamera(newCam);
     addCamera(newCam);
+    emit(listChanged());
 }
 
 void Cameras::addCamera(const QSharedPointer<AbstractCamera> camera)

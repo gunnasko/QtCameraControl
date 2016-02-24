@@ -8,5 +8,6 @@
         <file>images/StopRecord.png</file>
         <file>images/camera.png</file>
         <file>images/cameraInverted.png</file>
+        <file>images/addCamera.png</file>
     </qresource>
 </RCC>

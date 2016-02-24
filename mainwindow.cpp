@@ -6,7 +6,7 @@
 #include <QHBoxLayout>
 #include <QAction>
 #include <QCloseEvent>
-
+#include <QInputDialog>
 
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     : QMainWindow(parent), db_(db)
@@ -44,7 +44,6 @@ void MainWindow::openCamSettings(int index)
         settingsDialog->setAttribute( Qt::WA_DeleteOnClose, true);
         settingsDialog->show();
     }
-    cameras_->addNetworkCamera(QUrl("rtps://localhost"));
 }
 
 void MainWindow::changeView(int index)
@@ -56,6 +55,16 @@ void MainWindow::changeView(int index)
         currentView_= cam->cameraGUI();
         layout_->insertWidget(0, currentView_.data());
         currentView_->show();
+    }
+}
+
+void MainWindow::openAddNetworkCameraDialog()
+{
+    bool ok;
+    auto urlPath = QInputDialog::getText(this, "Add Network Camera", "Camera URL", QLineEdit::Normal, QString("rtsp://"), &ok, Qt::Widget, Qt::ImhUrlCharactersOnly);
+    QUrl url(urlPath);
+    if(ok && url.isValid()) {
+        cameras_->addNetworkCamera(url);
     }
 }
 
@@ -75,14 +84,18 @@ void MainWindow::readSettings()
 
 void MainWindow::buildToolbar()
 {
-    auto searchCameras = new QAction(QIcon(":/toolbar/images/refresh_original.png"), "Search...", this);
+    auto searchCameras = new QAction(QIcon(":/toolbar/images/refresh_original.png"), "Search Local Cameras", this);
     connect(searchCameras, &QAction::triggered, cameras_.data(), &Cameras::searchAndAddLocalCameras);
+
+    auto addNetworkCamera = new QAction(QIcon(":/toolbar/images/addCamera.png"), "Add Network Camera", this);
+    connect(addNetworkCamera, &QAction::triggered, this, &MainWindow::openAddNetworkCameraDialog);
 
     auto openSettings = new QAction(QIcon(":/toolbar/images/settings.png"), "Settings", this);
     connect(openSettings, &QAction::triggered, appSettings_.data(), &AppSettingsDialog::show);
 
     toolbar_ = addToolBar("Camera Menu");
     toolbar_->addAction(searchCameras);
+    toolbar_->addAction(addNetworkCamera);
     toolbar_->addAction(openSettings);
 }
 
