@@ -9,13 +9,13 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     deviceId_ = cameraAddress.toString();
     userDefinedName_ = deviceId_;
 
-    instance_ = QSharedPointer<VlcInstance>(new VlcInstance(VlcCommon::args(), this));
-    mediaPlayer_ = QSharedPointer<VlcMediaPlayer>(new VlcMediaPlayer(instance_.data()));
-    media_ = QSharedPointer<VlcMedia>(new VlcMedia(cameraAddress_.toString(), false, instance_.data()));
+    instance_ = new VlcInstance(VlcCommon::args(), this);
+    mediaPlayer_ = new VlcMediaPlayer(instance_);
+    media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
 
     auto tmp = QSharedPointer<VlcNetworkCameraView>(new VlcNetworkCameraView());
     mediaPlayer_->setVideoWidget(tmp->vlcNetworkCameraView().data());
-    tmp->setMediaPlayer(mediaPlayer_.data());
+    tmp->setMediaPlayer(mediaPlayer_);
     vlcNetworkCameraView_ = tmp;
 
     vlcNetworkCameraView_->updateName(userDefinedName_);
@@ -27,15 +27,22 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
 
-    connect(mediaPlayer_.data(), &VlcMediaPlayer::error, [=] {
+    connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
         vlcNetworkCameraView_->updateMessageLabel("Error: " + VlcError::errmsg());
     } );
-    connect(mediaPlayer_.data(), &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
+    connect(mediaPlayer_, &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
         vlcNetworkCameraView_->updateMessageLabel("Snapshot taken to: " + filePath);
     } );
 
 
-    connect(mediaPlayer_.data(), &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
+    connect(mediaPlayer_, &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
+}
+
+VlcNetworkCamera::~VlcNetworkCamera()
+{
+    delete mediaPlayer_;
+    delete media_;
+    delete instance_;
 }
 
 bool VlcNetworkCamera::available()
@@ -50,7 +57,7 @@ bool VlcNetworkCamera::isRunning()
 
 void VlcNetworkCamera::startCamera()
 {
-    mediaPlayer_->open(media_.data());
+    mediaPlayer_->open(media_);
 }
 
 void VlcNetworkCamera::stopCamera()

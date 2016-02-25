@@ -14,6 +14,7 @@ class VlcNetworkCamera : public AbstractCamera
     Q_OBJECT
 public:
     explicit VlcNetworkCamera(QUrl cameraAddress, QObject *parent = 0);
+    ~VlcNetworkCamera();
     bool available();
     bool isRunning();
 
@@ -28,9 +29,9 @@ private slots:
 
 private:
     QUrl cameraAddress_;
-    QSharedPointer<VlcMediaPlayer> mediaPlayer_;
-    QSharedPointer<VlcInstance> instance_;
-    QSharedPointer<VlcMedia> media_;
+    VlcMediaPlayer *mediaPlayer_;
+    VlcInstance *instance_;
+    VlcMedia *media_;
     QSharedPointer<VlcNetworkCameraView> vlcNetworkCameraView_;
 };
 
