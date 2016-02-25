@@ -6,7 +6,7 @@ QtNetworkCameraView::QtNetworkCameraView(QWidget *parent) : AbstractCameraView(p
     viewStack_->addWidget(qtNetworkCameraView_.data());
 }
 
-QSharedPointer<QVideoWidget> QtNetworkCameraView::qtNetworkCameraView()
+QSharedPointer<QVideoWidget> QtNetworkCameraView::camGUI()
 {
     return qtNetworkCameraView_;
 }

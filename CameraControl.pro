@@ -56,7 +56,8 @@ SOURCES += main.cpp\
     qtnetworkcamera.cpp \
     qtnetworkcameraview.cpp \
     vlcnetworkcamera.cpp \
-    vlcnetworkcameraview.cpp
+    vlcnetworkcameraview.cpp \
+    qtcamera.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -77,7 +78,8 @@ HEADERS  += mainwindow.h \
     qtnetworkcameraview.h \
     qtnetworkcamera.h \
     vlcnetworkcamera.h \
-    vlcnetworkcameraview.h
+    vlcnetworkcameraview.h \
+    qtcamera.h
 
 RESOURCES += \
     images.qrc

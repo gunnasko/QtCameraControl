@@ -4,7 +4,7 @@
 #include <QSettings>
 #include "settingskeys.h"
 
-QtNetworkCamera::QtNetworkCamera(QUrl cameraAddress, QObject *parent) : AbstractCamera(parent), cameraAddress_(cameraAddress)
+QtNetworkCamera::QtNetworkCamera(QUrl cameraAddress, QObject *parent) : QtCamera(parent), cameraAddress_(cameraAddress)
 {
     deviceId_ = cameraAddress.toString();
     userDefinedName_ = deviceId_;
@@ -13,7 +13,7 @@ QtNetworkCamera::QtNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstract
     mediaPlayer_->setMedia(cameraAddress_);
 
     auto tmp = QSharedPointer<QtNetworkCameraView>(new QtNetworkCameraView());
-    mediaPlayer_->setVideoOutput(tmp->qtNetworkCameraView().data());
+    mediaPlayer_->setVideoOutput(tmp->camGUI().data());
     qtNetworkCameraView_ = tmp;
 
     qtNetworkCameraView_->updateName(userDefinedName_);

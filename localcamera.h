@@ -6,16 +6,16 @@
 #include <QCameraViewfinder>
 #include <QImageEncoderSettings>
 
-#include "abstractcamera.h"
+#include "qtcamera.h"
 #include "localcameraview.h"
 
-class LocalCamera : public AbstractCamera
+class QtLocalCamera : public QtCamera
 {
     Q_OBJECT
 public:
 
-    LocalCamera(const QByteArray &deviceName, QObject *parent = 0);
-    LocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
+    QtLocalCamera(const QByteArray &deviceName, QObject *parent = 0);
+    QtLocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
 
     bool available();
     bool isRunning();
@@ -36,7 +36,7 @@ private slots:
 private:
     void init();
     QSharedPointer<QCamera> camera_;
-    QSharedPointer<LocalCameraView> localCameraView_;
+    QSharedPointer<QtLocalCameraView> qtLocalCameraView_;
 
 };
 

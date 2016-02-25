@@ -1,9 +1,6 @@
 #include "abstractcamera.h"
-#include "settingskeys.h"
 
 #include <QDebug>
-#include <QSettings>
-#include <QUrl>
 
 AbstractCamera::AbstractCamera(QObject *parent) : QObject(parent)
 {
@@ -60,23 +57,23 @@ QString AbstractCamera::getNewFileName(QString filePrefix, QDir dirLocation)
 
 QSize AbstractCamera::imageResolution()
 {
-    return imageEncodeSettings_.resolution();
+    return imageResolution_;
 }
 
 int AbstractCamera::imageResolutionH()
 {
-    return imageEncodeSettings_.resolution().height();
+    return imageResolution_.height();
 }
 
 int AbstractCamera::imageResolutionW()
 {
-    return imageEncodeSettings_.resolution().width();
+    return imageResolution_.width();
 }
 
 void AbstractCamera::setImageResolution(QSize res)
 {
-    if(res != imageEncodeSettings_.resolution()) {
-        imageEncodeSettings_.setResolution(res);
+    if(res != imageResolution_) {
+        imageResolution_= res;
         emit(imageResolutionChanged());
         emit(dataChanged());
     }
@@ -84,8 +81,8 @@ void AbstractCamera::setImageResolution(QSize res)
 
 void AbstractCamera::setImageResolutionW(int width)
 {
-    if(width != imageEncodeSettings_.resolution().width()) {
-        imageEncodeSettings_.setResolution(width, imageEncodeSettings_.resolution().height());
+    if(width != imageResolution_.width()) {
+        imageResolution_.setWidth(width);
         emit(imageResolutionChanged());
         emit(dataChanged());
     }
@@ -93,36 +90,15 @@ void AbstractCamera::setImageResolutionW(int width)
 
 QList<QSize> AbstractCamera::supportedResolutions()
 {
-    return imageCapture_->supportedResolutions();
+    qDebug()<<"Move this function to QtCamera!";
+    return QList<QSize>();
 }
 
 void AbstractCamera::setImageResolutionH(int height)
 {
-    if(height != imageEncodeSettings_.resolution().height()) {
-        imageEncodeSettings_.setResolution(imageEncodeSettings_.resolution().width(), height);
+    if(height != imageResolution_.height()) {
+        imageResolution_.setHeight(height);
         emit(imageResolutionChanged());
         emit(dataChanged());
     }
 }
-
-void AbstractCamera::startRecording()
-{
-    QSettings settings;
-    auto vidLocation = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
-    videoRecorder_->setOutputLocation(vidLocation);
-    videoRecorder_->record();
-}
-
-void AbstractCamera::stopRecording()
-{
-    videoRecorder_->stop();
-}
-
-void AbstractCamera::captureImage()
-{
-    QSettings settings;
-    imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
-    auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
-    imageCapture_->capture(getNewFileName("IMG", imageLocation));
-}
-

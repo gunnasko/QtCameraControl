@@ -5,13 +5,13 @@
 #include <QStackedWidget>
 #include <QDateTime>
 
-LocalCameraView::LocalCameraView(QWidget *parent) : AbstractCameraView(parent)
+QtLocalCameraView::QtLocalCameraView(QWidget *parent) : AbstractCameraView(parent)
 {
     camView_ = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
     viewStack_->addWidget(camView_.data());
 }
 
-QSharedPointer<QCameraViewfinder> LocalCameraView::camView()
+QSharedPointer<QCameraViewfinder> QtLocalCameraView::camGUI()
 {
     return QSharedPointer<QCameraViewfinder>(camView_);
 }

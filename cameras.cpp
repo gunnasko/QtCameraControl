@@ -13,7 +13,7 @@ void Cameras::searchAndAddLocalCameras()
     clearNotRunning();
     auto cameras = QCameraInfo::availableCameras();
     foreach (auto cameraInfo, cameras) {
-        auto newCam = QSharedPointer<AbstractCamera>(new LocalCamera(cameraInfo));
+        auto newCam = QSharedPointer<AbstractCamera>(new QtLocalCamera(cameraInfo));
         if(!containsCamera(newCam)) {
             camDb_->updateCamera(newCam);
             addCamera(newCam);

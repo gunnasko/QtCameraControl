@@ -4,10 +4,10 @@
 #include <QUrl>
 #include <QMediaPlayer>
 
-#include "abstractcamera.h"
+#include "qtcamera.h"
 #include "qtnetworkcameraview.h"
 
-class QtNetworkCamera : public AbstractCamera
+class QtNetworkCamera : public QtCamera
 {
     Q_OBJECT
 public:

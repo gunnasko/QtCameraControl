@@ -9,7 +9,7 @@ class QtNetworkCameraView : public AbstractCameraView
     Q_OBJECT
 public:
     explicit QtNetworkCameraView(QWidget *parent = 0);
-    QSharedPointer<QVideoWidget> qtNetworkCameraView();
+    QSharedPointer<QVideoWidget> camGUI();
 private:
     QSharedPointer<QVideoWidget> qtNetworkCameraView_;
 };

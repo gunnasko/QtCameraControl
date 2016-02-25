@@ -11,12 +11,12 @@
 
 #include "abstractcameraview.h"
 
-class LocalCameraView : public AbstractCameraView
+class QtLocalCameraView : public AbstractCameraView
 {
     Q_OBJECT
 public:
-    explicit LocalCameraView(QWidget *parent = 0);
-    QSharedPointer<QCameraViewfinder> camView();
+    explicit QtLocalCameraView(QWidget *parent = 0);
+    QSharedPointer<QCameraViewfinder> camGUI();
 private:
     QSharedPointer<QCameraViewfinder> camView_;
 

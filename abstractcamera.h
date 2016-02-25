@@ -40,12 +40,6 @@ public:
 
     virtual void startCamera() = 0;
     virtual void stopCamera() = 0;
-
-    void startRecording();
-    void stopRecording();
-
-    void captureImage();
-
     virtual QSharedPointer<QWidget> cameraGUI() = 0;
 
     bool operator==(const AbstractCamera& other);
@@ -61,9 +55,7 @@ signals:
 protected:
     QString deviceId_;
     QString userDefinedName_;
-    QImageEncoderSettings imageEncodeSettings_;
-    QSharedPointer<QMediaRecorder> videoRecorder_;
-    QSharedPointer<QCameraImageCapture> imageCapture_;
+    QSize imageResolution_;
 };
 
 #endif // ABSTRACTCAMERA_H
