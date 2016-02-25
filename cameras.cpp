@@ -1,4 +1,7 @@
 #include "cameras.h"
+#include "localcamera.h"
+#include "qtnetworkcamera.h"
+#include "vlcnetworkcamera.h"
 
 Cameras::Cameras(QSharedPointer<DataBase> db, QObject *parent) : QObject(parent)
 {
@@ -21,7 +24,7 @@ void Cameras::searchAndAddLocalCameras()
 
 void Cameras::addNetworkCamera(QUrl address)
 {
-    auto newCam = QSharedPointer<AbstractCamera>(new RtspCamera(address));
+    auto newCam = QSharedPointer<AbstractCamera>(new VlcNetworkCamera(address));
     camDb_->updateCamera(newCam);
     addCamera(newCam);
     emit(listChanged());

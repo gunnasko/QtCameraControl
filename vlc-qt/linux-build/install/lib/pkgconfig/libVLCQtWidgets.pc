@@ -1,0 +1,10 @@
+prefix=/home/andreas/CameraControl/vlc-qt/linux-build/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: VLCQtWidgets
+Description: Qt and libvlc connector library - Widgets component
+Version: 1.0.1
+Libs: -L${libdir} -lVLCQtCore -lVLCQtWidgets
+Cflags: -I${includedir}

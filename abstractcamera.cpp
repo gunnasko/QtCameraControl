@@ -5,7 +5,7 @@
 #include <QSettings>
 #include <QUrl>
 
-AbstractCamera::AbstractCamera()
+AbstractCamera::AbstractCamera(QObject *parent) : QObject(parent)
 {
 
 }

@@ -13,6 +13,12 @@ QT       += sql core gui multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+unix{
+    LIBS += -L$$_PRO_FILE_PWD_/vlc-qt/linux-build/install/lib -lVLCQtCore -lVLCQtWidgets
+    INCLUDEPATH += $$_PRO_FILE_PWD_/vlc-qt/linux-build/install/include
+    LIBS += -L/usr/local/lib
+}
+
 CONFIG += c++11
 
 TARGET = CameraControl
@@ -33,9 +39,11 @@ SOURCES += main.cpp\
     camerarepository.cpp \
     appsettingsdialog.cpp \
     cameraselectdelegate.cpp \
-    rtspcamera.cpp \
     abstractcameraview.cpp \
-    rtspcameraview.cpp
+    qtnetworkcamera.cpp \
+    qtnetworkcameraview.cpp \
+    vlcnetworkcamera.cpp \
+    vlcnetworkcameraview.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
@@ -52,9 +60,11 @@ HEADERS  += mainwindow.h \
     appsettingsdialog.h \
     settingskeys.h \
     cameraselectdelegate.h \
-    rtspcamera.h \
     abstractcameraview.h \
-    rtspcameraview.h
+    qtnetworkcameraview.h \
+    qtnetworkcamera.h \
+    vlcnetworkcamera.h \
+    vlcnetworkcameraview.h
 
 RESOURCES += \
     images.qrc

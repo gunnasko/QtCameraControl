@@ -5,19 +5,15 @@
 #include <QSettings>
 #include "settingskeys.h"
 
-LocalCamera::LocalCamera(const QByteArray &deviceId, QObject *parent)
+LocalCamera::LocalCamera(const QByteArray &deviceId, QObject *parent) : AbstractCamera(parent)
 {
-    setParent(parent);
     deviceId_ = QString(deviceId);
-
     camera_ = QSharedPointer<QCamera>(new QCamera(deviceId));
-
     init();
 }
 
-LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent)
+LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent) : AbstractCamera(parent)
 {
-    setParent(parent);
     camera_ = QSharedPointer<QCamera>(new QCamera(camInfo));
     deviceId_ = camInfo.deviceName();
     init();

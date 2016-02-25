@@ -56,9 +56,11 @@ FIND_PATH(LIBVLC_INCLUDE_DIR PATHS "${CMAKE_INCLUDE_PATH}/vlc" NAMES vlc.h)
 
 #Put here path to custom location
 #example: /home/user/vlc/lib etc..
-FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc
+FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc vlc
   HINTS "$ENV{LIBVLC_LIBRARY_PATH}"
   PATHS
+	"/usr/local/lib"
+	"/usr/local/lib/vlc"
     "$ENV{LIB_DIR}/lib"
     #Mac OS
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/lib"
@@ -71,9 +73,10 @@ FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc
     "c:/Program Files/VideoLAN/VLC/sdk/lib"
   )
 FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc)
-FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore
+FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore vlccore
   HINTS "$ENV{LIBVLC_LIBRARY_PATH}"
   PATHS
+	"/usr/local/lib"
     "$ENV{LIB_DIR}/lib"
     #Mac OS
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/lib"
@@ -99,6 +102,9 @@ IF (LIBVLC_FOUND)
    ENDIF (NOT LIBVLC_FIND_QUIETLY)
 ELSE (LIBVLC_FOUND)
    IF (LIBVLC_FIND_REQUIRED)
+      MESSAGE(STATUS "Found LibVLC include-dir path: ${LIBVLC_INCLUDE_DIR}")
+      MESSAGE(STATUS "Found LibVLC library path:${LIBVLC_LIBRARY}")
+      MESSAGE(STATUS "Found LibVLCcore library path:${LIBVLCCORE_LIBRARY}")
       MESSAGE(FATAL_ERROR "Could not find LibVLC")
    ENDIF (LIBVLC_FIND_REQUIRED)
 ENDIF (LIBVLC_FOUND)

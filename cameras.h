@@ -6,8 +6,6 @@
 
 #include "camerarepository.h"
 #include "abstractcamera.h"
-#include "localcamera.h"
-#include "rtspcamera.h"
 
 class Cameras : public QObject
 {

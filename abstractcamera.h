@@ -19,7 +19,7 @@ class AbstractCamera : public QObject
     Q_PROPERTY(int imageResolutionW READ imageResolutionW WRITE setImageResolutionW NOTIFY imageResolutionChanged)
 
 public:
-    AbstractCamera();
+    AbstractCamera(QObject *parent = 0);
     QString deviceId() const;
 
     QString userDefinedName() const;
