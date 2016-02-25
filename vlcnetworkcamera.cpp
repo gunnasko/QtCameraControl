@@ -20,26 +20,30 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
 
     vlcNetworkCameraView_->updateName(userDefinedName_);
 
-    connect(this, &AbstractCamera::userDefinedNameChanged, [=] {
+    username_connect_ = connect(this, &AbstractCamera::userDefinedNameChanged, [=] {
         vlcNetworkCameraView_->updateName(userDefinedName_);
     } );
 
-    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
-    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
+    onoff_connect_ = connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
+    snapshot_connect_ = connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
 
-    connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
+    error_connect_ = connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
         vlcNetworkCameraView_->updateMessageLabel("Error: " + VlcError::errmsg());
     } );
-    connect(mediaPlayer_, &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
+    snapshot_print_connect_ = connect(mediaPlayer_, &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
         vlcNetworkCameraView_->updateMessageLabel("Snapshot taken to: " + filePath);
     } );
-
-
-    connect(mediaPlayer_, &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
+    state_connect_ = connect(mediaPlayer_, &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
 }
 
 VlcNetworkCamera::~VlcNetworkCamera()
 {
+    disconnect(username_connect_);
+    disconnect(onoff_connect_);
+    disconnect(snapshot_connect_);
+    disconnect(error_connect_);
+    disconnect(snapshot_print_connect_);
+    disconnect(state_connect_);
     delete mediaPlayer_;
     delete media_;
     delete instance_;

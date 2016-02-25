@@ -53,7 +53,6 @@ void MainWindow::changeView(int index)
         currentView_->hide();
         layout_->removeWidget(currentView_.data());
         currentView_= cam->cameraGUI();
-        currentView_->setParent(this);
         layout_->insertWidget(0, currentView_.data());
         currentView_->show();
     }
