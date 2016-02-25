@@ -13,7 +13,7 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 {
     readSettings();
 
-    cameras_  = QSharedPointer<Cameras>(new Cameras(db_));
+    cameras_  = QSharedPointer<Cameras>(new Cameras(db_, this));
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
 
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));

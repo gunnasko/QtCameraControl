@@ -11,7 +11,7 @@ QSharedPointer<VlcWidgetVideo> VlcNetworkCameraView::vlcNetworkCameraView()
     return vlcNetworkCameraView_;
 }
 
-void VlcNetworkCameraView::setMediaPlayer(QSharedPointer<VlcMediaPlayer> mediaPlayer)
+void VlcNetworkCameraView::setMediaPlayer(VlcMediaPlayer *mediaPlayer)
 {
-    vlcNetworkCameraView_->setMediaPlayer(mediaPlayer.data());
+    vlcNetworkCameraView_->setMediaPlayer(mediaPlayer);
 }

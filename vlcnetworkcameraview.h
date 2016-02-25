@@ -11,7 +11,7 @@ class VlcNetworkCameraView : public AbstractCameraView
 public:
     explicit VlcNetworkCameraView(QWidget *parent = 0);
     QSharedPointer<VlcWidgetVideo> vlcNetworkCameraView();
-    void setMediaPlayer(QSharedPointer<VlcMediaPlayer> mediaPlayer);
+    void setMediaPlayer(VlcMediaPlayer *mediaPlayer);
 
 private:
     QSharedPointer<VlcWidgetVideo> vlcNetworkCameraView_;
