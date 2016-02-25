@@ -5,9 +5,9 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     deviceId_ = cameraAddress.toString();
     userDefinedName_ = deviceId_;
 
-    instance_ = QSharedPointer<VlcInstance>(new VlcInstance(VlcCommon::args(), this));
-    mediaPlayer_ = QSharedPointer<VlcMediaPlayer>(new VlcMediaPlayer(instance_.data()));
-    media_ = QSharedPointer<VlcMedia>(new VlcMedia(cameraAddress_.toString(), false, instance_.data()));
+    instance_ = new VlcInstance(VlcCommon::args(), this);
+    mediaPlayer_ = QSharedPointer<VlcMediaPlayer>(new VlcMediaPlayer(instance_));
+    media_ = QSharedPointer<VlcMedia>(new VlcMedia(cameraAddress_.toString(), false, instance_));
 
     auto tmp = QSharedPointer<VlcNetworkCameraView>(new VlcNetworkCameraView());
     tmp->vlcNetworkCameraView()->setMediaPlayer(mediaPlayer_.data());

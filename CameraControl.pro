@@ -18,6 +18,12 @@ unix{
     INCLUDEPATH += $$_PRO_FILE_PWD_/vlc-qt/linux-build/install/include
     LIBS += -L/usr/local/lib
 }
+win32{
+    LIBS += -L"C:/Program Files/VideoLAN/VLC/sdk/lib"
+    LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/lib"
+    LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/bin" -lVLCQtCore -lVLCQtWidgets
+    INCLUDEPATH += $$_PRO_FILE_PWD_/vlc-qt/win-build/install/include
+}
 
 CONFIG += c++11
 

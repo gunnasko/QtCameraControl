@@ -24,7 +24,7 @@ void Cameras::searchAndAddLocalCameras()
 
 void Cameras::addNetworkCamera(QUrl address)
 {
-    auto newCam = QSharedPointer<AbstractCamera>(new VlcNetworkCamera(address));
+    auto newCam = QSharedPointer<AbstractCamera>(new VlcNetworkCamera(address, this));
     camDb_->updateCamera(newCam);
     addCamera(newCam);
     emit(listChanged());
