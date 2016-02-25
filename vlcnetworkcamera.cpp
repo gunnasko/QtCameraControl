@@ -10,7 +10,8 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     media_ = QSharedPointer<VlcMedia>(new VlcMedia(cameraAddress_.toString(), false, instance_.data()));
 
     auto tmp = QSharedPointer<VlcNetworkCameraView>(new VlcNetworkCameraView());
-    tmp->vlcNetworkCameraView()->setMediaPlayer(mediaPlayer_.data());
+    mediaPlayer_->setVideoWidget(tmp->vlcNetworkCameraView().data());
+    tmp->setMediaPlayer(mediaPlayer_);
     vlcNetworkCameraView_ = tmp;
 
     vlcNetworkCameraView_->updateName(userDefinedName_);

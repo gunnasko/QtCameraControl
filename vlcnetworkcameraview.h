@@ -3,6 +3,7 @@
 
 #include "abstractcameraview.h"
 #include <VLCQtWidgets/WidgetVideo.h>
+#include <VLCQtCore/MediaPlayer.h>
 
 class VlcNetworkCameraView : public AbstractCameraView
 {
@@ -10,6 +11,7 @@ class VlcNetworkCameraView : public AbstractCameraView
 public:
     explicit VlcNetworkCameraView(QWidget *parent = 0);
     QSharedPointer<VlcWidgetVideo> vlcNetworkCameraView();
+    void setMediaPlayer(QSharedPointer<VlcMediaPlayer> mediaPlayer);
 
 private:
     QSharedPointer<VlcWidgetVideo> vlcNetworkCameraView_;
