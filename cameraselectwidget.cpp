@@ -13,7 +13,7 @@ CameraSelectWidget::CameraSelectWidget(QSharedPointer <CameraModel> camModel, QW
     auto camListView = new QListView(this);
     auto selectCamButton = new QPushButton("Change Camera", this);
     auto openSettingsButton = new QPushButton("Camera Settings", this);
-    camListView->setItemDelegate(new CameraSelectDelegate);
+    camListView->setItemDelegate(new CameraSelectDelegate(this));
     camListView->setModel(camModel_.data());
 
     connect(selectCamButton, &QPushButton::clicked, [=] {

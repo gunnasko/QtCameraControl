@@ -31,15 +31,25 @@ void CameraTests::getNewFileName_data()
     testFile2.open(QFile::WriteOnly);
     testFile2.close();
 
+    QFile testFile3("PNGImage1.png");
+    testFile3.open(QFile::WriteOnly);
+    testFile3.close();
+
+    QFile testFile4("PNGimage600.png");
+    testFile4.open(QFile::WriteOnly);
+    testFile4.close();
+
 
     QTest::addColumn<QString>("prefix");
     QTest::addColumn<QString>("path");
     QTest::addColumn<QString>("result");
 
-    QTest::newRow("First picture") << "img" << dirString << dirString + "/img1";
-    QTest::newRow("Test against file") << "IMG" << dirString << dirString + "/IMG2";
-    QTest::newRow("Test against file large number") << "IMAGE" << dirString << dirString + "/IMAGE501";
+    QTest::newRow("First image") << "img" << dirString << dirString + "/img1";
+    QTest::newRow("Test against jpg") << "IMG" << dirString << dirString + "/IMG2";
+    QTest::newRow("Test against jpg large number") << "IMAGE" << dirString << dirString + "/IMAGE501";
     QTest::newRow("Number in prefix") << "img04" << dirString << dirString + "/img041";
+    QTest::newRow("Test against png") << "PNGImage" << dirString << dirString + "/PNGImage2";
+    QTest::newRow("Test against file large png") << "PNGimage" << dirString << dirString + "/PNGimage601";
 }
 
 void CameraTests::getNewFileName()

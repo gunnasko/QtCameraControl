@@ -40,10 +40,10 @@ void AbstractCamera::copy(const AbstractCamera *other)
 
 QString AbstractCamera::getNewFileName(QString filePrefix, QDir dirLocation)
 {
-    auto files = dirLocation.entryList(QStringList()<<"*.jpg");
-    files = files.filter(QRegExp(filePrefix+"\\d*.jpg"));
+    auto files = dirLocation.entryList(QStringList()<<"*.jpg"<<"*.png");
+    files = files.filter(QRegExp(filePrefix+"\\d*(.jpg|.png)"));
     files.replaceInStrings(QRegExp(filePrefix),"");
-    files.replaceInStrings(QRegExp(".jpg"),"");
+    files.replaceInStrings(QRegExp("(.jpg|.png)"),"");
     int largestNum = 0;
     foreach(auto file, files) {
         int num = file.toInt();

@@ -1,5 +1,9 @@
 #include "vlcnetworkcamera.h"
 
+#include <VLCQtCore/Video.h>
+#include <QSettings>
+#include "settingskeys.h"
+
 VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : AbstractCamera(parent), cameraAddress_(cameraAddress)
 {
     deviceId_ = cameraAddress.toString();
@@ -21,11 +25,15 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     } );
 
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
+    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
 
     connect(mediaPlayer_.data(), &VlcMediaPlayer::error, [=] {
-        VlcError::showErrmsg();
         vlcNetworkCameraView_->updateMessageLabel("Error: " + VlcError::errmsg());
     } );
+    connect(mediaPlayer_.data(), &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
+        vlcNetworkCameraView_->updateMessageLabel("Snapshot taken to: " + filePath);
+    } );
+
 
     connect(mediaPlayer_.data(), &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
 }
@@ -96,4 +104,11 @@ void VlcNetworkCamera::printCurrentState()
         toPrint = "Wrong state!";
     }
     vlcNetworkCameraView_->updateMessageLabel(toPrint);
+}
+
+void VlcNetworkCamera::takeSnapShot()
+{
+    QSettings settings;
+    auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
+    mediaPlayer_->video()->takeSnapshot(getNewFileName("IMG", imageLocation) + ".png");
 }

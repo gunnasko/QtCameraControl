@@ -4,11 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QDir>
-
-#include <QImageEncoderSettings>
-#include <QMediaRecorder>
-#include <QCameraImageCapture>
-
+#include <QSize>
 
 class AbstractCamera : public QObject
 {

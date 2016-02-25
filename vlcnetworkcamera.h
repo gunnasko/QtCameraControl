@@ -24,6 +24,7 @@ public:
 private slots:
     void onOffStream(bool);
     void printCurrentState();
+    void takeSnapShot();
 
 private:
     QUrl cameraAddress_;

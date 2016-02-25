@@ -3,6 +3,10 @@
 
 #include "abstractcamera.h"
 
+#include <QImageEncoderSettings>
+#include <QMediaRecorder>
+#include <QCameraImageCapture>
+
 class QtCamera : public AbstractCamera
 {
     Q_OBJECT

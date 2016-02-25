@@ -6,6 +6,7 @@ QT += testlib
 TEMPLATE = app
 TARGET = tests
 INCLUDEPATH += . \..
+CONFIG += c++11
 
 # Input
 HEADERS += ..\abstractcamera.h
