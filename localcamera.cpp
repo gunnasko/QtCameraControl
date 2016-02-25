@@ -21,8 +21,8 @@ LocalCamera::LocalCamera(const QCameraInfo &camInfo, QObject *parent) : Abstract
 
 void LocalCamera::init()
 {
-    videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data()));
-    imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data()));
+    videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data(), this));
+    imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data(), this));
     imageCapture_->setEncodingSettings(imageEncodeSettings_);
 
     auto tmp = QSharedPointer<LocalCameraView>(new LocalCameraView());

@@ -20,9 +20,16 @@ unix{
 }
 win32{
     LIBS += -L"C:/Program Files/VideoLAN/VLC/sdk/lib"
-    LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/lib"
-    LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/bin" -lVLCQtCore -lVLCQtWidgets
     INCLUDEPATH += $$_PRO_FILE_PWD_/vlc-qt/win-build/install/include
+
+    CONFIG(debug, debug|release) {
+        LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build-debug/install/lib"
+        LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build-debug/install/bin" -lVLCQtCore -lVLCQtWidgets
+    }
+    CONFIG(release, debug|release){
+        LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/lib"
+        LIBS += -L"$$_PRO_FILE_PWD_/vlc-qt/win-build/install/bin" -lVLCQtCore -lVLCQtWidgets
+    }
 }
 
 CONFIG += c++11
