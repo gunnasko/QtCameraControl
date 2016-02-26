@@ -35,6 +35,9 @@ private:
     VlcInstance *instance_;
     VlcMedia *media_;
 
+    void runFunctionWhenInState(Vlc::State, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs);
+    bool checkState(Vlc::State state, QTimer* timer, void (VlcNetworkCamera::*funcptr)());
+
     QSharedPointer<VlcNetworkCameraView> vlcNetworkCameraView_;
 };
 

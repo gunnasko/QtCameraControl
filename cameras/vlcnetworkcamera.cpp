@@ -135,6 +135,34 @@ void VlcNetworkCamera::startStopRecording(bool on)
         vlcNetworkCameraView_->updateMessageLabel("Recorded to: " + output);
         qDebug()<<"Recorded to: " << output;
     }
-    mediaPlayer_->play();
+    runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
+}
 
+void VlcNetworkCamera::runFunctionWhenInState(Vlc::State state, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs)
+{
+    QTimer *timer = new QTimer(this);
+    QTimer *timeOut = new QTimer(this);
+    connect(timer, &QTimer::timeout, [=]() {
+        if(checkState(state, timer, (funcptr)))
+            timeOut->stop();
+    } );
+    connect(timeOut, &QTimer::timeout, [=]() {
+        timeOut->stop();
+        timer->stop();
+    } );
+    timer->start(10);
+    timeOut->start(timeoutInMs);
+}
+
+bool VlcNetworkCamera::checkState(Vlc::State state, QTimer *timer, void (VlcNetworkCamera::*funcptr)())
+{
+    if(mediaPlayer_->state()==state)
+    {
+        timer->stop();
+        if(funcptr != NULL)
+            (this->*funcptr)();
+        return true;
+    } else {
+        return false;
+    }
 }
