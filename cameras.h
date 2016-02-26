@@ -12,6 +12,7 @@ class Cameras : public QObject
     Q_OBJECT
 public:
     Cameras(QSharedPointer<DataBase> db, QObject *parent = 0);
+    ~Cameras();
     QSharedPointer<AbstractCamera> getCamera(QString deviceName);
     QSharedPointer<AbstractCamera> getCamera(int index);
     QList <QSharedPointer<AbstractCamera>> getCameras() const;
@@ -31,6 +32,7 @@ private:
     void addCamera(const QSharedPointer<AbstractCamera> camera);
     void clearNotRunning();
     QList <QSharedPointer<AbstractCamera> > cameras_;
+    QList <QMetaObject::Connection > dbConnections_;
     QSharedPointer<CameraRepository> camDb_;
 };
 

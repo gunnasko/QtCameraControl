@@ -61,7 +61,6 @@ void QtLocalCamera::init()
         Q_UNUSED(id);
         qtLocalCameraView_->updateMessageLabel("Saved image in: " + fileName);
     } );
-
     camera_->load();
 }
 

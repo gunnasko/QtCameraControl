@@ -1,3 +1,4 @@
+#define QT_SHAREDPOINTER_TRACK_POINTERS
 #include "mainwindow.h"
 #include <QApplication>
 

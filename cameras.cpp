@@ -8,6 +8,14 @@ Cameras::Cameras(QSharedPointer<DataBase> db, QObject *parent) : QObject(parent)
     camDb_ = QSharedPointer<CameraRepository>(new CameraRepository(db));
 }
 
+Cameras::~Cameras()
+{
+    for(int i = 0; i < cameras_.count(); i++) {
+        deleteCamera(i);
+        emit(listChanged());
+    }
+}
+
 void Cameras::searchAndAddLocalCameras()
 {
     clearNotRunning();
@@ -34,7 +42,8 @@ void Cameras::addCamera(const QSharedPointer<AbstractCamera> camera)
 {
     cameras_.append(camera);
     camDb_->saveCamera(camera);
-    connect(camera.data(), &AbstractCamera::dataChanged, [=] {camDb_->saveCamera(camera);});
+    auto dbConnect = connect(camera.data(), &AbstractCamera::dataChanged, [=] {camDb_->saveCamera(camera);});
+    dbConnections_.append(dbConnect);
 }
 
 void Cameras::clearNotRunning()
@@ -90,7 +99,11 @@ bool Cameras::containsCamera(const QString deviceName)
 void Cameras::deleteCamera(int index)
 {
     if(index >= 0 && index < cameras_.count()) {
-        cameras_.removeAt(index);
+        auto cam = cameras_.takeAt(index);
+        cam.clear();
+        if(index < dbConnections_.count()) {
+            disconnect(dbConnections_.takeAt(index));
+        }
         emit(listChanged());
     }
 }

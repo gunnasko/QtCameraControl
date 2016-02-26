@@ -1,4 +1,5 @@
 #include "vlcnetworkcameraview.h"
+#include <QDebug>
 
 VlcNetworkCameraView::VlcNetworkCameraView(QWidget *parent) : AbstractCameraView(parent)
 {

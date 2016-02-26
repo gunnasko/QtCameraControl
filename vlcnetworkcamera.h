@@ -33,14 +33,6 @@ private:
     VlcInstance *instance_;
     VlcMedia *media_;
     QSharedPointer<VlcNetworkCameraView> vlcNetworkCameraView_;
-
-    QMetaObject::Connection username_connect_;
-    QMetaObject::Connection onoff_connect_;
-    QMetaObject::Connection snapshot_print_connect_;
-    QMetaObject::Connection snapshot_connect_;
-    QMetaObject::Connection state_connect_;
-    QMetaObject::Connection error_connect_;
-
 };
 
 #endif // VLCNETWORKCAMERA_H
