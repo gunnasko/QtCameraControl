@@ -26,6 +26,6 @@ void QtCamera::captureImage()
     QSettings settings;
     imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
     auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
-    imageCapture_->capture(getNewFileName("IMG", imageLocation));
+    imageCapture_->capture(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation));
 }
 

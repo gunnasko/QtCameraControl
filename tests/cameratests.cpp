@@ -1,6 +1,6 @@
 #include <QtTest/QTest>
 #include <QFile>
-#include "../abstractcamera.h"
+#include "../cameras/abstractcamera.h"
 
 class CameraTests : public QObject
 {
@@ -39,17 +39,30 @@ void CameraTests::getNewFileName_data()
     testFile4.open(QFile::WriteOnly);
     testFile4.close();
 
+    QFile testFile5("avivid1.avi");
+    testFile5.open(QFile::WriteOnly);
+    testFile5.close();
+
+
+    QFile testFile6("mp4vid1.mp4");
+    testFile6.open(QFile::WriteOnly);
+    testFile6.close();
+
+
 
     QTest::addColumn<QString>("prefix");
     QTest::addColumn<QString>("path");
     QTest::addColumn<QString>("result");
 
-    QTest::newRow("First image") << "img" << dirString << dirString + "/img1";
-    QTest::newRow("Test against jpg") << "IMG" << dirString << dirString + "/IMG2";
-    QTest::newRow("Test against jpg large number") << "IMAGE" << dirString << dirString + "/IMAGE501";
-    QTest::newRow("Number in prefix") << "img04" << dirString << dirString + "/img041";
-    QTest::newRow("Test against png") << "PNGImage" << dirString << dirString + "/PNGImage2";
-    QTest::newRow("Test against file large png") << "PNGimage" << dirString << dirString + "/PNGimage601";
+    QTest::newRow("First image") << "img" << dirString << "img1";
+    QTest::newRow("Test against jpg") << "IMG" << dirString << "IMG2";
+    QTest::newRow("Test against jpg large number") << "IMAGE" << dirString <<  "IMAGE501";
+    QTest::newRow("Number in prefix") << "img04" << dirString << "img041";
+    QTest::newRow("Test against png") << "PNGImage" << dirString <<  "PNGImage2";
+    QTest::newRow("Test against file large png") << "PNGimage" << dirString <<  "PNGimage601";
+    QTest::newRow("Test against avi") << "avivid" << dirString <<  "avivid2";
+    QTest::newRow("Test against mp4") << "mp4vid" << dirString <<  "mp4vid2";
+
 }
 
 void CameraTests::getNewFileName()

@@ -9,7 +9,7 @@ INCLUDEPATH += . \..
 CONFIG += c++11
 
 # Input
-HEADERS += ..\abstractcamera.h
+HEADERS += ..\cameras\abstractcamera.h
 
 SOURCES += cameratests.cpp \
-            ..\abstractcamera.cpp
+            ..\cameras\abstractcamera.cpp

@@ -27,12 +27,14 @@ private slots:
     void onOffStream(bool);
     void printCurrentState();
     void takeSnapShot();
+    void startStopRecording(bool);
 
 private:
     QUrl cameraAddress_;
     VlcMediaPlayer *mediaPlayer_;
     VlcInstance *instance_;
     VlcMedia *media_;
+
     QSharedPointer<VlcNetworkCameraView> vlcNetworkCameraView_;
 };
 

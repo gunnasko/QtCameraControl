@@ -27,6 +27,7 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
 
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
+    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::toggleRecord, this, &VlcNetworkCamera::startStopRecording);
 
     connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
         vlcNetworkCameraView_->updateMessageLabel("Error: " + VlcError::errmsg());
@@ -116,5 +117,24 @@ void VlcNetworkCamera::takeSnapShot()
 {
     QSettings settings;
     auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
-    mediaPlayer_->video()->takeSnapshot(getNewFileName("IMG", imageLocation) + ".png");
+    mediaPlayer_->video()->takeSnapshot(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png");
+}
+
+void VlcNetworkCamera::startStopRecording(bool on)
+{
+    static QString output;
+    mediaPlayer_->stop();
+    if(on) {
+        QSettings settings;
+        auto vidLocation = QDir(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+        output = media_->record(getNewFileName("VID", vidLocation), vidLocation.absolutePath(), Vlc::MP4, true);
+    } else {
+
+        delete media_;
+        media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
+        vlcNetworkCameraView_->updateMessageLabel("Recorded to: " + output);
+        qDebug()<<"Recorded to: " << output;
+    }
+    mediaPlayer_->play();
+
 }
