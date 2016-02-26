@@ -1,8 +1,8 @@
-# Install script for directory: /home/andreas/CameraControl/vlc-qt/src
+# Install script for directory: /home/andreas/CameraControl/third-party_libs/vlc-qt/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/vlc-qt/linux-build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/andreas/CameraControl/vlc-qt/linux-build/src/core/cmake_install.cmake")
-  include("/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/cmake_install.cmake")
-  include("/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/cmake_install.cmake")
+  include("/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/cmake_install.cmake")
+  include("/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/cmake_install.cmake")
+  include("/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/cmake_install.cmake")
 
 endif()
 

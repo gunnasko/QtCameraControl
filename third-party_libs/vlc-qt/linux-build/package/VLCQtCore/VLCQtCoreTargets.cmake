@@ -44,7 +44,7 @@ add_library(VLCQt::Core SHARED IMPORTED)
 # Import target "VLCQt::Core" for configuration ""
 set_property(TARGET VLCQt::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(VLCQt::Core PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
+  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
   IMPORTED_SONAME_NOCONFIG "libVLCQtCore.so.1.0"
   )
 

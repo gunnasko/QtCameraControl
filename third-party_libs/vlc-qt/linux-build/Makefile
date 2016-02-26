@@ -51,10 +51,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,9 +127,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -248,32 +248,6 @@ Qml_automoc/fast:
 	$(MAKE) -f src/qml/CMakeFiles/Qml_automoc.dir/build.make src/qml/CMakeFiles/Qml_automoc.dir/build
 .PHONY : Qml_automoc/fast
 
-#=============================================================================
-# Target rules for targets named VLC-Qt
-
-# Build rule for target.
-VLC-Qt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 VLC-Qt
-.PHONY : VLC-Qt
-
-# fast build rule for target.
-VLC-Qt/fast:
-	$(MAKE) -f tests/CMakeFiles/VLC-Qt.dir/build.make tests/CMakeFiles/VLC-Qt.dir/build
-.PHONY : VLC-Qt/fast
-
-#=============================================================================
-# Target rules for targets named VLC-Qt_automoc
-
-# Build rule for target.
-VLC-Qt_automoc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 VLC-Qt_automoc
-.PHONY : VLC-Qt_automoc
-
-# fast build rule for target.
-VLC-Qt_automoc/fast:
-	$(MAKE) -f tests/CMakeFiles/VLC-Qt_automoc.dir/build.make tests/CMakeFiles/VLC-Qt_automoc.dir/build
-.PHONY : VLC-Qt_automoc/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -293,8 +267,6 @@ help:
 	@echo "... Widgets_automoc"
 	@echo "... Qml"
 	@echo "... Qml_automoc"
-	@echo "... VLC-Qt"
-	@echo "... VLC-Qt_automoc"
 .PHONY : help
 
 

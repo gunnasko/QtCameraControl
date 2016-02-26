@@ -3,7 +3,7 @@
 
 #include <QAbstractListModel>
 
-#include "cameras.h"
+#include "cameras/cameras.h"
 
 class CameraModelElement : public QObject
 {

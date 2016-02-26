@@ -44,7 +44,7 @@ add_library(VLCQt::Qml SHARED IMPORTED)
 # Import target "VLCQt::Qml" for configuration ""
 set_property(TARGET VLCQt::Qml APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(VLCQt::Qml PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/libVLCQtQml.so.1.0.1"
+  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/libVLCQtQml.so.1.0.1"
   IMPORTED_SONAME_NOCONFIG "libVLCQtQml.so.1.0"
   )
 

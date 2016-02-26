@@ -46,10 +46,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 # Utility rule file for Qml_automoc.
 
@@ -57,8 +57,8 @@ CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
 include src/qml/CMakeFiles/Qml_automoc.dir/progress.make
 
 src/qml/CMakeFiles/Qml_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc, uic and rcc for target Qml"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/qml && /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E cmake_autogen /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/CMakeFiles/Qml_automoc.dir/ ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc, uic and rcc for target Qml"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml && /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E cmake_autogen /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/CMakeFiles/Qml_automoc.dir/ ""
 
 Qml_automoc: src/qml/CMakeFiles/Qml_automoc
 Qml_automoc: src/qml/CMakeFiles/Qml_automoc.dir/build.make
@@ -71,10 +71,10 @@ src/qml/CMakeFiles/Qml_automoc.dir/build: Qml_automoc
 .PHONY : src/qml/CMakeFiles/Qml_automoc.dir/build
 
 src/qml/CMakeFiles/Qml_automoc.dir/clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/qml && $(CMAKE_COMMAND) -P CMakeFiles/Qml_automoc.dir/cmake_clean.cmake
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml && $(CMAKE_COMMAND) -P CMakeFiles/Qml_automoc.dir/cmake_clean.cmake
 .PHONY : src/qml/CMakeFiles/Qml_automoc.dir/clean
 
 src/qml/CMakeFiles/Qml_automoc.dir/depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/vlc-qt /home/andreas/CameraControl/vlc-qt/src/qml /home/andreas/CameraControl/vlc-qt/linux-build /home/andreas/CameraControl/vlc-qt/linux-build/src/qml /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/CMakeFiles/Qml_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/third-party_libs/vlc-qt /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/CMakeFiles/Qml_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/qml/CMakeFiles/Qml_automoc.dir/depend
 

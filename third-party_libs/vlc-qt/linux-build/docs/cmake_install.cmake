@@ -1,8 +1,8 @@
-# Install script for directory: /home/andreas/CameraControl/vlc-qt/docs
+# Install script for directory: /home/andreas/CameraControl/third-party_libs/vlc-qt/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/vlc-qt/linux-build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

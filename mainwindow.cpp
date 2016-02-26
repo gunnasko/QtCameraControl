@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-#include "camerasettingsdialog.h"
+#include "dialogs/camerasettingsdialog.h"
 
 #include <QDebug>
 #include <QHBoxLayout>

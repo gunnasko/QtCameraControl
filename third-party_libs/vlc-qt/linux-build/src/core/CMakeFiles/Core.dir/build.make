@@ -46,10 +46,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 # Include any dependencies generated for this target.
 include src/core/CMakeFiles/Core.dir/depend.make
@@ -62,16 +62,16 @@ include src/core/CMakeFiles/Core.dir/flags.make
 
 src/core/CMakeFiles/Core.dir/Audio.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Audio.cpp.o: ../src/core/Audio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/core/CMakeFiles/Core.dir/Audio.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Audio.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Audio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/core/CMakeFiles/Core.dir/Audio.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Audio.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Audio.cpp
 
 src/core/CMakeFiles/Core.dir/Audio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Audio.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Audio.cpp > CMakeFiles/Core.dir/Audio.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Audio.cpp > CMakeFiles/Core.dir/Audio.cpp.i
 
 src/core/CMakeFiles/Core.dir/Audio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Audio.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Audio.cpp -o CMakeFiles/Core.dir/Audio.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Audio.cpp -o CMakeFiles/Core.dir/Audio.cpp.s
 
 src/core/CMakeFiles/Core.dir/Audio.cpp.o.requires:
 
@@ -86,16 +86,16 @@ src/core/CMakeFiles/Core.dir/Audio.cpp.o.provides.build: src/core/CMakeFiles/Cor
 
 src/core/CMakeFiles/Core.dir/Common.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Common.cpp.o: ../src/core/Common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/core/CMakeFiles/Core.dir/Common.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Common.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/core/CMakeFiles/Core.dir/Common.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Common.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Common.cpp
 
 src/core/CMakeFiles/Core.dir/Common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Common.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Common.cpp > CMakeFiles/Core.dir/Common.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Common.cpp > CMakeFiles/Core.dir/Common.cpp.i
 
 src/core/CMakeFiles/Core.dir/Common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Common.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Common.cpp -o CMakeFiles/Core.dir/Common.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Common.cpp -o CMakeFiles/Core.dir/Common.cpp.s
 
 src/core/CMakeFiles/Core.dir/Common.cpp.o.requires:
 
@@ -110,16 +110,16 @@ src/core/CMakeFiles/Core.dir/Common.cpp.o.provides.build: src/core/CMakeFiles/Co
 
 src/core/CMakeFiles/Core.dir/Enums.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Enums.cpp.o: ../src/core/Enums.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/core/CMakeFiles/Core.dir/Enums.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Enums.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Enums.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/core/CMakeFiles/Core.dir/Enums.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Enums.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Enums.cpp
 
 src/core/CMakeFiles/Core.dir/Enums.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Enums.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Enums.cpp > CMakeFiles/Core.dir/Enums.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Enums.cpp > CMakeFiles/Core.dir/Enums.cpp.i
 
 src/core/CMakeFiles/Core.dir/Enums.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Enums.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Enums.cpp -o CMakeFiles/Core.dir/Enums.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Enums.cpp -o CMakeFiles/Core.dir/Enums.cpp.s
 
 src/core/CMakeFiles/Core.dir/Enums.cpp.o.requires:
 
@@ -134,16 +134,16 @@ src/core/CMakeFiles/Core.dir/Enums.cpp.o.provides.build: src/core/CMakeFiles/Cor
 
 src/core/CMakeFiles/Core.dir/Error.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Error.cpp.o: ../src/core/Error.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/core/CMakeFiles/Core.dir/Error.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Error.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/core/CMakeFiles/Core.dir/Error.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Error.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Error.cpp
 
 src/core/CMakeFiles/Core.dir/Error.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Error.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Error.cpp > CMakeFiles/Core.dir/Error.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Error.cpp > CMakeFiles/Core.dir/Error.cpp.i
 
 src/core/CMakeFiles/Core.dir/Error.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Error.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Error.cpp -o CMakeFiles/Core.dir/Error.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Error.cpp -o CMakeFiles/Core.dir/Error.cpp.s
 
 src/core/CMakeFiles/Core.dir/Error.cpp.o.requires:
 
@@ -158,16 +158,16 @@ src/core/CMakeFiles/Core.dir/Error.cpp.o.provides.build: src/core/CMakeFiles/Cor
 
 src/core/CMakeFiles/Core.dir/Instance.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Instance.cpp.o: ../src/core/Instance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/core/CMakeFiles/Core.dir/Instance.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Instance.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Instance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/core/CMakeFiles/Core.dir/Instance.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Instance.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Instance.cpp
 
 src/core/CMakeFiles/Core.dir/Instance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Instance.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Instance.cpp > CMakeFiles/Core.dir/Instance.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Instance.cpp > CMakeFiles/Core.dir/Instance.cpp.i
 
 src/core/CMakeFiles/Core.dir/Instance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Instance.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Instance.cpp -o CMakeFiles/Core.dir/Instance.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Instance.cpp -o CMakeFiles/Core.dir/Instance.cpp.s
 
 src/core/CMakeFiles/Core.dir/Instance.cpp.o.requires:
 
@@ -182,16 +182,16 @@ src/core/CMakeFiles/Core.dir/Instance.cpp.o.provides.build: src/core/CMakeFiles/
 
 src/core/CMakeFiles/Core.dir/Media.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Media.cpp.o: ../src/core/Media.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/core/CMakeFiles/Core.dir/Media.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Media.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Media.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/core/CMakeFiles/Core.dir/Media.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Media.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Media.cpp
 
 src/core/CMakeFiles/Core.dir/Media.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Media.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Media.cpp > CMakeFiles/Core.dir/Media.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Media.cpp > CMakeFiles/Core.dir/Media.cpp.i
 
 src/core/CMakeFiles/Core.dir/Media.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Media.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Media.cpp -o CMakeFiles/Core.dir/Media.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Media.cpp -o CMakeFiles/Core.dir/Media.cpp.s
 
 src/core/CMakeFiles/Core.dir/Media.cpp.o.requires:
 
@@ -206,16 +206,16 @@ src/core/CMakeFiles/Core.dir/Media.cpp.o.provides.build: src/core/CMakeFiles/Cor
 
 src/core/CMakeFiles/Core.dir/MediaList.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/MediaList.cpp.o: ../src/core/MediaList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/core/CMakeFiles/Core.dir/MediaList.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaList.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/MediaList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/core/CMakeFiles/Core.dir/MediaList.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaList.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaList.cpp
 
 src/core/CMakeFiles/Core.dir/MediaList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/MediaList.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/MediaList.cpp > CMakeFiles/Core.dir/MediaList.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaList.cpp > CMakeFiles/Core.dir/MediaList.cpp.i
 
 src/core/CMakeFiles/Core.dir/MediaList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/MediaList.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/MediaList.cpp -o CMakeFiles/Core.dir/MediaList.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaList.cpp -o CMakeFiles/Core.dir/MediaList.cpp.s
 
 src/core/CMakeFiles/Core.dir/MediaList.cpp.o.requires:
 
@@ -230,16 +230,16 @@ src/core/CMakeFiles/Core.dir/MediaList.cpp.o.provides.build: src/core/CMakeFiles
 
 src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o: ../src/core/MediaListPlayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaListPlayer.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/MediaListPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaListPlayer.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.cpp
 
 src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/MediaListPlayer.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/MediaListPlayer.cpp > CMakeFiles/Core.dir/MediaListPlayer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.cpp > CMakeFiles/Core.dir/MediaListPlayer.cpp.i
 
 src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/MediaListPlayer.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/MediaListPlayer.cpp -o CMakeFiles/Core.dir/MediaListPlayer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.cpp -o CMakeFiles/Core.dir/MediaListPlayer.cpp.s
 
 src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o.requires:
 
@@ -254,16 +254,16 @@ src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o.provides.build: src/core/CMak
 
 src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o: ../src/core/MediaPlayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaPlayer.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/MediaPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MediaPlayer.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.cpp
 
 src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/MediaPlayer.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/MediaPlayer.cpp > CMakeFiles/Core.dir/MediaPlayer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.cpp > CMakeFiles/Core.dir/MediaPlayer.cpp.i
 
 src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/MediaPlayer.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/MediaPlayer.cpp -o CMakeFiles/Core.dir/MediaPlayer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.cpp -o CMakeFiles/Core.dir/MediaPlayer.cpp.s
 
 src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o.requires:
 
@@ -278,16 +278,16 @@ src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o.provides.build: src/core/CMakeFil
 
 src/core/CMakeFiles/Core.dir/MetaManager.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/MetaManager.cpp.o: ../src/core/MetaManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/core/CMakeFiles/Core.dir/MetaManager.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MetaManager.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/MetaManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/core/CMakeFiles/Core.dir/MetaManager.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/MetaManager.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MetaManager.cpp
 
 src/core/CMakeFiles/Core.dir/MetaManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/MetaManager.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/MetaManager.cpp > CMakeFiles/Core.dir/MetaManager.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MetaManager.cpp > CMakeFiles/Core.dir/MetaManager.cpp.i
 
 src/core/CMakeFiles/Core.dir/MetaManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/MetaManager.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/MetaManager.cpp -o CMakeFiles/Core.dir/MetaManager.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MetaManager.cpp -o CMakeFiles/Core.dir/MetaManager.cpp.s
 
 src/core/CMakeFiles/Core.dir/MetaManager.cpp.o.requires:
 
@@ -302,16 +302,16 @@ src/core/CMakeFiles/Core.dir/MetaManager.cpp.o.provides.build: src/core/CMakeFil
 
 src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o: ../src/core/ModuleDescription.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/ModuleDescription.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/ModuleDescription.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/ModuleDescription.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.cpp
 
 src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/ModuleDescription.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/ModuleDescription.cpp > CMakeFiles/Core.dir/ModuleDescription.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.cpp > CMakeFiles/Core.dir/ModuleDescription.cpp.i
 
 src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/ModuleDescription.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/ModuleDescription.cpp -o CMakeFiles/Core.dir/ModuleDescription.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.cpp -o CMakeFiles/Core.dir/ModuleDescription.cpp.s
 
 src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o.requires:
 
@@ -326,16 +326,16 @@ src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o.provides.build: src/core/CM
 
 src/core/CMakeFiles/Core.dir/Video.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Video.cpp.o: ../src/core/Video.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/core/CMakeFiles/Core.dir/Video.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Video.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/core/CMakeFiles/Core.dir/Video.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Video.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Video.cpp
 
 src/core/CMakeFiles/Core.dir/Video.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Video.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Video.cpp > CMakeFiles/Core.dir/Video.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Video.cpp > CMakeFiles/Core.dir/Video.cpp.i
 
 src/core/CMakeFiles/Core.dir/Video.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Video.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Video.cpp -o CMakeFiles/Core.dir/Video.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Video.cpp -o CMakeFiles/Core.dir/Video.cpp.s
 
 src/core/CMakeFiles/Core.dir/Video.cpp.o.requires:
 
@@ -350,16 +350,16 @@ src/core/CMakeFiles/Core.dir/Video.cpp.o.provides.build: src/core/CMakeFiles/Cor
 
 src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o: ../src/core/VideoMemoryStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/VideoMemoryStream.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/VideoMemoryStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/VideoMemoryStream.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.cpp
 
 src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/VideoMemoryStream.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/VideoMemoryStream.cpp > CMakeFiles/Core.dir/VideoMemoryStream.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.cpp > CMakeFiles/Core.dir/VideoMemoryStream.cpp.i
 
 src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/VideoMemoryStream.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/VideoMemoryStream.cpp -o CMakeFiles/Core.dir/VideoMemoryStream.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.cpp -o CMakeFiles/Core.dir/VideoMemoryStream.cpp.s
 
 src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o.requires:
 
@@ -374,16 +374,16 @@ src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o.provides.build: src/core/CM
 
 src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o: ../src/core/VideoFrame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/VideoFrame.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/VideoFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/VideoFrame.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.cpp
 
 src/core/CMakeFiles/Core.dir/VideoFrame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/VideoFrame.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/VideoFrame.cpp > CMakeFiles/Core.dir/VideoFrame.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.cpp > CMakeFiles/Core.dir/VideoFrame.cpp.i
 
 src/core/CMakeFiles/Core.dir/VideoFrame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/VideoFrame.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/VideoFrame.cpp -o CMakeFiles/Core.dir/VideoFrame.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.cpp -o CMakeFiles/Core.dir/VideoFrame.cpp.s
 
 src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o.requires:
 
@@ -398,16 +398,16 @@ src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o.provides.build: src/core/CMakeFile
 
 src/core/CMakeFiles/Core.dir/Equalizer.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Equalizer.cpp.o: ../src/core/Equalizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/core/CMakeFiles/Core.dir/Equalizer.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Equalizer.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/core/Equalizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/core/CMakeFiles/Core.dir/Equalizer.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Equalizer.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Equalizer.cpp
 
 src/core/CMakeFiles/Core.dir/Equalizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Equalizer.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/core/Equalizer.cpp > CMakeFiles/Core.dir/Equalizer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Equalizer.cpp > CMakeFiles/Core.dir/Equalizer.cpp.i
 
 src/core/CMakeFiles/Core.dir/Equalizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Equalizer.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/core/Equalizer.cpp -o CMakeFiles/Core.dir/Equalizer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Equalizer.cpp -o CMakeFiles/Core.dir/Equalizer.cpp.s
 
 src/core/CMakeFiles/Core.dir/Equalizer.cpp.o.requires:
 
@@ -422,16 +422,16 @@ src/core/CMakeFiles/Core.dir/Equalizer.cpp.o.provides.build: src/core/CMakeFiles
 
 src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o: src/core/CMakeFiles/Core.dir/flags.make
 src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o: src/core/Core_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Core_automoc.cpp.o -c /home/andreas/CameraControl/vlc-qt/linux-build/src/core/Core_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Core.dir/Core_automoc.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/Core_automoc.cpp
 
 src/core/CMakeFiles/Core.dir/Core_automoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Core.dir/Core_automoc.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/linux-build/src/core/Core_automoc.cpp > CMakeFiles/Core.dir/Core_automoc.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/Core_automoc.cpp > CMakeFiles/Core.dir/Core_automoc.cpp.i
 
 src/core/CMakeFiles/Core.dir/Core_automoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Core.dir/Core_automoc.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/linux-build/src/core/Core_automoc.cpp -o CMakeFiles/Core.dir/Core_automoc.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/Core_automoc.cpp -o CMakeFiles/Core.dir/Core_automoc.cpp.s
 
 src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o.requires:
 
@@ -487,10 +487,10 @@ src/core/libVLCQtCore.so.1.0.1: /home/andreas/Qt/5.5/gcc_64/lib/libQt5Core.so.5.
 src/core/libVLCQtCore.so.1.0.1: /usr/local/lib/libvlc.so
 src/core/libVLCQtCore.so.1.0.1: /usr/local/lib/libvlccore.so
 src/core/libVLCQtCore.so.1.0.1: src/core/CMakeFiles/Core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libVLCQtCore.so"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Core.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -E cmake_symlink_library libVLCQtCore.so.1.0.1 libVLCQtCore.so.1.0 libVLCQtCore.so
-	/home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E create_symlink /home/andreas/CameraControl/vlc-qt/src/core include/VLCQtCore
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libVLCQtCore.so"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Core.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -E cmake_symlink_library libVLCQtCore.so.1.0.1 libVLCQtCore.so.1.0 libVLCQtCore.so
+	/home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E create_symlink /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core include/VLCQtCore
 
 src/core/libVLCQtCore.so.1.0: src/core/libVLCQtCore.so.1.0.1
 	@$(CMAKE_COMMAND) -E touch_nocreate src/core/libVLCQtCore.so.1.0
@@ -523,10 +523,10 @@ src/core/CMakeFiles/Core.dir/requires: src/core/CMakeFiles/Core.dir/Core_automoc
 .PHONY : src/core/CMakeFiles/Core.dir/requires
 
 src/core/CMakeFiles/Core.dir/clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -P CMakeFiles/Core.dir/cmake_clean.cmake
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core && $(CMAKE_COMMAND) -P CMakeFiles/Core.dir/cmake_clean.cmake
 .PHONY : src/core/CMakeFiles/Core.dir/clean
 
 src/core/CMakeFiles/Core.dir/depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/vlc-qt /home/andreas/CameraControl/vlc-qt/src/core /home/andreas/CameraControl/vlc-qt/linux-build /home/andreas/CameraControl/vlc-qt/linux-build/src/core /home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/third-party_libs/vlc-qt /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/core/CMakeFiles/Core.dir/depend
 

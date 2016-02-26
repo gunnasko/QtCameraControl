@@ -146,37 +146,37 @@ QtQuick/QQuickItem
 qml/painter/GlPainter.h
 ../src/qml/painter/qml/painter/GlPainter.h
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/Qml_automoc.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/Qml_automoc.cpp
 moc_QmlVideoObject.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
 moc_QmlVideoPlayer.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
 ../../../src/qml/QmlVideoObject.h
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
 ../../../src/qml/QmlVideoPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoPlayer.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.cpp
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/MediaPlayer.h
 qml/QmlVideoObject.h
-/home/andreas/CameraControl/vlc-qt/src/qml/qml/QmlVideoObject.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/qml/QmlVideoObject.h
 qml/painter/GlslPainter.h
-/home/andreas/CameraControl/vlc-qt/src/qml/qml/painter/GlslPainter.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/qml/painter/GlslPainter.h
 
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.h
 QtCore/QMap
 -
 QtCore/QMutex
@@ -190,55 +190,55 @@ VLCQtCore/VideoFrame.h
 VLCQtCore/VideoMemoryStream.h
 -
 SharedExportQml.h
-/home/andreas/CameraControl/vlc-qt/src/qml/SharedExportQml.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/SharedExportQml.h
 
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoPlayer.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoPlayer.cpp
 QtCore/QDebug
 -
 QtQml/QQmlEngine
 -
 Config.h
-/home/andreas/CameraControl/vlc-qt/src/qml/Config.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/Config.h
 core/Video.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/Video.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/Video.h
 core/Audio.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/Audio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/Audio.h
 core/Common.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/Common.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/Common.h
 core/Instance.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/Instance.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/Instance.h
 core/Media.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/Media.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/Media.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/qml/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/core/MediaPlayer.h
 qml/QmlVideoPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/qml/qml/QmlVideoPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/qml/QmlVideoPlayer.h
 
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoPlayer.h
 QtQuick/QQuickItem
 -
 QmlVideoObject.h
-/home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.h
 SharedExportQml.h
-/home/andreas/CameraControl/vlc-qt/src/qml/SharedExportQml.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/SharedExportQml.h
 
-/home/andreas/CameraControl/vlc-qt/src/qml/SharedExportQml.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/SharedExportQml.h
 QtCore/qglobal.h
 -
 
-/home/andreas/CameraControl/vlc-qt/src/qml/painter/GlPainter.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/GlPainter.cpp
 qml/painter/GlPainter.h
-/home/andreas/CameraControl/vlc-qt/src/qml/painter/qml/painter/GlPainter.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/qml/painter/GlPainter.h
 
-/home/andreas/CameraControl/vlc-qt/src/qml/painter/GlslPainter.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/GlslPainter.cpp
 QtGui/QOpenGLFunctions
 -
 QtGui/QOpenGLShaderProgram
 -
 core/VideoFrame.h
-/home/andreas/CameraControl/vlc-qt/src/qml/painter/core/VideoFrame.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/core/VideoFrame.h
 qml/painter/GlslPainter.h
-/home/andreas/CameraControl/vlc-qt/src/qml/painter/qml/painter/GlslPainter.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/qml/painter/GlslPainter.h
 
 /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
 qbytearray.h

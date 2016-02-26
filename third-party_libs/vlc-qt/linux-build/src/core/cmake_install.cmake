@@ -1,8 +1,8 @@
-# Install script for directory: /home/andreas/CameraControl/vlc-qt/src/core
+# Install script for directory: /home/andreas/CameraControl/third-party_libs/vlc-qt/src/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/vlc-qt/linux-build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -46,9 +46,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
-    "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0"
-    "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libVLCQtCore.so.1.0.1"
@@ -70,25 +70,25 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/VLCQtCore" TYPE FILE FILES
-    "/home/andreas/CameraControl/vlc-qt/src/core/Audio.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Common.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Enums.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Error.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Instance.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Media.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/MediaList.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/MediaListPlayer.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/MediaPlayer.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/MetaManager.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/ModuleDescription.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/SharedExportCore.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Stats.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Video.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/VideoDelegate.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/VideoFrame.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/VideoMemoryStream.h"
-    "/home/andreas/CameraControl/vlc-qt/linux-build/src/Config.h"
-    "/home/andreas/CameraControl/vlc-qt/src/core/Equalizer.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Audio.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Common.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Enums.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Error.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Instance.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Media.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaList.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MetaManager.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/SharedExportCore.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Stats.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Video.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoDelegate.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/Config.h"
+    "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Equalizer.h"
     )
 endif()
 

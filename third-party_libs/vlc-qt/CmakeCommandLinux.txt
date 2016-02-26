@@ -1,0 +1,2 @@
+cmake -DCMAKE_PREFIX_PATH=$HOME/Qt/5.5/gcc_64/lib/cmake -DCMAKE_INSTALL_PREFIX=install ../
+

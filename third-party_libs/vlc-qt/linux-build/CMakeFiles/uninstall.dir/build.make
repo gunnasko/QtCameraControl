@@ -46,10 +46,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 # Utility rule file for uninstall.
 
@@ -57,7 +57,7 @@ CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -P /home/andreas/CameraControl/vlc-qt/linux-build/cmake_uninstall.cmake
+	/home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -P /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -74,6 +74,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/vlc-qt /home/andreas/CameraControl/vlc-qt /home/andreas/CameraControl/vlc-qt/linux-build /home/andreas/CameraControl/vlc-qt/linux-build /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/third-party_libs/vlc-qt /home/andreas/CameraControl/third-party_libs/vlc-qt /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

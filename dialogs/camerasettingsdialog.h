@@ -5,7 +5,7 @@
 #include <QLineEdit>
 #include <QComboBox>
 
-#include "abstractcamera.h"
+#include "cameras/abstractcamera.h"
 
 class CameraSettingsDialog : public QDialog
 {

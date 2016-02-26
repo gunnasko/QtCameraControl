@@ -51,10 +51,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,14 +127,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/progress.marks
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/progress.marks
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/clean
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/clean
 .PHONY : clean
 
 # The main clean target
@@ -144,22 +144,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/core/CMakeFiles/Core.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/Core.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/Core.dir/rule
 .PHONY : src/core/CMakeFiles/Core.dir/rule
 
 # Convenience name for target.
@@ -169,12 +169,12 @@ Core: src/core/CMakeFiles/Core.dir/rule
 
 # fast build rule for target.
 Core/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/build
 .PHONY : Core/fast
 
 # Convenience name for target.
 src/core/CMakeFiles/Core_automoc.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/Core_automoc.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/core/CMakeFiles/Core_automoc.dir/rule
 .PHONY : src/core/CMakeFiles/Core_automoc.dir/rule
 
 # Convenience name for target.
@@ -184,7 +184,7 @@ Core_automoc: src/core/CMakeFiles/Core_automoc.dir/rule
 
 # fast build rule for target.
 Core_automoc/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core_automoc.dir/build.make src/core/CMakeFiles/Core_automoc.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core_automoc.dir/build.make src/core/CMakeFiles/Core_automoc.dir/build
 .PHONY : Core_automoc/fast
 
 Audio.o: Audio.cpp.o
@@ -193,7 +193,7 @@ Audio.o: Audio.cpp.o
 
 # target to build an object file
 Audio.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.o
 .PHONY : Audio.cpp.o
 
 Audio.i: Audio.cpp.i
@@ -202,7 +202,7 @@ Audio.i: Audio.cpp.i
 
 # target to preprocess a source file
 Audio.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.i
 .PHONY : Audio.cpp.i
 
 Audio.s: Audio.cpp.s
@@ -211,7 +211,7 @@ Audio.s: Audio.cpp.s
 
 # target to generate assembly for a file
 Audio.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Audio.cpp.s
 .PHONY : Audio.cpp.s
 
 Common.o: Common.cpp.o
@@ -220,7 +220,7 @@ Common.o: Common.cpp.o
 
 # target to build an object file
 Common.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.o
 .PHONY : Common.cpp.o
 
 Common.i: Common.cpp.i
@@ -229,7 +229,7 @@ Common.i: Common.cpp.i
 
 # target to preprocess a source file
 Common.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.i
 .PHONY : Common.cpp.i
 
 Common.s: Common.cpp.s
@@ -238,7 +238,7 @@ Common.s: Common.cpp.s
 
 # target to generate assembly for a file
 Common.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Common.cpp.s
 .PHONY : Common.cpp.s
 
 Core_automoc.o: Core_automoc.cpp.o
@@ -247,7 +247,7 @@ Core_automoc.o: Core_automoc.cpp.o
 
 # target to build an object file
 Core_automoc.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o
 .PHONY : Core_automoc.cpp.o
 
 Core_automoc.i: Core_automoc.cpp.i
@@ -256,7 +256,7 @@ Core_automoc.i: Core_automoc.cpp.i
 
 # target to preprocess a source file
 Core_automoc.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.i
 .PHONY : Core_automoc.cpp.i
 
 Core_automoc.s: Core_automoc.cpp.s
@@ -265,7 +265,7 @@ Core_automoc.s: Core_automoc.cpp.s
 
 # target to generate assembly for a file
 Core_automoc.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Core_automoc.cpp.s
 .PHONY : Core_automoc.cpp.s
 
 Enums.o: Enums.cpp.o
@@ -274,7 +274,7 @@ Enums.o: Enums.cpp.o
 
 # target to build an object file
 Enums.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.o
 .PHONY : Enums.cpp.o
 
 Enums.i: Enums.cpp.i
@@ -283,7 +283,7 @@ Enums.i: Enums.cpp.i
 
 # target to preprocess a source file
 Enums.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.i
 .PHONY : Enums.cpp.i
 
 Enums.s: Enums.cpp.s
@@ -292,7 +292,7 @@ Enums.s: Enums.cpp.s
 
 # target to generate assembly for a file
 Enums.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Enums.cpp.s
 .PHONY : Enums.cpp.s
 
 Equalizer.o: Equalizer.cpp.o
@@ -301,7 +301,7 @@ Equalizer.o: Equalizer.cpp.o
 
 # target to build an object file
 Equalizer.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.o
 .PHONY : Equalizer.cpp.o
 
 Equalizer.i: Equalizer.cpp.i
@@ -310,7 +310,7 @@ Equalizer.i: Equalizer.cpp.i
 
 # target to preprocess a source file
 Equalizer.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.i
 .PHONY : Equalizer.cpp.i
 
 Equalizer.s: Equalizer.cpp.s
@@ -319,7 +319,7 @@ Equalizer.s: Equalizer.cpp.s
 
 # target to generate assembly for a file
 Equalizer.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Equalizer.cpp.s
 .PHONY : Equalizer.cpp.s
 
 Error.o: Error.cpp.o
@@ -328,7 +328,7 @@ Error.o: Error.cpp.o
 
 # target to build an object file
 Error.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.o
 .PHONY : Error.cpp.o
 
 Error.i: Error.cpp.i
@@ -337,7 +337,7 @@ Error.i: Error.cpp.i
 
 # target to preprocess a source file
 Error.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.i
 .PHONY : Error.cpp.i
 
 Error.s: Error.cpp.s
@@ -346,7 +346,7 @@ Error.s: Error.cpp.s
 
 # target to generate assembly for a file
 Error.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Error.cpp.s
 .PHONY : Error.cpp.s
 
 Instance.o: Instance.cpp.o
@@ -355,7 +355,7 @@ Instance.o: Instance.cpp.o
 
 # target to build an object file
 Instance.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.o
 .PHONY : Instance.cpp.o
 
 Instance.i: Instance.cpp.i
@@ -364,7 +364,7 @@ Instance.i: Instance.cpp.i
 
 # target to preprocess a source file
 Instance.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.i
 .PHONY : Instance.cpp.i
 
 Instance.s: Instance.cpp.s
@@ -373,7 +373,7 @@ Instance.s: Instance.cpp.s
 
 # target to generate assembly for a file
 Instance.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Instance.cpp.s
 .PHONY : Instance.cpp.s
 
 Media.o: Media.cpp.o
@@ -382,7 +382,7 @@ Media.o: Media.cpp.o
 
 # target to build an object file
 Media.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.o
 .PHONY : Media.cpp.o
 
 Media.i: Media.cpp.i
@@ -391,7 +391,7 @@ Media.i: Media.cpp.i
 
 # target to preprocess a source file
 Media.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.i
 .PHONY : Media.cpp.i
 
 Media.s: Media.cpp.s
@@ -400,7 +400,7 @@ Media.s: Media.cpp.s
 
 # target to generate assembly for a file
 Media.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Media.cpp.s
 .PHONY : Media.cpp.s
 
 MediaList.o: MediaList.cpp.o
@@ -409,7 +409,7 @@ MediaList.o: MediaList.cpp.o
 
 # target to build an object file
 MediaList.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.o
 .PHONY : MediaList.cpp.o
 
 MediaList.i: MediaList.cpp.i
@@ -418,7 +418,7 @@ MediaList.i: MediaList.cpp.i
 
 # target to preprocess a source file
 MediaList.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.i
 .PHONY : MediaList.cpp.i
 
 MediaList.s: MediaList.cpp.s
@@ -427,7 +427,7 @@ MediaList.s: MediaList.cpp.s
 
 # target to generate assembly for a file
 MediaList.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaList.cpp.s
 .PHONY : MediaList.cpp.s
 
 MediaListPlayer.o: MediaListPlayer.cpp.o
@@ -436,7 +436,7 @@ MediaListPlayer.o: MediaListPlayer.cpp.o
 
 # target to build an object file
 MediaListPlayer.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o
 .PHONY : MediaListPlayer.cpp.o
 
 MediaListPlayer.i: MediaListPlayer.cpp.i
@@ -445,7 +445,7 @@ MediaListPlayer.i: MediaListPlayer.cpp.i
 
 # target to preprocess a source file
 MediaListPlayer.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.i
 .PHONY : MediaListPlayer.cpp.i
 
 MediaListPlayer.s: MediaListPlayer.cpp.s
@@ -454,7 +454,7 @@ MediaListPlayer.s: MediaListPlayer.cpp.s
 
 # target to generate assembly for a file
 MediaListPlayer.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.s
 .PHONY : MediaListPlayer.cpp.s
 
 MediaPlayer.o: MediaPlayer.cpp.o
@@ -463,7 +463,7 @@ MediaPlayer.o: MediaPlayer.cpp.o
 
 # target to build an object file
 MediaPlayer.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o
 .PHONY : MediaPlayer.cpp.o
 
 MediaPlayer.i: MediaPlayer.cpp.i
@@ -472,7 +472,7 @@ MediaPlayer.i: MediaPlayer.cpp.i
 
 # target to preprocess a source file
 MediaPlayer.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.i
 .PHONY : MediaPlayer.cpp.i
 
 MediaPlayer.s: MediaPlayer.cpp.s
@@ -481,7 +481,7 @@ MediaPlayer.s: MediaPlayer.cpp.s
 
 # target to generate assembly for a file
 MediaPlayer.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.s
 .PHONY : MediaPlayer.cpp.s
 
 MetaManager.o: MetaManager.cpp.o
@@ -490,7 +490,7 @@ MetaManager.o: MetaManager.cpp.o
 
 # target to build an object file
 MetaManager.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.o
 .PHONY : MetaManager.cpp.o
 
 MetaManager.i: MetaManager.cpp.i
@@ -499,7 +499,7 @@ MetaManager.i: MetaManager.cpp.i
 
 # target to preprocess a source file
 MetaManager.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.i
 .PHONY : MetaManager.cpp.i
 
 MetaManager.s: MetaManager.cpp.s
@@ -508,7 +508,7 @@ MetaManager.s: MetaManager.cpp.s
 
 # target to generate assembly for a file
 MetaManager.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/MetaManager.cpp.s
 .PHONY : MetaManager.cpp.s
 
 ModuleDescription.o: ModuleDescription.cpp.o
@@ -517,7 +517,7 @@ ModuleDescription.o: ModuleDescription.cpp.o
 
 # target to build an object file
 ModuleDescription.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o
 .PHONY : ModuleDescription.cpp.o
 
 ModuleDescription.i: ModuleDescription.cpp.i
@@ -526,7 +526,7 @@ ModuleDescription.i: ModuleDescription.cpp.i
 
 # target to preprocess a source file
 ModuleDescription.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.i
 .PHONY : ModuleDescription.cpp.i
 
 ModuleDescription.s: ModuleDescription.cpp.s
@@ -535,7 +535,7 @@ ModuleDescription.s: ModuleDescription.cpp.s
 
 # target to generate assembly for a file
 ModuleDescription.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.s
 .PHONY : ModuleDescription.cpp.s
 
 Video.o: Video.cpp.o
@@ -544,7 +544,7 @@ Video.o: Video.cpp.o
 
 # target to build an object file
 Video.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.o
 .PHONY : Video.cpp.o
 
 Video.i: Video.cpp.i
@@ -553,7 +553,7 @@ Video.i: Video.cpp.i
 
 # target to preprocess a source file
 Video.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.i
 .PHONY : Video.cpp.i
 
 Video.s: Video.cpp.s
@@ -562,7 +562,7 @@ Video.s: Video.cpp.s
 
 # target to generate assembly for a file
 Video.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/Video.cpp.s
 .PHONY : Video.cpp.s
 
 VideoFrame.o: VideoFrame.cpp.o
@@ -571,7 +571,7 @@ VideoFrame.o: VideoFrame.cpp.o
 
 # target to build an object file
 VideoFrame.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o
 .PHONY : VideoFrame.cpp.o
 
 VideoFrame.i: VideoFrame.cpp.i
@@ -580,7 +580,7 @@ VideoFrame.i: VideoFrame.cpp.i
 
 # target to preprocess a source file
 VideoFrame.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.i
 .PHONY : VideoFrame.cpp.i
 
 VideoFrame.s: VideoFrame.cpp.s
@@ -589,7 +589,7 @@ VideoFrame.s: VideoFrame.cpp.s
 
 # target to generate assembly for a file
 VideoFrame.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoFrame.cpp.s
 .PHONY : VideoFrame.cpp.s
 
 VideoMemoryStream.o: VideoMemoryStream.cpp.o
@@ -598,7 +598,7 @@ VideoMemoryStream.o: VideoMemoryStream.cpp.o
 
 # target to build an object file
 VideoMemoryStream.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o
 .PHONY : VideoMemoryStream.cpp.o
 
 VideoMemoryStream.i: VideoMemoryStream.cpp.i
@@ -607,7 +607,7 @@ VideoMemoryStream.i: VideoMemoryStream.cpp.i
 
 # target to preprocess a source file
 VideoMemoryStream.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.i
 .PHONY : VideoMemoryStream.cpp.i
 
 VideoMemoryStream.s: VideoMemoryStream.cpp.s
@@ -616,7 +616,7 @@ VideoMemoryStream.s: VideoMemoryStream.cpp.s
 
 # target to generate assembly for a file
 VideoMemoryStream.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/core/CMakeFiles/Core.dir/build.make src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.s
 .PHONY : VideoMemoryStream.cpp.s
 
 # Help Target
@@ -692,6 +692,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -5,12 +5,12 @@
 #include <QToolBar>
 #include <QHBoxLayout>
 
-#include "cameras.h"
-#include "cameramodel.h"
-#include "cameraselectwidget.h"
-#include "camerarepository.h"
+#include "cameras/cameras.h"
+#include "models/cameramodel.h"
+#include "widgets/cameraselect/cameraselectwidget.h"
+#include "repository/camerarepository.h"
 
-#include "appsettingsdialog.h"
+#include "dialogs/appsettingsdialog.h"
 
 class MainWindow : public QMainWindow
 {

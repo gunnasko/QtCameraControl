@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/andreas/CameraControl/vlc-qt/src/core/Audio.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Audio.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Common.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Common.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/Core_automoc.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Enums.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Enums.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Equalizer.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Equalizer.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Error.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Error.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Instance.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Instance.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Media.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Media.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/MediaList.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaList.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/MediaListPlayer.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/MediaPlayer.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/MetaManager.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MetaManager.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/ModuleDescription.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/Video.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Video.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/VideoFrame.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o"
-  "/home/andreas/CameraControl/vlc-qt/src/core/VideoMemoryStream.cpp" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Audio.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Audio.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Common.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Common.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/Core_automoc.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Core_automoc.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Enums.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Enums.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Equalizer.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Equalizer.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Error.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Error.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Instance.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Instance.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Media.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Media.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaList.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaList.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaListPlayer.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MediaPlayer.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/MetaManager.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/MetaManager.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/ModuleDescription.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/Video.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/Video.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/VideoFrame.cpp.o"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.cpp" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/CMakeFiles/Core.dir/VideoMemoryStream.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -46,8 +46,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
-  "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0" "/home/andreas/CameraControl/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
+  "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0" "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/core/libVLCQtCore.so.1.0.1"
   )
 
 

@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -fPIC   -fPIC
 
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_SHARED -DQT_WIDGETS_LIB -DVLCQT_WIDGETS_LIBRARY -DWidgets_EXPORTS -D_REENTRANT
 
-CXX_INCLUDES = -I/home/andreas/CameraControl/vlc-qt/src -I/home/andreas/CameraControl/vlc-qt/src/widgets -I/home/andreas/CameraControl/vlc-qt/linux-build/src -I/home/andreas/CameraControl/vlc-qt/linux-build/include -isystem /home/andreas/Qt/5.5/gcc_64/include -isystem /home/andreas/Qt/5.5/gcc_64/include/QtWidgets -isystem /home/andreas/Qt/5.5/gcc_64/include/QtGui -isystem /home/andreas/Qt/5.5/gcc_64/include/QtCore -isystem /home/andreas/Qt/5.5/gcc_64/./mkspecs/linux-g++ 
+CXX_INCLUDES = -I/home/andreas/CameraControl/third-party_libs/vlc-qt/src -I/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets -I/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src -I/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/include -isystem /home/andreas/Qt/5.5/gcc_64/include -isystem /home/andreas/Qt/5.5/gcc_64/include/QtWidgets -isystem /home/andreas/Qt/5.5/gcc_64/include/QtGui -isystem /home/andreas/Qt/5.5/gcc_64/include/QtCore -isystem /home/andreas/Qt/5.5/gcc_64/./mkspecs/linux-g++ 
 

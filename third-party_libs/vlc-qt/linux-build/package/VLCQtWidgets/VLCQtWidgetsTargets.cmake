@@ -44,7 +44,7 @@ add_library(VLCQt::Widgets SHARED IMPORTED)
 # Import target "VLCQt::Widgets" for configuration ""
 set_property(TARGET VLCQt::Widgets APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(VLCQt::Widgets PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/libVLCQtWidgets.so.1.0.1"
+  IMPORTED_LOCATION_NOCONFIG "/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/libVLCQtWidgets.so.1.0.1"
   IMPORTED_SONAME_NOCONFIG "libVLCQtWidgets.so.1.0"
   )
 

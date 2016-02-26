@@ -51,10 +51,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,14 +127,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/CMakeFiles/progress.marks
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/CMakeFiles/progress.marks
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/clean
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/clean
 .PHONY : clean
 
 # The main clean target
@@ -144,22 +144,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/qml/CMakeFiles/Qml.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/CMakeFiles/Qml.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/CMakeFiles/Qml.dir/rule
 .PHONY : src/qml/CMakeFiles/Qml.dir/rule
 
 # Convenience name for target.
@@ -169,12 +169,12 @@ Qml: src/qml/CMakeFiles/Qml.dir/rule
 
 # fast build rule for target.
 Qml/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/build
 .PHONY : Qml/fast
 
 # Convenience name for target.
 src/qml/CMakeFiles/Qml_automoc.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/CMakeFiles/Qml_automoc.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/qml/CMakeFiles/Qml_automoc.dir/rule
 .PHONY : src/qml/CMakeFiles/Qml_automoc.dir/rule
 
 # Convenience name for target.
@@ -184,7 +184,7 @@ Qml_automoc: src/qml/CMakeFiles/Qml_automoc.dir/rule
 
 # fast build rule for target.
 Qml_automoc/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml_automoc.dir/build.make src/qml/CMakeFiles/Qml_automoc.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml_automoc.dir/build.make src/qml/CMakeFiles/Qml_automoc.dir/build
 .PHONY : Qml_automoc/fast
 
 QmlVideoObject.o: QmlVideoObject.cpp.o
@@ -193,7 +193,7 @@ QmlVideoObject.o: QmlVideoObject.cpp.o
 
 # target to build an object file
 QmlVideoObject.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.o
 .PHONY : QmlVideoObject.cpp.o
 
 QmlVideoObject.i: QmlVideoObject.cpp.i
@@ -202,7 +202,7 @@ QmlVideoObject.i: QmlVideoObject.cpp.i
 
 # target to preprocess a source file
 QmlVideoObject.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.i
 .PHONY : QmlVideoObject.cpp.i
 
 QmlVideoObject.s: QmlVideoObject.cpp.s
@@ -211,7 +211,7 @@ QmlVideoObject.s: QmlVideoObject.cpp.s
 
 # target to generate assembly for a file
 QmlVideoObject.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.s
 .PHONY : QmlVideoObject.cpp.s
 
 QmlVideoPlayer.o: QmlVideoPlayer.cpp.o
@@ -220,7 +220,7 @@ QmlVideoPlayer.o: QmlVideoPlayer.cpp.o
 
 # target to build an object file
 QmlVideoPlayer.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.o
 .PHONY : QmlVideoPlayer.cpp.o
 
 QmlVideoPlayer.i: QmlVideoPlayer.cpp.i
@@ -229,7 +229,7 @@ QmlVideoPlayer.i: QmlVideoPlayer.cpp.i
 
 # target to preprocess a source file
 QmlVideoPlayer.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.i
 .PHONY : QmlVideoPlayer.cpp.i
 
 QmlVideoPlayer.s: QmlVideoPlayer.cpp.s
@@ -238,7 +238,7 @@ QmlVideoPlayer.s: QmlVideoPlayer.cpp.s
 
 # target to generate assembly for a file
 QmlVideoPlayer.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.s
 .PHONY : QmlVideoPlayer.cpp.s
 
 Qml_automoc.o: Qml_automoc.cpp.o
@@ -247,7 +247,7 @@ Qml_automoc.o: Qml_automoc.cpp.o
 
 # target to build an object file
 Qml_automoc.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.o
 .PHONY : Qml_automoc.cpp.o
 
 Qml_automoc.i: Qml_automoc.cpp.i
@@ -256,7 +256,7 @@ Qml_automoc.i: Qml_automoc.cpp.i
 
 # target to preprocess a source file
 Qml_automoc.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.i
 .PHONY : Qml_automoc.cpp.i
 
 Qml_automoc.s: Qml_automoc.cpp.s
@@ -265,7 +265,7 @@ Qml_automoc.s: Qml_automoc.cpp.s
 
 # target to generate assembly for a file
 Qml_automoc.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.s
 .PHONY : Qml_automoc.cpp.s
 
 painter/GlPainter.o: painter/GlPainter.cpp.o
@@ -274,7 +274,7 @@ painter/GlPainter.o: painter/GlPainter.cpp.o
 
 # target to build an object file
 painter/GlPainter.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.o
 .PHONY : painter/GlPainter.cpp.o
 
 painter/GlPainter.i: painter/GlPainter.cpp.i
@@ -283,7 +283,7 @@ painter/GlPainter.i: painter/GlPainter.cpp.i
 
 # target to preprocess a source file
 painter/GlPainter.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.i
 .PHONY : painter/GlPainter.cpp.i
 
 painter/GlPainter.s: painter/GlPainter.cpp.s
@@ -292,7 +292,7 @@ painter/GlPainter.s: painter/GlPainter.cpp.s
 
 # target to generate assembly for a file
 painter/GlPainter.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.s
 .PHONY : painter/GlPainter.cpp.s
 
 painter/GlslPainter.o: painter/GlslPainter.cpp.o
@@ -301,7 +301,7 @@ painter/GlslPainter.o: painter/GlslPainter.cpp.o
 
 # target to build an object file
 painter/GlslPainter.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.o
 .PHONY : painter/GlslPainter.cpp.o
 
 painter/GlslPainter.i: painter/GlslPainter.cpp.i
@@ -310,7 +310,7 @@ painter/GlslPainter.i: painter/GlslPainter.cpp.i
 
 # target to preprocess a source file
 painter/GlslPainter.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.i
 .PHONY : painter/GlslPainter.cpp.i
 
 painter/GlslPainter.s: painter/GlslPainter.cpp.s
@@ -319,7 +319,7 @@ painter/GlslPainter.s: painter/GlslPainter.cpp.s
 
 # target to generate assembly for a file
 painter/GlslPainter.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/qml/CMakeFiles/Qml.dir/build.make src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.s
 .PHONY : painter/GlslPainter.cpp.s
 
 # Help Target
@@ -362,6 +362,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

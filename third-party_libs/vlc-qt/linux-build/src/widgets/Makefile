@@ -51,10 +51,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,14 +127,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/CMakeFiles/progress.marks
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/CMakeFiles/progress.marks
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/clean
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/clean
 .PHONY : clean
 
 # The main clean target
@@ -144,22 +144,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/preinstall
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/widgets/CMakeFiles/Widgets.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/CMakeFiles/Widgets.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/CMakeFiles/Widgets.dir/rule
 .PHONY : src/widgets/CMakeFiles/Widgets.dir/rule
 
 # Convenience name for target.
@@ -169,12 +169,12 @@ Widgets: src/widgets/CMakeFiles/Widgets.dir/rule
 
 # fast build rule for target.
 Widgets/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/build
 .PHONY : Widgets/fast
 
 # Convenience name for target.
 src/widgets/CMakeFiles/Widgets_automoc.dir/rule:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/CMakeFiles/Widgets_automoc.dir/rule
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f CMakeFiles/Makefile2 src/widgets/CMakeFiles/Widgets_automoc.dir/rule
 .PHONY : src/widgets/CMakeFiles/Widgets_automoc.dir/rule
 
 # Convenience name for target.
@@ -184,7 +184,7 @@ Widgets_automoc: src/widgets/CMakeFiles/Widgets_automoc.dir/rule
 
 # fast build rule for target.
 Widgets_automoc/fast:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets_automoc.dir/build.make src/widgets/CMakeFiles/Widgets_automoc.dir/build
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets_automoc.dir/build.make src/widgets/CMakeFiles/Widgets_automoc.dir/build
 .PHONY : Widgets_automoc/fast
 
 ControlAudio.o: ControlAudio.cpp.o
@@ -193,7 +193,7 @@ ControlAudio.o: ControlAudio.cpp.o
 
 # target to build an object file
 ControlAudio.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o
 .PHONY : ControlAudio.cpp.o
 
 ControlAudio.i: ControlAudio.cpp.i
@@ -202,7 +202,7 @@ ControlAudio.i: ControlAudio.cpp.i
 
 # target to preprocess a source file
 ControlAudio.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.i
 .PHONY : ControlAudio.cpp.i
 
 ControlAudio.s: ControlAudio.cpp.s
@@ -211,7 +211,7 @@ ControlAudio.s: ControlAudio.cpp.s
 
 # target to generate assembly for a file
 ControlAudio.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.s
 .PHONY : ControlAudio.cpp.s
 
 ControlVideo.o: ControlVideo.cpp.o
@@ -220,7 +220,7 @@ ControlVideo.o: ControlVideo.cpp.o
 
 # target to build an object file
 ControlVideo.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o
 .PHONY : ControlVideo.cpp.o
 
 ControlVideo.i: ControlVideo.cpp.i
@@ -229,7 +229,7 @@ ControlVideo.i: ControlVideo.cpp.i
 
 # target to preprocess a source file
 ControlVideo.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.i
 .PHONY : ControlVideo.cpp.i
 
 ControlVideo.s: ControlVideo.cpp.s
@@ -238,7 +238,7 @@ ControlVideo.s: ControlVideo.cpp.s
 
 # target to generate assembly for a file
 ControlVideo.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.s
 .PHONY : ControlVideo.cpp.s
 
 WidgetSeek.o: WidgetSeek.cpp.o
@@ -247,7 +247,7 @@ WidgetSeek.o: WidgetSeek.cpp.o
 
 # target to build an object file
 WidgetSeek.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o
 .PHONY : WidgetSeek.cpp.o
 
 WidgetSeek.i: WidgetSeek.cpp.i
@@ -256,7 +256,7 @@ WidgetSeek.i: WidgetSeek.cpp.i
 
 # target to preprocess a source file
 WidgetSeek.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.i
 .PHONY : WidgetSeek.cpp.i
 
 WidgetSeek.s: WidgetSeek.cpp.s
@@ -265,7 +265,7 @@ WidgetSeek.s: WidgetSeek.cpp.s
 
 # target to generate assembly for a file
 WidgetSeek.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.s
 .PHONY : WidgetSeek.cpp.s
 
 WidgetSeekProgress.o: WidgetSeekProgress.cpp.o
@@ -274,7 +274,7 @@ WidgetSeekProgress.o: WidgetSeekProgress.cpp.o
 
 # target to build an object file
 WidgetSeekProgress.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o
 .PHONY : WidgetSeekProgress.cpp.o
 
 WidgetSeekProgress.i: WidgetSeekProgress.cpp.i
@@ -283,7 +283,7 @@ WidgetSeekProgress.i: WidgetSeekProgress.cpp.i
 
 # target to preprocess a source file
 WidgetSeekProgress.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i
 .PHONY : WidgetSeekProgress.cpp.i
 
 WidgetSeekProgress.s: WidgetSeekProgress.cpp.s
@@ -292,7 +292,7 @@ WidgetSeekProgress.s: WidgetSeekProgress.cpp.s
 
 # target to generate assembly for a file
 WidgetSeekProgress.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s
 .PHONY : WidgetSeekProgress.cpp.s
 
 WidgetVideo.o: WidgetVideo.cpp.o
@@ -301,7 +301,7 @@ WidgetVideo.o: WidgetVideo.cpp.o
 
 # target to build an object file
 WidgetVideo.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o
 .PHONY : WidgetVideo.cpp.o
 
 WidgetVideo.i: WidgetVideo.cpp.i
@@ -310,7 +310,7 @@ WidgetVideo.i: WidgetVideo.cpp.i
 
 # target to preprocess a source file
 WidgetVideo.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.i
 .PHONY : WidgetVideo.cpp.i
 
 WidgetVideo.s: WidgetVideo.cpp.s
@@ -319,7 +319,7 @@ WidgetVideo.s: WidgetVideo.cpp.s
 
 # target to generate assembly for a file
 WidgetVideo.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.s
 .PHONY : WidgetVideo.cpp.s
 
 WidgetVolumeSlider.o: WidgetVolumeSlider.cpp.o
@@ -328,7 +328,7 @@ WidgetVolumeSlider.o: WidgetVolumeSlider.cpp.o
 
 # target to build an object file
 WidgetVolumeSlider.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o
 .PHONY : WidgetVolumeSlider.cpp.o
 
 WidgetVolumeSlider.i: WidgetVolumeSlider.cpp.i
@@ -337,7 +337,7 @@ WidgetVolumeSlider.i: WidgetVolumeSlider.cpp.i
 
 # target to preprocess a source file
 WidgetVolumeSlider.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i
 .PHONY : WidgetVolumeSlider.cpp.i
 
 WidgetVolumeSlider.s: WidgetVolumeSlider.cpp.s
@@ -346,7 +346,7 @@ WidgetVolumeSlider.s: WidgetVolumeSlider.cpp.s
 
 # target to generate assembly for a file
 WidgetVolumeSlider.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s
 .PHONY : WidgetVolumeSlider.cpp.s
 
 Widgets_automoc.o: Widgets_automoc.cpp.o
@@ -355,7 +355,7 @@ Widgets_automoc.o: Widgets_automoc.cpp.o
 
 # target to build an object file
 Widgets_automoc.cpp.o:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o
 .PHONY : Widgets_automoc.cpp.o
 
 Widgets_automoc.i: Widgets_automoc.cpp.i
@@ -364,7 +364,7 @@ Widgets_automoc.i: Widgets_automoc.cpp.i
 
 # target to preprocess a source file
 Widgets_automoc.cpp.i:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i
 .PHONY : Widgets_automoc.cpp.i
 
 Widgets_automoc.s: Widgets_automoc.cpp.s
@@ -373,7 +373,7 @@ Widgets_automoc.s: Widgets_automoc.cpp.s
 
 # target to generate assembly for a file
 Widgets_automoc.cpp.s:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(MAKE) -f src/widgets/CMakeFiles/Widgets.dir/build.make src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s
 .PHONY : Widgets_automoc.cpp.s
 
 # Help Target
@@ -422,6 +422,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

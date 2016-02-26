@@ -120,23 +120,23 @@ QSlider
 SharedExportWidgets.h
 ../src/widgets/SharedExportWidgets.h
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp
 moc_ControlAudio.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_ControlAudio.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_ControlAudio.cpp
 moc_ControlVideo.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_ControlVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_ControlVideo.cpp
 moc_WidgetSeek.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetSeek.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetSeek.cpp
 moc_WidgetSeekProgress.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetSeekProgress.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetSeekProgress.cpp
 moc_WidgetVideo.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetVideo.cpp
 moc_WidgetVolumeSlider.cpp
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetVolumeSlider.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetVolumeSlider.cpp
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_ControlAudio.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_ControlAudio.cpp
 ../../../src/widgets/ControlAudio.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -144,9 +144,9 @@ QtCore/qmetatype.h
 QtCore/QList
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_ControlVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_ControlVideo.cpp
 ../../../src/widgets/ControlVideo.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -154,39 +154,39 @@ QtCore/qmetatype.h
 QtCore/QList
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetSeek.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetSeek.cpp
 ../../../src/widgets/WidgetSeek.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetSeekProgress.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetSeekProgress.cpp
 ../../../src/widgets/WidgetSeekProgress.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetVideo.cpp
 ../../../src/widgets/WidgetVideo.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/moc_WidgetVolumeSlider.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/moc_WidgetVolumeSlider.cpp
 ../../../src/widgets/WidgetVolumeSlider.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.cpp
 QtCore/QTimer
 -
 QtWidgets/QAction
@@ -194,13 +194,13 @@ QtWidgets/QAction
 QtGui/QAction
 -
 core/Audio.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Audio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Audio.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 widgets/ControlAudio.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/ControlAudio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/ControlAudio.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.h
 QtCore/QList
 -
 QtCore/QMap
@@ -208,9 +208,9 @@ QtCore/QMap
 VLCQtCore/Enums.h
 -
 SharedExportWidgets.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.cpp
 QtCore/QTimer
 -
 QtWidgets/QAction
@@ -218,15 +218,15 @@ QtWidgets/QAction
 QtGui/QAction
 -
 core/Error.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Error.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Error.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 core/Video.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Video.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Video.h
 widgets/ControlVideo.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/ControlVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/ControlVideo.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.h
 QtCore/QList
 -
 QtCore/QMap
@@ -234,13 +234,13 @@ QtCore/QMap
 VLCQtCore/Enums.h
 -
 SharedExportWidgets.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 QtCore/qglobal.h
 -
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.cpp
 QtCore/QTime
 -
 QtCore/QTimer
@@ -266,21 +266,21 @@ QtGui/QSlider
 QtGui/QProgressBar
 -
 core/Error.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Error.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Error.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 widgets/WidgetSeek.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/WidgetSeek.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/WidgetSeek.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.h
 QtWidgets/QWidget
 -
 QtGui/QWidget
 -
 SharedExportWidgets.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.cpp
 QtGui/QMouseEvent
 -
 QtGui/QWheelEvent
@@ -290,17 +290,17 @@ QtWidgets/QProgressBar
 QtGui/QProgressBar
 -
 core/Error.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Error.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Error.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 widgets/WidgetSeekProgress.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/WidgetSeekProgress.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/WidgetSeekProgress.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.h
 WidgetSeek.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.cpp
 QtGlobal
 -
 QtWidgets/QApplication
@@ -324,15 +324,15 @@ X11/Xlib.h
 qx11info_x11.h
 -
 core/Error.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Error.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Error.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 core/Video.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Video.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Video.h
 widgets/WidgetVideo.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/WidgetVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/WidgetVideo.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.h
 QtCore/QTimer
 -
 QtWidgets/QFrame
@@ -344,9 +344,9 @@ VLCQtCore/Enums.h
 VLCQtCore/VideoDelegate.h
 -
 SharedExportWidgets.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.cpp
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.cpp
 QtCore/QTimer
 -
 QtGui/QMouseEvent
@@ -364,19 +364,19 @@ QtGui/QLabel
 QtGui/QSlider
 -
 core/Audio.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Audio.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Audio.h
 core/Error.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/Error.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/Error.h
 core/MediaPlayer.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/core/MediaPlayer.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/core/MediaPlayer.h
 widgets/WidgetVolumeSlider.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/widgets/WidgetVolumeSlider.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/widgets/WidgetVolumeSlider.h
 
-/home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.h
 QSlider
 -
 SharedExportWidgets.h
-/home/andreas/CameraControl/vlc-qt/src/widgets/SharedExportWidgets.h
+/home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/SharedExportWidgets.h
 
 /home/andreas/Qt/5.5/gcc_64/include/QtCore/QList
 qlist.h

@@ -1,4 +1,4 @@
-prefix=/home/andreas/CameraControl/vlc-qt/linux-build/install
+prefix=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/install
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

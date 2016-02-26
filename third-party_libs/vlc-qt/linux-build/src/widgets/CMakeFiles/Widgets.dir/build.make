@@ -46,10 +46,10 @@ RM = /home/andreas/cmake-3.5.0-rc3-Linux-x86_64/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andreas/CameraControl/vlc-qt
+CMAKE_SOURCE_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andreas/CameraControl/vlc-qt/linux-build
+CMAKE_BINARY_DIR = /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build
 
 # Include any dependencies generated for this target.
 include src/widgets/CMakeFiles/Widgets.dir/depend.make
@@ -62,16 +62,16 @@ include src/widgets/CMakeFiles/Widgets.dir/flags.make
 
 src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o: ../src/widgets/ControlAudio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/ControlAudio.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/ControlAudio.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/ControlAudio.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.cpp > CMakeFiles/Widgets.dir/ControlAudio.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.cpp > CMakeFiles/Widgets.dir/ControlAudio.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/ControlAudio.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/ControlAudio.cpp -o CMakeFiles/Widgets.dir/ControlAudio.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlAudio.cpp -o CMakeFiles/Widgets.dir/ControlAudio.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o.requires:
 
@@ -86,16 +86,16 @@ src/widgets/CMakeFiles/Widgets.dir/ControlAudio.cpp.o.provides.build: src/widget
 
 src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o: ../src/widgets/ControlVideo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/ControlVideo.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/ControlVideo.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/ControlVideo.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.cpp > CMakeFiles/Widgets.dir/ControlVideo.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.cpp > CMakeFiles/Widgets.dir/ControlVideo.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/ControlVideo.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/ControlVideo.cpp -o CMakeFiles/Widgets.dir/ControlVideo.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/ControlVideo.cpp -o CMakeFiles/Widgets.dir/ControlVideo.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o.requires:
 
@@ -110,16 +110,16 @@ src/widgets/CMakeFiles/Widgets.dir/ControlVideo.cpp.o.provides.build: src/widget
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o: ../src/widgets/WidgetSeek.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetSeek.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetSeek.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/WidgetSeek.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.cpp > CMakeFiles/Widgets.dir/WidgetSeek.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.cpp > CMakeFiles/Widgets.dir/WidgetSeek.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/WidgetSeek.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeek.cpp -o CMakeFiles/Widgets.dir/WidgetSeek.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeek.cpp -o CMakeFiles/Widgets.dir/WidgetSeek.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o.requires:
 
@@ -134,16 +134,16 @@ src/widgets/CMakeFiles/Widgets.dir/WidgetSeek.cpp.o.provides.build: src/widgets/
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o: ../src/widgets/WidgetSeekProgress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.cpp > CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.cpp > CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetSeekProgress.cpp -o CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetSeekProgress.cpp -o CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o.requires:
 
@@ -158,16 +158,16 @@ src/widgets/CMakeFiles/Widgets.dir/WidgetSeekProgress.cpp.o.provides.build: src/
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o: ../src/widgets/WidgetVideo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetVideo.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetVideo.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/WidgetVideo.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.cpp > CMakeFiles/Widgets.dir/WidgetVideo.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.cpp > CMakeFiles/Widgets.dir/WidgetVideo.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/WidgetVideo.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVideo.cpp -o CMakeFiles/Widgets.dir/WidgetVideo.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVideo.cpp -o CMakeFiles/Widgets.dir/WidgetVideo.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o.requires:
 
@@ -182,16 +182,16 @@ src/widgets/CMakeFiles/Widgets.dir/WidgetVideo.cpp.o.provides.build: src/widgets
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o: ../src/widgets/WidgetVolumeSlider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o -c /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.cpp > CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.cpp > CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/src/widgets/WidgetVolumeSlider.cpp -o CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets/WidgetVolumeSlider.cpp -o CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o.requires:
 
@@ -206,16 +206,16 @@ src/widgets/CMakeFiles/Widgets.dir/WidgetVolumeSlider.cpp.o.provides.build: src/
 
 src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o: src/widgets/CMakeFiles/Widgets.dir/flags.make
 src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o: src/widgets/Widgets_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o -c /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o -c /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp
 
 src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp > CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp > CMakeFiles/Widgets.dir/Widgets_automoc.cpp.i
 
 src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp -o CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/Widgets_automoc.cpp -o CMakeFiles/Widgets.dir/Widgets_automoc.cpp.s
 
 src/widgets/CMakeFiles/Widgets.dir/Widgets_automoc.cpp.o.requires:
 
@@ -254,9 +254,9 @@ src/widgets/libVLCQtWidgets.so.1.0.1: /home/andreas/Qt/5.5/gcc_64/lib/libQt5Widg
 src/widgets/libVLCQtWidgets.so.1.0.1: /home/andreas/Qt/5.5/gcc_64/lib/libQt5Gui.so.5.5.1
 src/widgets/libVLCQtWidgets.so.1.0.1: /home/andreas/Qt/5.5/gcc_64/lib/libQt5Core.so.5.5.1
 src/widgets/libVLCQtWidgets.so.1.0.1: src/widgets/CMakeFiles/Widgets.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreas/CameraControl/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libVLCQtWidgets.so"
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Widgets.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -E cmake_symlink_library libVLCQtWidgets.so.1.0.1 libVLCQtWidgets.so.1.0 libVLCQtWidgets.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libVLCQtWidgets.so"
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Widgets.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -E cmake_symlink_library libVLCQtWidgets.so.1.0.1 libVLCQtWidgets.so.1.0 libVLCQtWidgets.so
 
 src/widgets/libVLCQtWidgets.so.1.0: src/widgets/libVLCQtWidgets.so.1.0.1
 	@$(CMAKE_COMMAND) -E touch_nocreate src/widgets/libVLCQtWidgets.so.1.0
@@ -280,10 +280,10 @@ src/widgets/CMakeFiles/Widgets.dir/requires: src/widgets/CMakeFiles/Widgets.dir/
 .PHONY : src/widgets/CMakeFiles/Widgets.dir/requires
 
 src/widgets/CMakeFiles/Widgets.dir/clean:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -P CMakeFiles/Widgets.dir/cmake_clean.cmake
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets && $(CMAKE_COMMAND) -P CMakeFiles/Widgets.dir/cmake_clean.cmake
 .PHONY : src/widgets/CMakeFiles/Widgets.dir/clean
 
 src/widgets/CMakeFiles/Widgets.dir/depend:
-	cd /home/andreas/CameraControl/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/vlc-qt /home/andreas/CameraControl/vlc-qt/src/widgets /home/andreas/CameraControl/vlc-qt/linux-build /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets /home/andreas/CameraControl/vlc-qt/linux-build/src/widgets/CMakeFiles/Widgets.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andreas/CameraControl/third-party_libs/vlc-qt /home/andreas/CameraControl/third-party_libs/vlc-qt/src/widgets /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/widgets/CMakeFiles/Widgets.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/widgets/CMakeFiles/Widgets.dir/depend
 

@@ -10,7 +10,7 @@ src/qml/CMakeFiles/Qml.dir/QmlVideoObject.cpp.o
  ../src/qml/SharedExportQml.h
  ../src/qml/painter/GlPainter.h
  ../src/qml/painter/GlslPainter.h
- /home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.cpp
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QList
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QMap
@@ -194,7 +194,7 @@ src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.o
  ../src/qml/QmlVideoObject.h
  ../src/qml/QmlVideoPlayer.h
  ../src/qml/SharedExportQml.h
- /home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoPlayer.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoPlayer.cpp
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QDebug
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QList
@@ -332,12 +332,12 @@ src/qml/CMakeFiles/Qml.dir/QmlVideoPlayer.cpp.o
  include/VLCQtCore/VideoMemoryStream.h
  src/Config.h
 src/qml/CMakeFiles/Qml.dir/Qml_automoc.cpp.o
- /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/Qml_automoc.cpp
- /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
- /home/andreas/CameraControl/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
- /home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoObject.h
- /home/andreas/CameraControl/vlc-qt/src/qml/QmlVideoPlayer.h
- /home/andreas/CameraControl/vlc-qt/src/qml/SharedExportQml.h
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/Qml_automoc.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoObject.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/linux-build/src/qml/moc_QmlVideoPlayer.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoObject.h
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/QmlVideoPlayer.h
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/SharedExportQml.h
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QList
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QMap
@@ -467,7 +467,7 @@ src/qml/CMakeFiles/Qml.dir/painter/GlPainter.cpp.o
  ../src/core/SharedExportCore.h
  ../src/core/VideoFrame.h
  ../src/qml/painter/GlPainter.h
- /home/andreas/CameraControl/vlc-qt/src/qml/painter/GlPainter.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/GlPainter.cpp
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QObject
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QScopedPointer
@@ -591,7 +591,7 @@ src/qml/CMakeFiles/Qml.dir/painter/GlslPainter.cpp.o
  ../src/core/VideoFrame.h
  ../src/qml/painter/GlPainter.h
  ../src/qml/painter/GlslPainter.h
- /home/andreas/CameraControl/vlc-qt/src/qml/painter/GlslPainter.cpp
+ /home/andreas/CameraControl/third-party_libs/vlc-qt/src/qml/painter/GlslPainter.cpp
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QByteArray
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QList
  /home/andreas/Qt/5.5/gcc_64/include/QtCore/QObject

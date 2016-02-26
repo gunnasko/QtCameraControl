@@ -35,7 +35,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/core/CMakeLists.txt"
   "../src/qml/CMakeLists.txt"
   "../src/widgets/CMakeLists.txt"
-  "../tests/CMakeLists.txt"
   "/home/andreas/Qt/5.5/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake"
   "/home/andreas/Qt/5.5/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
   "/home/andreas/Qt/5.5/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"
@@ -130,7 +129,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/widgets/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/qml/CMakeFiles/CMakeDirectoryInformation.cmake"
   "docs/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -142,6 +140,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/widgets/CMakeFiles/Widgets_automoc.dir/DependInfo.cmake"
   "src/qml/CMakeFiles/Qml.dir/DependInfo.cmake"
   "src/qml/CMakeFiles/Qml_automoc.dir/DependInfo.cmake"
-  "tests/CMakeFiles/VLC-Qt.dir/DependInfo.cmake"
-  "tests/CMakeFiles/VLC-Qt_automoc.dir/DependInfo.cmake"
   )

@@ -2,8 +2,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 
-#include "database.h"
-#include "camerarepository.h"
+#include "repository/database.h"
 
 int main(int argc, char *argv[])
 {

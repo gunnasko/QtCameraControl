@@ -2,7 +2,7 @@
 #define CAMERASELECTDELEGATE_H
 
 #include <QStyledItemDelegate>
-#include "cameramodel.h"
+#include "models/cameramodel.h"
 
 class CameraSelectDelegate : public QStyledItemDelegate
 {
