@@ -1,6 +1,6 @@
 #include "camerarepository.h"
 
-#include "localcamera.h"
+#include "qtlocalcamera.h"
 
 CameraRepository::CameraRepository(QSharedPointer<DataBase> db) : db_(db)
 {

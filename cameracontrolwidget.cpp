@@ -1,5 +1,4 @@
 #include "cameracontrolwidget.h"
-#include <QtGlobal>
 
 CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
 {
@@ -20,7 +19,6 @@ CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
     connect(picture_, &QToolButton::released, this, &CameraControlWidget::pictureReleased );
     layout->addWidget(picture_);
 
-#ifndef Q_OS_WIN
     QIcon recordIcon = QIcon();
     recordIcon.addFile(":/toolbar/images/StartRecord.png", QSize(), QIcon::Normal, QIcon::Off);
     recordIcon.addFile(":/toolbar/images/StopRecord.png", QSize(), QIcon::Normal, QIcon::On);
@@ -29,7 +27,6 @@ CameraControlWidget::CameraControlWidget(QWidget *parent) : QWidget(parent)
     startRecord_->setCheckable(true);
     connect(startRecord_, &QToolButton::toggled, this, &CameraControlWidget::toggleRecord );
     layout->addWidget(startRecord_);
-#endif
 
     setLayout(layout);
 }

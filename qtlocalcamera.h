@@ -7,7 +7,7 @@
 #include <QImageEncoderSettings>
 
 #include "qtcamera.h"
-#include "localcameraview.h"
+#include "qtlocalcameraview.h"
 
 class QtLocalCamera : public QtCamera
 {

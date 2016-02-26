@@ -40,14 +40,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     abstractcamera.cpp \
-    localcamera.cpp \
     cameras.cpp \
     cameramodel.cpp \
     cameraselectwidget.cpp \
     cameranamelabel.cpp \
     camerasettingsdialog.cpp \
     cameracontrolwidget.cpp \
-    localcameraview.cpp \
     database.cpp \
     camerarepository.cpp \
     appsettingsdialog.cpp \
@@ -57,18 +55,18 @@ SOURCES += main.cpp\
     qtnetworkcameraview.cpp \
     vlcnetworkcamera.cpp \
     vlcnetworkcameraview.cpp \
-    qtcamera.cpp
+    qtcamera.cpp \
+    qtlocalcamera.cpp \
+    qtlocalcameraview.cpp
 
 HEADERS  += mainwindow.h \
     abstractcamera.h \
-    localcamera.h \
     cameras.h \
     cameramodel.h \
     cameraselectwidget.h \
     cameranamelabel.h \
     camerasettingsdialog.h \
     cameracontrolwidget.h \
-    localcameraview.h \
     database.h \
     camerarepository.h \
     appsettingsdialog.h \
@@ -79,7 +77,9 @@ HEADERS  += mainwindow.h \
     qtnetworkcamera.h \
     vlcnetworkcamera.h \
     vlcnetworkcameraview.h \
-    qtcamera.h
+    qtcamera.h \
+    qtlocalcamera.h \
+    qtlocalcameraview.h
 
 RESOURCES += \
     images.qrc

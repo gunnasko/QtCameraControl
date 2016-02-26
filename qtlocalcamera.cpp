@@ -1,5 +1,6 @@
-#include "localcamera.h"
+#include "qtlocalcamera.h"
 
+#include <QtGlobal>
 #include <QDir>
 #include <QUrl>
 #include <QSettings>
@@ -110,12 +111,17 @@ void QtLocalCamera::onOffCamera(bool on)
 
 void QtLocalCamera::startStopRecording(bool on)
 {
+#ifdef Q_OS_WIN
+    Q_UNUSED(on)
+    qtLocalCameraView_->updateMessageLabel("ERROR - This function is not supported in windows!");
+#else
     if(isRunning() && on) {
         camera_->setCaptureMode(QCamera::CaptureVideo);
         startRecording();
     } else {
         stopRecording();
     }
+#endif
 }
 
 void QtLocalCamera::focusPicture()

@@ -1,5 +1,5 @@
 #include "cameras.h"
-#include "localcamera.h"
+#include "qtlocalcamera.h"
 #include "qtnetworkcamera.h"
 #include "vlcnetworkcamera.h"
 
