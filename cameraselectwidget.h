@@ -15,6 +15,7 @@ public:
 signals:
     void selectionChanged(int index);
     void openSettings(int index);
+    void deleteCamera(int index);
 
 private:
     QSharedPointer<CameraModel> camModel_;

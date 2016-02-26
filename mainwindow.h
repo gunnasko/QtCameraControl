@@ -27,6 +27,7 @@ private slots:
     void openCamSettings(int index);
     void changeView(int index);
     void openAddNetworkCameraDialog();
+    void deleteCamera(int index);
 
 private:
     void readSettings();
@@ -37,6 +38,7 @@ private:
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<QWidget> currentView_;
+    int currentViewIndex_;
     QSharedPointer<CameraRepository> camerasDb_;
     QSharedPointer<DataBase> db_;
     QSharedPointer<AppSettingsDialog> appSettings_;

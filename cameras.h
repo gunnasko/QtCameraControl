@@ -18,6 +18,7 @@ public:
     QStringList getCameraNames();
     bool containsCamera(const QSharedPointer<AbstractCamera> camera);
     bool containsCamera(const QString deviceName);
+    void deleteCamera(int index);
 
 public slots:
     void searchAndAddLocalCameras();

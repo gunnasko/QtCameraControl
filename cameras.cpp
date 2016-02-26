@@ -87,6 +87,14 @@ bool Cameras::containsCamera(const QString deviceName)
 
 }
 
+void Cameras::deleteCamera(int index)
+{
+    if(index >= 0 && index < cameras_.count()) {
+        cameras_.removeAt(index);
+        emit(listChanged());
+    }
+}
+
 bool Cameras::containsCamera(const QSharedPointer<AbstractCamera> camera)
 {
     foreach(auto cam, cameras_) {

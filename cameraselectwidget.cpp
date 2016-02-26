@@ -4,6 +4,7 @@
 #include <QListView>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <QAction>
 
 #include "cameraselectdelegate.h"
 
@@ -15,6 +16,14 @@ CameraSelectWidget::CameraSelectWidget(QSharedPointer <CameraModel> camModel, QW
     auto openSettingsButton = new QPushButton("Camera Settings", this);
     camListView->setItemDelegate(new CameraSelectDelegate(this));
     camListView->setModel(camModel_.data());
+    camListView->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+    auto deleteCamAction = new QAction("Delete", this);
+    camListView->addAction(deleteCamAction);
+
+    connect(deleteCamAction, &QAction::triggered, [=] {
+        emit(deleteCamera(camListView->currentIndex().row()));
+    } );
 
     connect(selectCamButton, &QPushButton::clicked, [=] {
         emit(selectionChanged(camListView->currentIndex().row()));

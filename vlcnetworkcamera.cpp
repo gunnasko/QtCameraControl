@@ -3,6 +3,7 @@
 #include <VLCQtCore/Video.h>
 #include <QSettings>
 #include "settingskeys.h"
+#include <QDebug>
 
 VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : AbstractCamera(parent), cameraAddress_(cameraAddress)
 {

@@ -9,7 +9,7 @@
 #include <QInputDialog>
 
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
-    : QMainWindow(parent), db_(db)
+    : QMainWindow(parent), currentViewIndex_(0), db_(db)
 {
     readSettings();
 
@@ -25,6 +25,7 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
+    connect(cameraSelectWidget_.data(), &CameraSelectWidget::deleteCamera, this, &MainWindow::deleteCamera);
 
     cameras_->searchAndAddLocalCameras();
 
@@ -55,6 +56,7 @@ void MainWindow::changeView(int index)
         currentView_= cam->cameraGUI();
         layout_->insertWidget(0, currentView_.data());
         currentView_->show();
+        currentViewIndex_ = index;
     }
 }
 
@@ -66,6 +68,16 @@ void MainWindow::openAddNetworkCameraDialog()
     if(ok && url.isValid()) {
         cameras_->addNetworkCamera(url);
     }
+}
+
+void MainWindow::deleteCamera(int index)
+{
+    if(currentViewIndex_ == index) {
+        currentView_->hide();
+        layout_->removeWidget(currentView_.data());
+        currentView_ = QSharedPointer<QWidget>(new QWidget(this));
+    }
+    cameras_->deleteCamera(index);
 }
 
 void MainWindow::writeSettings()
