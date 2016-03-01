@@ -13,11 +13,19 @@ AbstractCameraView::AbstractCameraView(QWidget *parent) : QWidget(parent)
     camControl_ = new CameraControlWidget(this);
     placeHolder_ = new QWidget(this);
     initView(placeHolder_);
-    messageLabel_ = new QLabel(this);
-    messageLabel_->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-    messageCleaner_ = QSharedPointer<QTimer>(new QTimer(this));
-    messageCleaner_->setSingleShot(true);
-    connect(messageCleaner_.data(), &QTimer::timeout, messageLabel_, &QLabel::clear);
+
+    streamStatusLabel_ = new QLabel(this);
+    streamStatusLabel_->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    recordingStatusLabel_ = new QLabel(this);
+    recordingStatusLabel_->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+    streamStatusCleaner_ = QSharedPointer<QTimer>(new QTimer(this));
+    streamStatusCleaner_->setSingleShot(true);
+    connect(streamStatusCleaner_.data(), &QTimer::timeout, streamStatusLabel_, &QLabel::clear);
+
+    recordingStatusCleaner_ = QSharedPointer<QTimer>(new QTimer(this));
+    recordingStatusCleaner_->setSingleShot(true);
+    connect(recordingStatusCleaner_.data(), &QTimer::timeout, recordingStatusLabel_, &QLabel::clear);
 
     viewStack_ = new QStackedWidget(this);
     viewStack_->addWidget(placeHolder_);
@@ -34,7 +42,8 @@ AbstractCameraView::AbstractCameraView(QWidget *parent) : QWidget(parent)
     layout_->addWidget(camName_);
     layout_->addWidget(viewStack_);
     layout_->addWidget(camControl_);
-    layout_->addWidget(messageLabel_);
+    layout_->addWidget(streamStatusLabel_);
+    layout_->addWidget(recordingStatusLabel_);
     this->setLayout(layout_);
 }
 
@@ -54,11 +63,18 @@ void AbstractCameraView::updateName(QString name)
     camName_->update(name);
 }
 
-void AbstractCameraView::updateMessageLabel(QString msg)
+void AbstractCameraView::updateStreamStatus(QString msg)
 {
     msg.prepend(QDateTime::currentDateTime().toString("(dd.MM.yyyy-hh:mm:ss) - "));
-    messageLabel_->setText(msg);
-    messageCleaner_->start(10000);
+    streamStatusLabel_->setText(msg);
+    streamStatusCleaner_->start(10000);
+}
+
+void AbstractCameraView::updateRecordingStatus(QString msg)
+{
+    msg.prepend(QDateTime::currentDateTime().toString("(dd.MM.yyyy-hh:mm:ss) - "));
+    recordingStatusLabel_->setText(msg);
+    recordingStatusCleaner_->start(10000);
 }
 
 void AbstractCameraView::changeViewStack(bool enabled)

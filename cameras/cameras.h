@@ -30,7 +30,7 @@ signals:
 
 private:
     void addCamera(const QSharedPointer<AbstractCamera> camera);
-    void clearNotRunning();
+    void clearNotAvailable();
     QList <QSharedPointer<AbstractCamera> > cameras_;
     QList <QMetaObject::Connection > dbConnections_;
     QSharedPointer<CameraRepository> camDb_;

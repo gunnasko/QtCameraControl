@@ -18,7 +18,7 @@ Cameras::~Cameras()
 
 void Cameras::searchAndAddLocalCameras()
 {
-    clearNotRunning();
+    clearNotAvailable();
     auto cameras = QCameraInfo::availableCameras();
     foreach (auto cameraInfo, cameras) {
         auto newCam = QSharedPointer<AbstractCamera>(new QtLocalCamera(cameraInfo));
@@ -46,11 +46,12 @@ void Cameras::addCamera(const QSharedPointer<AbstractCamera> camera)
     dbConnections_.append(dbConnect);
 }
 
-void Cameras::clearNotRunning()
+void Cameras::clearNotAvailable()
 {
     foreach(auto cam, cameras_) {
-        if(!cam->isRunning())
-            cameras_.removeAll(cam);
+        if(!cam->available()) {
+            deleteCamera(cameras_.indexOf(cam));
+        }
     }
 
 }

@@ -30,10 +30,10 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::toggleRecord, this, &VlcNetworkCamera::startStopRecording);
 
     connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
-        vlcNetworkCameraView_->updateMessageLabel("Error: " + VlcError::errmsg());
+        vlcNetworkCameraView_->updateStreamStatus("Error: " + VlcError::errmsg());
     } );
     connect(mediaPlayer_, &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
-        vlcNetworkCameraView_->updateMessageLabel("Snapshot taken to: " + filePath);
+        vlcNetworkCameraView_->updateRecordingStatus("Snapshot taken to: " + filePath);
     } );
     connect(mediaPlayer_, &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
 }
@@ -110,7 +110,7 @@ void VlcNetworkCamera::printCurrentState()
     default:
         toPrint = "Wrong state!";
     }
-    vlcNetworkCameraView_->updateMessageLabel(toPrint);
+    vlcNetworkCameraView_->updateStreamStatus(toPrint);
 }
 
 void VlcNetworkCamera::takeSnapShot()
@@ -132,7 +132,7 @@ void VlcNetworkCamera::startStopRecording(bool on)
 
         delete media_;
         media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
-        vlcNetworkCameraView_->updateMessageLabel("Recorded to: " + output);
+        vlcNetworkCameraView_->updateRecordingStatus("Recorded to: " + output);
         qDebug()<<"Recorded to: " << output;
     }
     runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
@@ -143,12 +143,16 @@ void VlcNetworkCamera::runFunctionWhenInState(Vlc::State state, void (VlcNetwork
     QTimer *timer = new QTimer(this);
     QTimer *timeOut = new QTimer(this);
     connect(timer, &QTimer::timeout, [=]() {
-        if(checkState(state, timer, (funcptr)))
+        if(checkState(state, timer, (funcptr))) {
             timeOut->stop();
+            timeOut->deleteLater();
+        }
     } );
     connect(timeOut, &QTimer::timeout, [=]() {
         timeOut->stop();
         timer->stop();
+        timeOut->deleteLater();
+        timer->deleteLater();
     } );
     timer->start(10);
     timeOut->start(timeoutInMs);
@@ -159,8 +163,9 @@ bool VlcNetworkCamera::checkState(Vlc::State state, QTimer *timer, void (VlcNetw
     if(mediaPlayer_->state()==state)
     {
         timer->stop();
-        if(funcptr != NULL)
+        if(funcptr != NULL) {
             (this->*funcptr)();
+        }
         return true;
     } else {
         return false;

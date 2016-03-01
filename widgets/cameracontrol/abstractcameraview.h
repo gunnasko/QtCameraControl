@@ -23,15 +23,18 @@ signals:
 
 public slots:
     void updateName(QString);
-    void updateMessageLabel(QString msg);
+    void updateStreamStatus(QString msg);
+    void updateRecordingStatus(QString msg);
     void changeViewStack(bool enabled);
 
 private:
     CameraNameLabel *camName_;
     CameraControlWidget *camControl_;
     QWidget *placeHolder_;
-    QLabel *messageLabel_;
-    QSharedPointer<QTimer> messageCleaner_;
+    QLabel *streamStatusLabel_;
+    QLabel *recordingStatusLabel_;
+    QSharedPointer<QTimer> streamStatusCleaner_;
+    QSharedPointer<QTimer> recordingStatusCleaner_;
     QVBoxLayout *layout_;
     int currentIndex_;
 

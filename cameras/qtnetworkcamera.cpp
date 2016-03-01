@@ -25,7 +25,7 @@ QtNetworkCamera::QtNetworkCamera(QUrl cameraAddress, QObject *parent) : QtCamera
     connect(qtNetworkCameraView_.data(), &QtNetworkCameraView::camClicked, this, &QtNetworkCamera::onOffStream);
 
     connect(mediaPlayer_.data(), static_cast<void(QMediaPlayer::*)(QMediaPlayer::Error)>(&QMediaPlayer::error), [=] {
-        qtNetworkCameraView_->updateMessageLabel(mediaPlayer_->errorString());
+        qtNetworkCameraView_->updateStreamStatus(mediaPlayer_->errorString());
     } );
 }
 

@@ -49,18 +49,19 @@ void QtLocalCamera::init()
     connect(camera_.data(), &QCamera::stateChanged, [=] {
             emit(qtLocalCameraView_->camToggled(isRunning()));
     } );
+    connect(camera_.data(), &QCamera::statusChanged, this, &QtLocalCamera::printStatusChange);
 
     connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
-        qtLocalCameraView_->updateMessageLabel(camera_->errorString());
+        qtLocalCameraView_->updateStreamStatus(camera_->errorString());
     } );
 
     connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error), [=] {
-        qtLocalCameraView_->updateMessageLabel(videoRecorder_->errorString());
+        qtLocalCameraView_->updateStreamStatus(videoRecorder_->errorString());
     } );
 
     connect(imageCapture_.data(), &QCameraImageCapture::imageSaved,[=](int id, const QString &fileName) {
         Q_UNUSED(id);
-        qtLocalCameraView_->updateMessageLabel("Saved image in: " + fileName);
+        qtLocalCameraView_->updateRecordingStatus("Saved image in: " + fileName);
     } );
     camera_->load();
 }
@@ -69,10 +70,7 @@ void QtLocalCamera::init()
 
 bool QtLocalCamera::available()
 {
-    if(camera_->availability() == QMultimedia::Available)
-        return true;
-    else
-        return false;
+    return (camera_->state() == QCamera::ActiveState);
 }
 
 bool QtLocalCamera::isRunning()
@@ -113,7 +111,7 @@ void QtLocalCamera::startStopRecording(bool on)
 {
 #ifdef Q_OS_WIN
     Q_UNUSED(on)
-    qtLocalCameraView_->updateMessageLabel("ERROR - This function is not supported in windows!");
+    qtLocalCameraView_->updateRecordingStatus("ERROR - This function is not supported in windows!");
 #else
     if(isRunning() && on) {
         camera_->setCaptureMode(QCamera::CaptureVideo);
@@ -136,4 +134,42 @@ void QtLocalCamera::takePicture()
         captureImage();
         camera_->unlock();
     }
+}
+
+void QtLocalCamera::printStatusChange(QCamera::Status status)
+{
+    QString toPrint;
+    switch(status) {
+    case QCamera::StartingStatus:
+        toPrint = "Starting...";
+        break;
+    case QCamera::StoppingStatus:
+        toPrint = "Stopping...";
+        break;
+    case QCamera::StandbyStatus:
+        toPrint = "Standby...(Power Saving Mode)";
+        break;
+    case QCamera::LoadedStatus:
+        toPrint = "Loaded!";
+        break;
+    case QCamera::LoadingStatus:
+        toPrint = "Loading...";
+        break;
+    case QCamera::UnloadingStatus:
+        toPrint = "Unloading...";
+        break;
+    case QCamera::UnloadedStatus:
+        toPrint = "Unloaded!";
+        break;
+    case QCamera::ActiveStatus:
+        toPrint = "Camera Active!";
+        break;
+    case QCamera::UnavailableStatus:
+        toPrint = "Camera Unavailable!";
+        break;
+    default:
+        toPrint = "Unknown status!";
+    }
+    qtLocalCameraView_->updateStreamStatus(toPrint);
+
 }

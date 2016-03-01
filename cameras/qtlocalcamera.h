@@ -32,6 +32,7 @@ private slots:
     void startStopRecording(bool);
     void focusPicture();
     void takePicture();
+    void printStatusChange(QCamera::Status status);
 
 private:
     void init();
