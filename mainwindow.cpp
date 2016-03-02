@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-#include "dialogs/camerasettingsdialog.h"
+#include "dialogs/abstractcamerasettingsdialog.h"
 
 #include <QDebug>
 #include <QHBoxLayout>
@@ -41,8 +41,7 @@ void MainWindow::openCamSettings(int index)
 {
     auto cam = cameras_->getCamera(index);
     if(cam) {
-        auto settingsDialog = new CameraSettingsDialog(cam, this);
-        settingsDialog->setAttribute( Qt::WA_DeleteOnClose, true);
+        auto settingsDialog = cam->cameraSettings();
         settingsDialog->show();
     }
 }

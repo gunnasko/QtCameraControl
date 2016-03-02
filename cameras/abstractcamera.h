@@ -5,6 +5,9 @@
 #include <QString>
 #include <QDir>
 #include <QSize>
+#include <QDialog>
+//Move camera settings
+#include "../dialogs/abstractcamerasettingsdialog.h"
 
 class AbstractCamera : public QObject
 {
@@ -37,6 +40,7 @@ public:
     virtual void startCamera() = 0;
     virtual void stopCamera() = 0;
     virtual QSharedPointer<QWidget> cameraGUI() = 0;
+    virtual QSharedPointer<QDialog> cameraSettings() = 0;
 
     bool operator==(const AbstractCamera& other);
     void copy(const AbstractCamera *other);

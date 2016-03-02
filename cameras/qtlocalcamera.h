@@ -8,6 +8,8 @@
 
 #include "qtcamera.h"
 #include "widgets/cameracontrol/qtlocalcameraview.h"
+#include "dialogs/qtlocalcamerasettingsdialog.h"
+
 
 class QtLocalCamera : public QtCamera
 {
@@ -27,7 +29,11 @@ public:
     void imageFocus();
 
     QSharedPointer<QWidget> cameraGUI();
+    QSharedPointer<QDialog> cameraSettings();
 
+    void loadSettings(CameraSettings settings);
+
+    CameraSettings loadLocalSettings();
 private slots:
     void onOffCamera(bool);
     void startStopRecording(bool);
@@ -39,7 +45,10 @@ private:
     void init();
     QSharedPointer<QCamera> camera_;
     QSharedPointer<QtLocalCameraView> qtLocalCameraView_;
+
     QList<QMetaObject::Connection> connections_;
+    QSharedPointer<QtLocalCameraSettingsDialog> qtLocalCameraSettings_;
+
 };
 
 #endif // LOCALCAMERA_H

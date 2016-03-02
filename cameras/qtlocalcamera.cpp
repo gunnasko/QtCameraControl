@@ -38,6 +38,11 @@ void QtLocalCamera::init()
     qtLocalCameraView_ = tmp;
     userDefinedName_ = deviceId_;
 
+    qtLocalCameraSettings_ = QSharedPointer<QtLocalCameraSettingsDialog>(new QtLocalCameraSettingsDialog(loadLocalSettings()));
+    connect(qtLocalCameraSettings_.data(), &QDialog::accepted, [=] {
+        loadSettings(qtLocalCameraSettings_->settings());
+    } );
+
     qtLocalCameraView_->updateName(userDefinedName_);
     connect(qtLocalCameraView_.data(), &QtLocalCameraView::camClicked, this, &QtLocalCamera::onOffCamera);
     connect(qtLocalCameraView_.data(), &QtLocalCameraView::toggleRecord, this, &QtLocalCamera::startStopRecording);
@@ -104,6 +109,18 @@ void QtLocalCamera::imageFocus()
 QSharedPointer<QWidget> QtLocalCamera::cameraGUI()
 {
     return qtLocalCameraView_;
+}
+
+QSharedPointer<QDialog> QtLocalCamera::cameraSettings()
+{
+    qtLocalCameraSettings_->load(loadLocalSettings());
+    return qtLocalCameraSettings_;
+}
+
+void QtLocalCamera::loadSettings(CameraSettings settings)
+{
+    setUserDefinedName(settings.userDefinedName);
+    setImageResolution(settings.selectedResolution);
 }
 
 void QtLocalCamera::onOffCamera(bool on)
@@ -179,4 +196,13 @@ void QtLocalCamera::printStatusChange(QCamera::Status status)
     }
     qtLocalCameraView_->updateStreamStatus(toPrint);
 
+}
+
+CameraSettings QtLocalCamera::loadLocalSettings()
+{
+    CameraSettings settings;
+    settings.deviceId = deviceId_;
+    settings.userDefinedName = userDefinedName_;
+    settings.resolutions = supportedResolutions();
+    return settings;
 }

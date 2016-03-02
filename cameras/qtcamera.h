@@ -17,6 +17,7 @@ public:
     void stopRecording();
 
     void captureImage();
+    QList<QSize> supportedResolutions();
 
 protected:
     QImageEncoderSettings imageEncodeSettings_;

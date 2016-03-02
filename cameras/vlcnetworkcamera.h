@@ -22,6 +22,8 @@ public:
     void startCamera();
     void stopCamera();
     QSharedPointer<QWidget> cameraGUI();
+    QSharedPointer<QDialog> cameraSettings();
+    virtual void loadSettings(CameraSettings settings);
 
 private slots:
     void onOffStream(bool);

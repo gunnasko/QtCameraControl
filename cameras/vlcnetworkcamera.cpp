@@ -70,6 +70,17 @@ QSharedPointer<QWidget> VlcNetworkCamera::cameraGUI()
     return vlcNetworkCameraView_;
 }
 
+QSharedPointer<QDialog> VlcNetworkCamera::cameraSettings()
+{
+    qDebug()<<"VlcNetworkCamera::cameraSettings() - Not Implemented!";
+    return QSharedPointer<AbstractCameraSettingsDialog>();
+}
+
+void VlcNetworkCamera::loadSettings(CameraSettings settings)
+{
+    qDebug()<<"VlcNetworkCamera::loadSettings() - Not Implemented!";
+}
+
 void VlcNetworkCamera::onOffStream(bool on)
 {
     if(on && available())

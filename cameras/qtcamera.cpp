@@ -29,3 +29,8 @@ void QtCamera::captureImage()
     imageCapture_->capture(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation));
 }
 
+QList<QSize> QtCamera::supportedResolutions()
+{
+    return imageCapture_->supportedResolutions();
+}
+

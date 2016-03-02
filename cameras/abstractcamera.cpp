@@ -91,12 +91,6 @@ void AbstractCamera::setImageResolutionW(int width)
     }
 }
 
-QList<QSize> AbstractCamera::supportedResolutions()
-{
-    qDebug()<<"Move this function to QtCamera!";
-    return QList<QSize>();
-}
-
 void AbstractCamera::setImageResolutionH(int height)
 {
     if(height != imageResolution_.height()) {
