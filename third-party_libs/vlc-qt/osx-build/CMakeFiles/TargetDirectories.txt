@@ -1,0 +1,10 @@
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/widgets/CMakeFiles/Widgets_automoc.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/tests/CMakeFiles/VLC-Qt.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/core/CMakeFiles/Core_automoc.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/qml/CMakeFiles/Qml.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/widgets/CMakeFiles/Widgets.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/tests/CMakeFiles/VLC-Qt_automoc.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/qml/CMakeFiles/Qml_automoc.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/src/core/CMakeFiles/Core.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/CMakeFiles/dmg.dir
+/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/CMakeFiles/uninstall.dir

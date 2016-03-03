@@ -1,0 +1,1 @@
+cmake -DBUILD_TESTS=ON -DCMAKE_PREFIX_PATH=/Users/andreas/Qt/5.5/clang_64/lib/cmake -DSTATIC=OFF -DCMAKE_INSTALL_PREFIX=/Users/andreas/QtCameraControl/third-party_libs/vlc-qt/osx-build/install ../

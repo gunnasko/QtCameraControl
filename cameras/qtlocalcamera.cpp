@@ -9,15 +9,22 @@
 QtLocalCamera::QtLocalCamera(const QByteArray &deviceId, QObject *parent) : QtCamera(parent)
 {
     deviceId_ = QString(deviceId);
-    camera_ = QSharedPointer<QCamera>(new QCamera(deviceId));
+    camera_ = QSharedPointer<QCamera>(new QCamera(deviceId, this));
     init();
 }
 
 QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : QtCamera(parent)
 {
-    camera_ = QSharedPointer<QCamera>(new QCamera(camInfo));
+    camera_ = QSharedPointer<QCamera>(new QCamera(camInfo, this));
     deviceId_ = camInfo.deviceName();
     init();
+}
+
+QtLocalCamera::~QtLocalCamera()
+{
+    foreach(auto connection, connections_) {
+        disconnect(connection);
+    }
 }
 
 void QtLocalCamera::init()
@@ -45,11 +52,11 @@ void QtLocalCamera::init()
         imageCapture_->setEncodingSettings(imageEncodeSettings_);
     } );
 
-    connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged);
-    connect(camera_.data(), &QCamera::stateChanged, [=] {
+    connections_.append(connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged));
+    connections_.append(connect(camera_.data(), &QCamera::stateChanged, [=] {
             emit(qtLocalCameraView_->camToggled(isRunning()));
-    } );
-    connect(camera_.data(), &QCamera::statusChanged, this, &QtLocalCamera::printStatusChange);
+    } ));
+    connections_.append(connect(camera_.data(), &QCamera::statusChanged, this, &QtLocalCamera::printStatusChange));
 
     connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
         qtLocalCameraView_->updateStreamStatus(camera_->errorString());

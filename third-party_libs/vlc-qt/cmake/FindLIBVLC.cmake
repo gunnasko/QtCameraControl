@@ -28,13 +28,14 @@
 # and then again with no specified paths to search the default
 # locations. When an earlier FIND_* succeeds, subsequent FIND_*s
 # searching for the same item do nothing.
-
 #Put here path to custom location
 #example: /home/user/vlc/include etc..
 FIND_PATH(LIBVLC_INCLUDE_DIR vlc/vlc.h
   HINTS "$ENV{LIBVLC_INCLUDE_PATH}"
   PATHS
     #Mac OS and Contribs
+    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/vlc"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/include/vlc"
     "/Applications/VLC.app/Contents/MacOS/include"
@@ -63,6 +64,7 @@ FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc vlc
 	"/usr/local/lib/vlc"
     "$ENV{LIB_DIR}/lib"
     #Mac OS
+    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/plugins"
     "/Applications/VLC.app/Contents/MacOS/lib"
@@ -79,6 +81,7 @@ FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore vlccore
 	"/usr/local/lib"
     "$ENV{LIB_DIR}/lib"
     #Mac OS
+    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/plugins"
     "/Applications/VLC.app/Contents/MacOS/lib"

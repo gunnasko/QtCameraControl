@@ -13,7 +13,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-unix{
+unix:!macx{
     LIBS += -L$$_PRO_FILE_PWD_/third-party_libs/vlc-qt/linux-build/install/lib -lVLCQtCore -lVLCQtWidgets
     INCLUDEPATH += $$_PRO_FILE_PWD_/third-party_libs/vlc-qt/linux-build/install/include
     LIBS += -L/usr/local/lib
@@ -30,6 +30,12 @@ win32{
         LIBS += -L"$$_PRO_FILE_PWD_/third-party_libs/vlc-qt/win-build/install/lib"
         LIBS += -L"$$_PRO_FILE_PWD_/third-party_libs/vlc-qt/win-build/install/bin" -lVLCQtCore -lVLCQtWidgets
     }
+}
+macx{
+    LIBS += -F$$PWD/third-party_libs/vlc-qt/osx-build/install/lib/ -framework VLCQtCore -framework VLCQtWidgets
+    #DYLD_LIBRARY_PATH += $$PWD/third-party_libs/vlc-qt/osx-build/install/lib/
+    INCLUDEPATH += $$PWD/third-party_libs/vlc-qt/linux-build/install/include
+    DEPENDPATH += $$PWD/third-party_libs/vlc-qt/linux-build/install/include
 }
 
 include (cameras/cameras.pri)
@@ -51,3 +57,4 @@ HEADERS  += mainwindow.h \
 
 RESOURCES += \
     images.qrc
+

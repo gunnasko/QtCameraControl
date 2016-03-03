@@ -16,6 +16,7 @@ public:
 
     QtLocalCamera(const QByteArray &deviceName, QObject *parent = 0);
     QtLocalCamera(const QCameraInfo &camInfo, QObject *parent = 0);
+    ~QtLocalCamera();
 
     bool available();
     bool isRunning();
@@ -38,7 +39,7 @@ private:
     void init();
     QSharedPointer<QCamera> camera_;
     QSharedPointer<QtLocalCameraView> qtLocalCameraView_;
-
+    QList<QMetaObject::Connection> connections_;
 };
 
 #endif // LOCALCAMERA_H

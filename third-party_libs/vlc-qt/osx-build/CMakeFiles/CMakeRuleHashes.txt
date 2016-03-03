@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+8968eedf8aa6bf9e54a670211600f938 CMakeFiles/dmg
+d7f1166ca9aeb678123a411934ae7d8f CMakeFiles/uninstall
+09a0cf2a72c8cc862d4241ad3cb2f920 src/core/CMakeFiles/Core_automoc
+563830031c2f33d90dd8193f5520bcde src/qml/CMakeFiles/Qml_automoc
+9562876ed7daac04ba5a91fb2736571e src/widgets/CMakeFiles/Widgets_automoc
+6d55512e48e25e3d544b77547192c237 tests/CMakeFiles/VLC-Qt_automoc
+562effecea39024c940abf84f6f6c8a6 tests/VLC-Qt.app/Contents/Resources/VLC-Qt.icns
