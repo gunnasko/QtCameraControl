@@ -33,7 +33,7 @@ public:
 
     void loadSettings(CameraSettings settings);
 
-    CameraSettings loadLocalSettings();
+    CameraSettings createCameraSettings();
 private slots:
     void onOffCamera(bool);
     void startStopRecording(bool);

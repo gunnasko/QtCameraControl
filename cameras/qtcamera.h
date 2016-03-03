@@ -19,6 +19,9 @@ public:
     void captureImage();
     QList<QSize> supportedResolutions();
 
+private slots:
+    void updateImageResolution();
+
 protected:
     QImageEncoderSettings imageEncodeSettings_;
     QSharedPointer<QMediaRecorder> videoRecorder_;

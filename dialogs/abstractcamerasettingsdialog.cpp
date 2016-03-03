@@ -31,3 +31,13 @@ CameraSettings AbstractCameraSettingsDialog::settings()
     return settings_;
 }
 
+void AbstractCameraSettingsDialog::showEvent(QShowEvent *)
+{
+    emit(dialogVisibleChanged(true));
+}
+
+void AbstractCameraSettingsDialog::hideEvent(QHideEvent *)
+{
+    emit(dialogVisibleChanged(false));
+}
+

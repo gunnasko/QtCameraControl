@@ -23,10 +23,17 @@ public:
 
     virtual void load(CameraSettings settings) = 0;
     CameraSettings settings();
+
+signals:
+    void dialogVisibleChanged(bool);
+
 private slots:
     virtual void save() = 0;
 
 private:
+    void showEvent(QShowEvent *);
+    void hideEvent(QHideEvent *);
+
 protected:
     QVBoxLayout *layout_;
     CameraSettings settings_;

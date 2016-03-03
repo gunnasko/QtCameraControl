@@ -78,6 +78,7 @@ QSharedPointer<QDialog> VlcNetworkCamera::cameraSettings()
 
 void VlcNetworkCamera::loadSettings(CameraSettings settings)
 {
+    Q_UNUSED(settings);
     qDebug()<<"VlcNetworkCamera::loadSettings() - Not Implemented!";
 }
 

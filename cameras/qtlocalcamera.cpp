@@ -38,9 +38,13 @@ void QtLocalCamera::init()
     qtLocalCameraView_ = tmp;
     userDefinedName_ = deviceId_;
 
-    qtLocalCameraSettings_ = QSharedPointer<QtLocalCameraSettingsDialog>(new QtLocalCameraSettingsDialog(loadLocalSettings()));
+    qtLocalCameraSettings_ = QSharedPointer<QtLocalCameraSettingsDialog>(new QtLocalCameraSettingsDialog(createCameraSettings()));
     connect(qtLocalCameraSettings_.data(), &QDialog::accepted, [=] {
         loadSettings(qtLocalCameraSettings_->settings());
+    } );
+    connect(qtLocalCameraSettings_.data(), &AbstractCameraSettingsDialog::dialogVisibleChanged, [=] (bool visible){
+              if(visible)
+                  qtLocalCameraSettings_->load(createCameraSettings());
     } );
 
     qtLocalCameraView_->updateName(userDefinedName_);
@@ -113,7 +117,6 @@ QSharedPointer<QWidget> QtLocalCamera::cameraGUI()
 
 QSharedPointer<QDialog> QtLocalCamera::cameraSettings()
 {
-    qtLocalCameraSettings_->load(loadLocalSettings());
     return qtLocalCameraSettings_;
 }
 
@@ -198,7 +201,7 @@ void QtLocalCamera::printStatusChange(QCamera::Status status)
 
 }
 
-CameraSettings QtLocalCamera::loadLocalSettings()
+CameraSettings QtLocalCamera::createCameraSettings()
 {
     CameraSettings settings;
     settings.deviceId = deviceId_;

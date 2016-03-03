@@ -6,29 +6,33 @@
 QtLocalCameraSettingsDialog::QtLocalCameraSettingsDialog(CameraSettings settings, QWidget *parent) :
     AbstractCameraSettingsDialog(settings, parent)
 {
-    load(settings_);
     auto imageCaptureSettings = new QGroupBox("Image Capture Settings:", this);
     auto imageCaptureLayout = new QGridLayout();
     auto resLabel = new QLabel("Resolution:", this);
 
     resComboBox_ = new QComboBox(this);
-    resComboBox_->addItems(resolutionToStrings());
-    int index = currentResolutionIndex();
-    if(index >= 0 && index < resComboBox_->count())
-        resComboBox_->setCurrentIndex(index);
-
     imageCaptureLayout->addWidget(resLabel, 0, 0);
     imageCaptureLayout->addWidget(resComboBox_, 0, 1);
     imageCaptureSettings->setLayout(imageCaptureLayout);
 
     layout_->addWidget(imageCaptureSettings);
     layout_->addWidget(buttonBox_);
+
+    load(settings_);
 }
 
 void QtLocalCameraSettingsDialog::load(CameraSettings settings)
 {
     settings_ = settings;
     deviceUserValueLabel_->setText(settings_.userDefinedName);
+
+    resolutions_ = settings.resolutions;
+    if(resComboBox_->count() == 0) {
+        resComboBox_->addItems(resolutionToStrings());
+        int index = currentResolutionIndex();
+        if(index >= 0 && index < resComboBox_->count())
+            resComboBox_->setCurrentIndex(index);
+    }
 }
 
 void QtLocalCameraSettingsDialog::save()
