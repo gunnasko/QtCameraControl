@@ -9,6 +9,7 @@
 #include "models/cameramodel.h"
 #include "widgets/cameraselect/cameraselectwidget.h"
 #include "repository/camerarepository.h"
+#include "widgets/cameracontrol/cameraview.h"
 
 #include "dialogs/appsettingsdialog.h"
 
@@ -37,7 +38,7 @@ private:
     QSharedPointer<Cameras> cameras_;
     QSharedPointer<CameraModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
-    QSharedPointer<QWidget> currentView_;
+    QSharedPointer<CameraView> cameraView_;
     int currentViewIndex_;
     QSharedPointer<CameraRepository> camerasDb_;
     QSharedPointer<DataBase> db_;

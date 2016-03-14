@@ -1,4 +1,4 @@
-﻿Build started 04.03.2016 15.50.57.
+﻿Build started 14.03.2016 11.06.51.
      1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\Core.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          setlocal
@@ -15,80 +15,10 @@
          :cmDone
          if %errorlevel% neq 0 goto :VCEnd
          :VCEnd
-         Generating moc_Audio.cpp
-         Generating moc_Enums.cpp
-         Generating moc_Equalizer.cpp
-         Generating moc_Instance.cpp
-         Generating moc_Media.cpp
-         Generating moc_MediaList.cpp
-         Generating moc_MediaListPlayer.cpp
-         Generating moc_MediaPlayer.cpp
-         Generating moc_Video.cpp
-       CustomBuild:
-         Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\CMakeFiles\generate.stamp is up-to-date.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\VideoLAN\VLC\sdk\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_CORE_LIBRARY /D QT_SHARED /D _REENTRANT /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Debug\"" /D Core_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Core.dir\Debug\\" /Fd"Core.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt  -w34100 -w34189 "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Audio.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Common.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Enums.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Error.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Instance.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Media.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\MediaList.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\MediaListPlayer.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\MediaPlayer.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\MetaManager.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\ModuleDescription.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Video.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\VideoMemoryStream.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\VideoFrame.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core\Equalizer.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\Core_automoc.cpp"
-         Audio.cpp
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(453): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(463): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(510): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(523): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(577): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc/plugins/vlc_common.h(892): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>c:\program files\videolan\vlc\sdk\include\vlc\plugins\vlc_variables.h(653): warning C4244: 'return' : conversion from 'int64_t' to 'int', possible loss of data
-     1>C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\errno.h(130): warning C4005: 'ETIMEDOUT' : macro redefinition
-                 c:\program files\videolan\vlc\sdk\include\vlc\plugins\vlc_threads.h(40) : see previous definition of 'ETIMEDOUT'
-         Common.cpp
-         Enums.cpp
-         Error.cpp
-         Instance.cpp
-         Media.cpp
-         MediaList.cpp
-         MediaListPlayer.cpp
-         MediaPlayer.cpp
-         MetaManager.cpp
-         ModuleDescription.cpp
-         Video.cpp
-         VideoMemoryStream.cpp
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(510): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_common.h(892): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-         VideoFrame.cpp
-         Equalizer.cpp
-         Core_automoc.cpp
-         Generating Code...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_CORE_LIBRARY /D QT_SHARED /D _REENTRANT /D QT_CORE_LIB /D "CMAKE_INTDIR=\\\"Debug\\\"" /D Core_EXPORTS /l"0x0409" /I"C:\Program Files\VideoLAN\VLC\sdk\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /nologo /fo"Core.dir\Debug\core.res" C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\platform\windows\core.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\Debug\VLCQtCore.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Cored.lib "C:\Program Files\VideoLAN\VLC\sdk\lib\libvlc.lib" "C:\Program Files\VideoLAN\VLC\sdk\lib\libvlccore.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/Debug/VLCQtCore.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.lib" /MACHINE:X64  /machine:x64 /DLL Core.dir\Debug\core.res
-         Core.dir\Debug\Audio.obj
-         Core.dir\Debug\Common.obj
-         Core.dir\Debug\Enums.obj
-         Core.dir\Debug\Error.obj
-         Core.dir\Debug\Instance.obj
-         Core.dir\Debug\Media.obj
-         Core.dir\Debug\MediaList.obj
-         Core.dir\Debug\MediaListPlayer.obj
-         Core.dir\Debug\MediaPlayer.obj
-         Core.dir\Debug\MetaManager.obj
-         Core.dir\Debug\ModuleDescription.obj
-         Core.dir\Debug\Video.obj
-         Core.dir\Debug\VideoMemoryStream.obj
-         Core.dir\Debug\VideoFrame.obj
-         Core.dir\Debug\Equalizer.obj
-         Core.dir\Debug\Core_automoc.obj
-            Creating library C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.lib and object C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.exp
          Core.vcxproj -> C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\Debug\VLCQtCore.dll
      1>Done Building Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\Core.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:16.02
+Time Elapsed 00:00:00.27

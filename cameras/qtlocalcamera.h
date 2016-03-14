@@ -7,8 +7,6 @@
 #include <QImageEncoderSettings>
 
 #include "qtcamera.h"
-#include "widgets/cameracontrol/qtlocalcameraview.h"
-#include "dialogs/qtlocalcamerasettingsdialog.h"
 
 
 class QtLocalCamera : public QtCamera
@@ -25,29 +23,21 @@ public:
 
     void startCamera();
     void stopCamera();
+    void startRecording();
 
-    void imageFocus();
-
-    QSharedPointer<QWidget> cameraGUI();
-    QSharedPointer<QDialog> cameraSettings();
-
-    void loadSettings(CameraSettings settings);
-
-    CameraSettings createCameraSettings();
-private slots:
-    void onOffCamera(bool);
-    void startStopRecording(bool);
-    void focusPicture();
+    void focusCamera();
     void takePicture();
-    void printStatusChange(QCamera::Status status);
+    QSharedPointer<QWidget> cameraStream();
+    void setCameraView(QCameraViewfinder *view);
 
 private:
     void init();
+    QString statusToString(QCamera::Status status);
     QSharedPointer<QCamera> camera_;
-    QSharedPointer<QtLocalCameraView> qtLocalCameraView_;
-
     QList<QMetaObject::Connection> connections_;
-    QSharedPointer<QtLocalCameraSettingsDialog> qtLocalCameraSettings_;
+
+    QSharedPointer<QCameraViewfinder> cameraStream_;
+
 
 };
 

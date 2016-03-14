@@ -13,29 +13,7 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     instance_ = new VlcInstance(VlcCommon::args(), this);
     mediaPlayer_ = new VlcMediaPlayer(instance_);
     media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
-
-    auto tmp = QSharedPointer<VlcNetworkCameraView>(new VlcNetworkCameraView());
-    mediaPlayer_->setVideoWidget(tmp->vlcNetworkCameraView().data());
-    tmp->setMediaPlayer(mediaPlayer_);
-    vlcNetworkCameraView_ = tmp;
-
-    vlcNetworkCameraView_->updateName(userDefinedName_);
-
-    connect(this, &AbstractCamera::userDefinedNameChanged, [=] {
-        vlcNetworkCameraView_->updateName(userDefinedName_);
-    } );
-
-    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::camClicked, this, &VlcNetworkCamera::onOffStream);
-    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::pictureReleased, this, &VlcNetworkCamera::takeSnapShot);
-    connect(vlcNetworkCameraView_.data(), &VlcNetworkCameraView::toggleRecord, this, &VlcNetworkCamera::startStopRecording);
-
-    connect(mediaPlayer_, &VlcMediaPlayer::error, [=] {
-        vlcNetworkCameraView_->updateStreamStatus("Error: " + VlcError::errmsg());
-    } );
-    connect(mediaPlayer_, &VlcMediaPlayer::snapshotTaken, [=] (const QString &filePath){
-        vlcNetworkCameraView_->updateRecordingStatus("Snapshot taken to: " + filePath);
-    } );
-    connect(mediaPlayer_, &VlcMediaPlayer::stateChanged, this, &VlcNetworkCamera::printCurrentState);
+    cameraStream_ = QSharedPointer<VlcWidgetVideo>(new VlcWidgetVideo(mediaPlayer_));
 }
 
 VlcNetworkCamera::~VlcNetworkCamera()
@@ -65,89 +43,45 @@ void VlcNetworkCamera::stopCamera()
     mediaPlayer_->stop();
 }
 
-QSharedPointer<QWidget> VlcNetworkCamera::cameraGUI()
+void VlcNetworkCamera::startRecording()
 {
-    return vlcNetworkCameraView_;
+    mediaPlayer_->stop();
+
+    QSettings settings;
+    auto vidLocation = QDir(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    media_->record(getNewFileName("VID", vidLocation), vidLocation.absolutePath(), Vlc::MP4, true);
+
+    runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
 }
 
-QSharedPointer<QDialog> VlcNetworkCamera::cameraSettings()
+void VlcNetworkCamera::stopRecording()
 {
-    qDebug()<<"VlcNetworkCamera::cameraSettings() - Not Implemented!";
-    return QSharedPointer<AbstractCameraSettingsDialog>();
+    mediaPlayer_->stop();
+    delete media_;
+    media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
+    runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
 }
 
-void VlcNetworkCamera::loadSettings(CameraSettings settings)
+VlcMediaPlayer *VlcNetworkCamera::mediaPlayer()
 {
-    Q_UNUSED(settings);
-    qDebug()<<"VlcNetworkCamera::loadSettings() - Not Implemented!";
+    return mediaPlayer_;
 }
 
-void VlcNetworkCamera::onOffStream(bool on)
+void VlcNetworkCamera::focusCamera()
 {
-    if(on && available())
-        startCamera();
-    else
-        stopCamera();
+    //Nothing to focus on network stream!
 }
 
-void VlcNetworkCamera::printCurrentState()
-{
-    Vlc::State currentState = mediaPlayer_->state();
-    QString toPrint;
-    switch(currentState) {
-    case Vlc::Idle:
-        toPrint = "Idle...";
-        break;
-    case Vlc::Opening:
-        toPrint = "Opening...";
-        break;
-    case Vlc::Buffering:
-        toPrint = "Buffering...";
-        break;
-    case Vlc::Playing:
-        toPrint = "Playing...";
-        break;
-    case Vlc::Paused:
-        toPrint = "Paused...";
-        break;
-    case Vlc::Stopped:
-        toPrint = "Stopped...";
-        break;
-    case Vlc::Ended:
-        toPrint = "Ended...";
-        break;
-    case Vlc::Error:
-        toPrint = "Error!";
-        break;
-    default:
-        toPrint = "Wrong state!";
-    }
-    vlcNetworkCameraView_->updateStreamStatus(toPrint);
-}
-
-void VlcNetworkCamera::takeSnapShot()
+void VlcNetworkCamera::takePicture()
 {
     QSettings settings;
     auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
     mediaPlayer_->video()->takeSnapshot(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png");
 }
 
-void VlcNetworkCamera::startStopRecording(bool on)
+QSharedPointer<QWidget> VlcNetworkCamera::cameraStream()
 {
-    static QString output;
-    mediaPlayer_->stop();
-    if(on) {
-        QSettings settings;
-        auto vidLocation = QDir(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
-        output = media_->record(getNewFileName("VID", vidLocation), vidLocation.absolutePath(), Vlc::MP4, true);
-    } else {
-
-        delete media_;
-        media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
-        vlcNetworkCameraView_->updateRecordingStatus("Recorded to: " + output);
-        qDebug()<<"Recorded to: " << output;
-    }
-    runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
+    return cameraStream_;
 }
 
 void VlcNetworkCamera::runFunctionWhenInState(Vlc::State state, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs)

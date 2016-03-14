@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -28,7 +28,7 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/test" TYPE DIRECTORY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/install/bin/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/test" TYPE DIRECTORY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/install/bin/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

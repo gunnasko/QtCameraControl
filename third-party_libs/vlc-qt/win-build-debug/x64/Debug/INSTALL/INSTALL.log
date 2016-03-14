@@ -1,5 +1,5 @@
-﻿Build started 04.03.2016 15.52.39.
-     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\INSTALL.vcxproj" on node 2 (Build target(s)).
+﻿Build started 14.03.2016 11.06.54.
+     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\INSTALL.vcxproj" on node 4 (Build target(s)).
      1>PostBuildEvent:
          setlocal
          "C:\Program Files (x86)\CMake\bin\cmake.exe" -DBUILD_TYPE=Debug -P cmake_install.cmake
@@ -689,4 +689,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.16
+Time Elapsed 00:00:03.45

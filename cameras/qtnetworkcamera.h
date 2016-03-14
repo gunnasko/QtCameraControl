@@ -5,7 +5,6 @@
 #include <QMediaPlayer>
 
 #include "qtcamera.h"
-#include "widgets/cameracontrol/qtnetworkcameraview.h"
 
 class QtNetworkCamera : public QtCamera
 {
@@ -17,7 +16,6 @@ public:
 
     void startCamera();
     void stopCamera();
-    QSharedPointer<QWidget> cameraGUI();
 
 private slots:
     void onOffStream(bool);
@@ -26,7 +24,6 @@ private slots:
 private:
     QUrl cameraAddress_;
     QSharedPointer<QMediaPlayer> mediaPlayer_;
-    QSharedPointer<QtNetworkCameraView> qtNetworkCameraView_;
 };
 
 #endif // RTSPCAMERA_H

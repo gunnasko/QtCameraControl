@@ -22,64 +22,71 @@ QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : QtCa
 
 QtLocalCamera::~QtLocalCamera()
 {
-    foreach(auto connection, connections_) {
-        disconnect(connection);
-    }
+    qDebug()<<"Deleted local camera!";
 }
 
 void QtLocalCamera::init()
 {
     videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data(), this));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data(), this));
+    cameraStream_ = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
+
+    camera_->setViewfinder(cameraStream_.data());
+
     imageCapture_->setEncodingSettings(imageEncodeSettings_);
 
-    auto tmp = QSharedPointer<QtLocalCameraView>(new QtLocalCameraView());
-    camera_->setViewfinder(tmp->camGUI().data());
-    qtLocalCameraView_ = tmp;
     userDefinedName_ = deviceId_;
-
-    qtLocalCameraSettings_ = QSharedPointer<QtLocalCameraSettingsDialog>(new QtLocalCameraSettingsDialog(createCameraSettings()));
-    connect(qtLocalCameraSettings_.data(), &QDialog::accepted, [=] {
-        loadSettings(qtLocalCameraSettings_->settings());
-    } );
-    connect(qtLocalCameraSettings_.data(), &AbstractCameraSettingsDialog::dialogVisibleChanged, [=] (bool visible){
-              if(visible)
-                  qtLocalCameraSettings_->load(createCameraSettings());
-    } );
-
-    qtLocalCameraView_->updateName(userDefinedName_);
-    connect(qtLocalCameraView_.data(), &QtLocalCameraView::camClicked, this, &QtLocalCamera::onOffCamera);
-    connect(qtLocalCameraView_.data(), &QtLocalCameraView::toggleRecord, this, &QtLocalCamera::startStopRecording);
-    connect(qtLocalCameraView_.data(), &QtLocalCameraView::picturePressed, this, &QtLocalCamera::focusPicture);
-    connect(qtLocalCameraView_.data(), &QtLocalCameraView::pictureReleased, this, &QtLocalCamera::takePicture);
-
-    connect(this, &AbstractCamera::userDefinedNameChanged, [=] {
-        qtLocalCameraView_->updateName(userDefinedName());
-    } );
 
     connect(this, &AbstractCamera::imageResolutionChanged, [=] {
         imageCapture_->setEncodingSettings(imageEncodeSettings_);
     } );
 
-    connections_.append(connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged));
-    connections_.append(connect(camera_.data(), &QCamera::stateChanged, [=] {
-            emit(qtLocalCameraView_->camToggled(isRunning()));
-    } ));
-    connections_.append(connect(camera_.data(), &QCamera::statusChanged, this, &QtLocalCamera::printStatusChange));
-
-    connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
-        qtLocalCameraView_->updateStreamStatus(camera_->errorString());
-    } );
-
     connect(videoRecorder_.data(), static_cast<void(QMediaRecorder::*)(QMediaRecorder::Error)>(&QMediaRecorder::error), [=] {
-        qtLocalCameraView_->updateStreamStatus(videoRecorder_->errorString());
+        emit(recordingError(videoRecorder_->errorString()));
     } );
 
     connect(imageCapture_.data(), &QCameraImageCapture::imageSaved,[=](int id, const QString &fileName) {
-        Q_UNUSED(id);
-        qtLocalCameraView_->updateRecordingStatus("Saved image in: " + fileName);
+            Q_UNUSED(id);
+            emit(imageSaved(fileName));
+        } );
+
+
+    connect(camera_.data(), &QCamera::stateChanged, this, &AbstractCamera::dataChanged);
+    connect(camera_.data(), &QCamera::statusChanged, [=] (QCamera::Status status) {
+        emit(statusChanged(statusToString(status)));
     } );
+
+    connect(camera_.data(), static_cast<void(QCamera::*)(QCamera::Error)>(&QCamera::error), [=] {
+        emit(cameraError(camera_->errorString()));
+    } );
+
     camera_->load();
+}
+
+QString QtLocalCamera::statusToString(QCamera::Status status)
+{
+    switch(status) {
+    case QCamera::StartingStatus:
+        return "Starting...";
+    case QCamera::StoppingStatus:
+        return "Stopping...";
+    case QCamera::StandbyStatus:
+        return "Standby...(Power Saving Mode)";
+    case QCamera::LoadedStatus:
+        return "Loaded!";
+    case QCamera::LoadingStatus:
+        return "Loading...";
+    case QCamera::UnloadingStatus:
+        return "Unloading...";
+    case QCamera::UnloadedStatus:
+        return "Unloaded!";
+    case QCamera::ActiveStatus:
+        return "Camera Active!";
+    case QCamera::UnavailableStatus:
+        return "Camera Unavailable!";
+    default:
+        return "Unknown status!";
+    }
 }
 
 
@@ -104,55 +111,18 @@ void QtLocalCamera::stopCamera()
     camera_->stop();
 }
 
-void QtLocalCamera::imageFocus()
+void QtLocalCamera::focusCamera()
 {
-    camera_->setCaptureMode(QCamera::CaptureStillImage);
-    camera_->searchAndLock();
-}
-
-QSharedPointer<QWidget> QtLocalCamera::cameraGUI()
-{
-    return qtLocalCameraView_;
-}
-
-QSharedPointer<QDialog> QtLocalCamera::cameraSettings()
-{
-    return qtLocalCameraSettings_;
-}
-
-void QtLocalCamera::loadSettings(CameraSettings settings)
-{
-    setUserDefinedName(settings.userDefinedName);
-    setImageResolution(settings.selectedResolution);
-}
-
-void QtLocalCamera::onOffCamera(bool on)
-{
-    if(on)
-        startCamera();
-    else
-        stopCamera();
-}
-
-void QtLocalCamera::startStopRecording(bool on)
-{
-#ifdef Q_OS_WIN
-    Q_UNUSED(on)
-    qtLocalCameraView_->updateRecordingStatus("ERROR - This function is not supported in windows!");
-#else
-    if(isRunning() && on) {
-        camera_->setCaptureMode(QCamera::CaptureVideo);
-        startRecording();
-    } else {
-        stopRecording();
+    if(isRunning()) {
+        camera_->setCaptureMode(QCamera::CaptureStillImage);
+        camera_->searchAndLock();
     }
-#endif
 }
 
-void QtLocalCamera::focusPicture()
+void QtLocalCamera::startRecording()
 {
-    if(isRunning())
-        imageFocus();
+    camera_->setCaptureMode(QCamera::CaptureVideo);
+    QtCamera::startRecording();
 }
 
 void QtLocalCamera::takePicture()
@@ -163,49 +133,12 @@ void QtLocalCamera::takePicture()
     }
 }
 
-void QtLocalCamera::printStatusChange(QCamera::Status status)
+QSharedPointer<QWidget> QtLocalCamera::cameraStream()
 {
-    QString toPrint;
-    switch(status) {
-    case QCamera::StartingStatus:
-        toPrint = "Starting...";
-        break;
-    case QCamera::StoppingStatus:
-        toPrint = "Stopping...";
-        break;
-    case QCamera::StandbyStatus:
-        toPrint = "Standby...(Power Saving Mode)";
-        break;
-    case QCamera::LoadedStatus:
-        toPrint = "Loaded!";
-        break;
-    case QCamera::LoadingStatus:
-        toPrint = "Loading...";
-        break;
-    case QCamera::UnloadingStatus:
-        toPrint = "Unloading...";
-        break;
-    case QCamera::UnloadedStatus:
-        toPrint = "Unloaded!";
-        break;
-    case QCamera::ActiveStatus:
-        toPrint = "Camera Active!";
-        break;
-    case QCamera::UnavailableStatus:
-        toPrint = "Camera Unavailable!";
-        break;
-    default:
-        toPrint = "Unknown status!";
-    }
-    qtLocalCameraView_->updateStreamStatus(toPrint);
-
+    return cameraStream_;
 }
 
-CameraSettings QtLocalCamera::createCameraSettings()
+void QtLocalCamera::setCameraView(QCameraViewfinder *view)
 {
-    CameraSettings settings;
-    settings.deviceId = deviceId_;
-    settings.userDefinedName = userDefinedName_;
-    settings.resolutions = supportedResolutions();
-    return settings;
+    camera_->setViewfinder(view);
 }

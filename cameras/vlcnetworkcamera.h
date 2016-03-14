@@ -7,8 +7,9 @@
 #include <VLCQtCore/MediaPlayer.h>
 #include <VLCQtCore/Error.h>
 
+#include <VLCQtWidgets/WidgetVideo.h>
+
 #include "abstractcamera.h"
-#include "widgets/cameracontrol/vlcnetworkcameraview.h"
 
 class VlcNetworkCamera : public AbstractCamera
 {
@@ -21,15 +22,17 @@ public:
 
     void startCamera();
     void stopCamera();
-    QSharedPointer<QWidget> cameraGUI();
-    QSharedPointer<QDialog> cameraSettings();
-    virtual void loadSettings(CameraSettings settings);
 
-private slots:
-    void onOffStream(bool);
-    void printCurrentState();
-    void takeSnapShot();
-    void startStopRecording(bool);
+    void startRecording();
+    void stopRecording();
+
+    void focusCamera();
+    void takePicture();
+
+    QSharedPointer<QWidget> cameraStream();
+
+    VlcMediaPlayer *mediaPlayer();
+
 
 private:
     QUrl cameraAddress_;
@@ -37,10 +40,11 @@ private:
     VlcInstance *instance_;
     VlcMedia *media_;
 
+    QSharedPointer<VlcWidgetVideo> cameraStream_;
+
     void runFunctionWhenInState(Vlc::State, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs);
     bool checkState(Vlc::State state, QTimer* timer, void (VlcNetworkCamera::*funcptr)());
 
-    QSharedPointer<VlcNetworkCameraView> vlcNetworkCameraView_;
 };
 
 #endif // VLCNETWORKCAMERA_H

@@ -1,5 +1,5 @@
-﻿Build started 04.03.2016 15.51.13.
-     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Qml.vcxproj" on node 3 (Build target(s)).
+﻿Build started 14.03.2016 11.06.52.
+     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Qml.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          setlocal
          cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml
@@ -15,41 +15,6 @@
          :cmDone
          if %errorlevel% neq 0 goto :VCEnd
          :VCEnd
-         Generating moc_QmlVideoObject.cpp
-         Generating moc_QmlVideoPlayer.cpp
-       CustomBuild:
-         Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp is up-to-date.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtQuick /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /IC:\Qt\5.5\msvc2013_64\include\QtQml /IC:\Qt\5.5\msvc2013_64\include\QtNetwork /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_QML_LIBRARY /D QT_SHARED /D _REENTRANT /D NOMINMAX /D QT_QUICK_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D QT_QML_LIB /D QT_NETWORK_LIB /D "CMAKE_INTDIR=\"Debug\"" /D Qml_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Qml.dir\Debug\\" /Fd"Qml.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt  -w34100 -w34189 "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoObject.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoPlayer.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlPainter.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlslPainter.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Qml_automoc.cpp"
-         QmlVideoObject.cpp
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(510): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_common.h(892): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-         QmlVideoPlayer.cpp
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(510): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_common.h(892): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-         GlPainter.cpp
-     1>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlPainter.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlPainter.cpp(68): warning C4305: 'argument' : truncation from 'double' to 'float'
-         GlslPainter.cpp
-         Qml_automoc.cpp
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(510): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_arrays.h(527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-     1>C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins\vlc_common.h(892): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
-         Generating Code...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_QML_LIBRARY /D QT_SHARED /D _REENTRANT /D NOMINMAX /D QT_QUICK_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D QT_QML_LIB /D QT_NETWORK_LIB /D "CMAKE_INTDIR=\\\"Debug\\\"" /D Qml_EXPORTS /l"0x0409" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include" /I"C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtQuick /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /IC:\Qt\5.5\msvc2013_64\include\QtQml /IC:\Qt\5.5\msvc2013_64\include\QtNetwork /nologo /fo"Qml.dir\Debug\qml.res" C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\platform\windows\qml.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Debug\VLCQtQml.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Quickd.lib ..\core\VLCQtCore.lib "C:\Program Files\VideoLAN\VLC\sdk\lib\libvlccore.lib" C:\Qt\5.5\msvc2013_64\lib\Qt5Guid.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Qmld.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Networkd.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Cored.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/Debug/VLCQtQml.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib" /MACHINE:X64  /machine:x64 /DLL Qml.dir\Debug\qml.res
          Qml.dir\Debug\QmlVideoObject.obj
@@ -57,10 +22,11 @@
          Qml.dir\Debug\GlPainter.obj
          Qml.dir\Debug\GlslPainter.obj
          Qml.dir\Debug\Qml_automoc.obj
+         LINK : C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Debug\VLCQtQml.dll not found or not built by the last incremental link; performing full link
             Creating library C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib and object C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.exp
          Qml.vcxproj -> C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Debug\VLCQtQml.dll
      1>Done Building Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Qml.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:14.34
+Time Elapsed 00:00:01.49

@@ -17,7 +17,7 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     camerasModel_= QSharedPointer<CameraModel>(new CameraModel(cameras_));
 
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
-    currentView_ = QSharedPointer<QWidget>(new QWidget(this));
+    cameraView_ = QSharedPointer<CameraView>(new CameraView(this));
 
     appSettings_ = QSharedPointer<AppSettingsDialog>(new AppSettingsDialog(this));
 
@@ -31,7 +31,7 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 
     auto mainWindowWidget = new QWidget(this);
     layout_ = new QHBoxLayout(mainWindowWidget);
-    layout_->addWidget(currentView_.data());
+    layout_->addWidget(cameraView_.data());
     layout_->addWidget(cameraSelectWidget_.data());
     mainWindowWidget->setLayout(layout_);
     setCentralWidget(mainWindowWidget);
@@ -40,21 +40,17 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 void MainWindow::openCamSettings(int index)
 {
     auto cam = cameras_->getCamera(index);
-    if(cam) {
+    /*if(cam) {
         auto settingsDialog = cam->cameraSettings();
         settingsDialog->show();
-    }
+    }*/
 }
 
 void MainWindow::changeView(int index)
 {
     auto cam = cameras_->getCamera(index);
     if(cam) {
-        currentView_->hide();
-        layout_->removeWidget(currentView_.data());
-        currentView_= cam->cameraGUI();
-        layout_->insertWidget(0, currentView_.data());
-        currentView_->show();
+        cameraView_->initCam(cam);
         currentViewIndex_ = index;
     }
 }
@@ -72,9 +68,7 @@ void MainWindow::openAddNetworkCameraDialog()
 void MainWindow::deleteCamera(int index)
 {
     if(currentViewIndex_ == index) {
-        currentView_->hide();
-        layout_->removeWidget(currentView_.data());
-        currentView_ = QSharedPointer<QWidget>(new QWidget(this));
+        cameraView_->reset();
     }
     cameras_->deleteCamera(index);
 }

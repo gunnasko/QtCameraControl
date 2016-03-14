@@ -1,24 +1,6 @@
-﻿Build started 04.03.2016 15.51.27.
+﻿Build started 14.03.2016 11.06.54.
      1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\VLC-Qt.vcxproj" on node 3 (Build target(s)).
-     1>CustomBuild:
-         Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/tests/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\CMakeFiles\generate.stamp is up-to-date.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtQuick /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /IC:\Qt\5.5\msvc2013_64\include\QtQml /IC:\Qt\5.5\msvc2013_64\include\QtNetwork /IC:\Qt\5.5\msvc2013_64\include\QtWidgets /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D QT_QUICK_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D QT_QML_LIB /D QT_NETWORK_LIB /D QT_WIDGETS_LIB /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"VLC-Qt.dir\Debug\\" /Fd"VLC-Qt.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt  -w34100 -w34189 "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\main.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\Tests.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\common\MetaManager.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\common\Recorder.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\common\dual\DualInstance.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\common\dual\DualPlayer.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\widgets\MediaList.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\widgets\Player.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\tests\widgets\EqualizerDialog.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\VLC-Qt_automoc.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\CMakeFiles\VLC-Qt.dir\qrc_logo.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\CMakeFiles\VLC-Qt.dir\qrc_qml.cpp"
-         main.cpp
-         Tests.cpp
-         MetaManager.cpp
-         Recorder.cpp
-         DualInstance.cpp
-         DualPlayer.cpp
-         MediaList.cpp
-         Player.cpp
-         EqualizerDialog.cpp
-         VLC-Qt_automoc.cpp
-         qrc_logo.cpp
-         qrc_qml.cpp
-         Generating Code...
-       ResourceCompile:
+     1>ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _DEBUG /D QT_QUICK_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D QT_QML_LIB /D QT_NETWORK_LIB /D QT_WIDGETS_LIB /D "CMAKE_INTDIR=\\\"Debug\\\"" /l"0x0409" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtQuick /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /IC:\Qt\5.5\msvc2013_64\include\QtQml /IC:\Qt\5.5\msvc2013_64\include\QtNetwork /IC:\Qt\5.5\msvc2013_64\include\QtWidgets /nologo /fo"VLC-Qt.dir\Debug\tests.res" C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\platform\windows\tests.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\Debug\VLC-Qt.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Quickd.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Widgetsd.lib ..\src\core\VLCQtCore.lib ..\src\qml\VLCQtQml.lib ..\src\widgets\VLCQtWidgets.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Qmld.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Networkd.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Guid.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Cored.lib C:\Qt\5.5\msvc2013_64\lib\qtmaind.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/tests/Debug/VLC-Qt.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/tests/Debug/VLC-Qt.lib" /MACHINE:X64  /machine:x64 "VLC-Qt.dir\Debug\tests.res"
@@ -34,9 +16,10 @@
          "VLC-Qt.dir\Debug\VLC-Qt_automoc.obj"
          "VLC-Qt.dir\Debug\qrc_logo.obj"
          "VLC-Qt.dir\Debug\qrc_qml.obj"
+         LINK : C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\Debug\VLC-Qt.exe not found or not built by the last incremental link; performing full link
          VLC-Qt.vcxproj -> C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\Debug\VLC-Qt.exe
      1>Done Building Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\tests\VLC-Qt.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:17.46
+Time Elapsed 00:00:00.71
