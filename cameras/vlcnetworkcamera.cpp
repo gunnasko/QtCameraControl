@@ -13,7 +13,7 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     instance_ = new VlcInstance(VlcCommon::args(), this);
     mediaPlayer_ = new VlcMediaPlayer(instance_);
     media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
-    cameraStream_ = QSharedPointer<VlcWidgetVideo>(new VlcWidgetVideo(mediaPlayer_));
+    cameraStream_ = new VlcWidgetVideo(mediaPlayer_);
 }
 
 VlcNetworkCamera::~VlcNetworkCamera()
@@ -79,7 +79,7 @@ void VlcNetworkCamera::takePicture()
     mediaPlayer_->video()->takeSnapshot(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png");
 }
 
-QSharedPointer<QWidget> VlcNetworkCamera::cameraStream()
+QWidget *VlcNetworkCamera::cameraStream()
 {
     return cameraStream_;
 }

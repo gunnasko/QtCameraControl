@@ -14,6 +14,7 @@ class CameraView : public QWidget
     Q_OBJECT
 public:
     explicit CameraView(QWidget *parent = 0);
+    ~CameraView();
 
     void initCam(QSharedPointer<AbstractCamera> camera);
     void reset();
@@ -34,6 +35,8 @@ private:
     CameraNameLabel *camName_;
     CameraControlWidget *camControl_;
     QWidget *placeHolder_;
+    QWidget *currentStream_;
+
     QLabel *streamStatusLabel_;
     QLabel *recordingStatusLabel_;
     QSharedPointer<QTimer> streamStatusCleaner_;
@@ -45,6 +48,7 @@ private:
 protected:
     QStackedWidget *viewStack_;
     QSharedPointer<AbstractCamera> camera_;
+    QList<QMetaObject::Connection> camConnections_;
 
 };
 

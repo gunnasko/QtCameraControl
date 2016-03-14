@@ -29,7 +29,7 @@ public:
     void focusCamera();
     void takePicture();
 
-    QSharedPointer<QWidget> cameraStream();
+    QWidget *cameraStream();
 
     VlcMediaPlayer *mediaPlayer();
 
@@ -40,7 +40,7 @@ private:
     VlcInstance *instance_;
     VlcMedia *media_;
 
-    QSharedPointer<VlcWidgetVideo> cameraStream_;
+    VlcWidgetVideo *cameraStream_;
 
     void runFunctionWhenInState(Vlc::State, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs);
     bool checkState(Vlc::State state, QTimer* timer, void (VlcNetworkCamera::*funcptr)());

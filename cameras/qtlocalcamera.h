@@ -27,7 +27,7 @@ public:
 
     void focusCamera();
     void takePicture();
-    QSharedPointer<QWidget> cameraStream();
+    QWidget *cameraStream();
     void setCameraView(QCameraViewfinder *view);
 
 private:
@@ -36,7 +36,7 @@ private:
     QSharedPointer<QCamera> camera_;
     QList<QMetaObject::Connection> connections_;
 
-    QSharedPointer<QCameraViewfinder> cameraStream_;
+    QCameraViewfinder *cameraStream_;
 
 
 };

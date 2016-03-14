@@ -44,7 +44,7 @@ public:
     virtual void focusCamera() = 0;
     virtual void takePicture() = 0;
 
-    virtual QSharedPointer<QWidget> cameraStream() = 0;
+    virtual QWidget *cameraStream() = 0;
 
     bool operator==(const AbstractCamera& other);
     void copy(const AbstractCamera *other);

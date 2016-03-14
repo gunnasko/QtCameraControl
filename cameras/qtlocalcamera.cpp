@@ -22,6 +22,7 @@ QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : QtCa
 
 QtLocalCamera::~QtLocalCamera()
 {
+    //delete cameraStream_;
     qDebug()<<"Deleted local camera!";
 }
 
@@ -29,9 +30,9 @@ void QtLocalCamera::init()
 {
     videoRecorder_ = QSharedPointer<QMediaRecorder>(new QMediaRecorder(camera_.data(), this));
     imageCapture_ = QSharedPointer<QCameraImageCapture>(new QCameraImageCapture(camera_.data(), this));
-    cameraStream_ = QSharedPointer<QCameraViewfinder>(new QCameraViewfinder());
+    cameraStream_ = new QCameraViewfinder();
 
-    camera_->setViewfinder(cameraStream_.data());
+    camera_->setViewfinder(cameraStream_);
 
     imageCapture_->setEncodingSettings(imageEncodeSettings_);
 
@@ -133,7 +134,7 @@ void QtLocalCamera::takePicture()
     }
 }
 
-QSharedPointer<QWidget> QtLocalCamera::cameraStream()
+QWidget *QtLocalCamera::cameraStream()
 {
     return cameraStream_;
 }

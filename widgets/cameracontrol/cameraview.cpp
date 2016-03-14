@@ -48,6 +48,12 @@ CameraView::CameraView(QWidget *parent) :
     this->setLayout(layout_);
 }
 
+CameraView::~CameraView()
+{
+    if(camera_)
+        reset();
+}
+
 void CameraView::initCam(QSharedPointer<AbstractCamera> camera)
 {
     if(camera_) {
@@ -55,25 +61,30 @@ void CameraView::initCam(QSharedPointer<AbstractCamera> camera)
     }
     camera_ = camera;
     updateName(camera_->userDefinedName());
-
-    viewStack_->addWidget(camera_->cameraStream().data());
-
-    connect(camera_.data(), &AbstractCamera::imageSaved, [=] (QString filename){
+    currentStream_ = camera_->cameraStream();
+    viewStack_->addWidget(currentStream_);
+    viewStack_->dumpObjectTree();
+    camConnections_.append(connect(camera_.data(), &AbstractCamera::imageSaved, [=] (QString filename){
         updateRecordingStatus(QString("Image saved to :") + filename);
-    } );
+    } ));
 
-    connect(camera_.data(), &AbstractCamera::statusChanged, this, &CameraView::updateStreamStatus);
-    connect(camera_.data(), &AbstractCamera::cameraError, this, &CameraView::updateStreamStatus);
-    connect(camera_.data(), &AbstractCamera::recordingError, this, &CameraView::updateStreamStatus);
+    camConnections_.append(connect(camera_.data(), &AbstractCamera::statusChanged, this, &CameraView::updateStreamStatus));
+    camConnections_.append(connect(camera_.data(), &AbstractCamera::cameraError, this, &CameraView::updateStreamStatus));
+    camConnections_.append(connect(camera_.data(), &AbstractCamera::recordingError, this, &CameraView::updateStreamStatus));
 
-    connect(camera_.data(), &AbstractCamera::userDefinedNameChanged, [=] {
+    camConnections_.append(connect(camera_.data(), &AbstractCamera::userDefinedNameChanged, [=] {
         updateName(camera_->userDefinedName());
-    } );
+    } ));
 }
 
 void CameraView::reset()
 {
-    viewStack_->removeWidget(camera_->cameraStream().data());
+    foreach(auto connection, camConnections_) {
+        disconnect(connection);
+    }
+    if(currentStream_) {
+        viewStack_->removeWidget(currentStream_);
+    }
     camera_->stopCamera();
     camControl_->setToggleCam(false);
     camera_.reset();
