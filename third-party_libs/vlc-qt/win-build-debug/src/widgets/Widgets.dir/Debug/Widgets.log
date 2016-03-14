@@ -1,0 +1,54 @@
+﻿Build started 04.03.2016 15.51.13.
+     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\Widgets.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         setlocal
+         cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets
+         if %errorlevel% neq 0 goto :cmEnd
+         C:
+         if %errorlevel% neq 0 goto :cmEnd
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/CMakeFiles/Widgets_automoc.dir/ Debug
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+         Generating moc_ControlAudio.cpp
+         Generating moc_ControlVideo.cpp
+         Generating moc_WidgetSeek.cpp
+         Generating moc_WidgetSeekProgress.cpp
+         Generating moc_WidgetVideo.cpp
+         Generating moc_WidgetVolumeSlider.cpp
+       CustomBuild:
+         Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/widgets/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\windows\msvc" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtWidgets /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_WIDGETS_LIBRARY /D QT_SHARED /D _REENTRANT /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Debug\"" /D Widgets_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Widgets.dir\Debug\\" /Fd"Widgets.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt  -w34100 -w34189 "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\ControlAudio.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\ControlVideo.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\WidgetSeek.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\WidgetSeekProgress.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\WidgetVideo.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets\WidgetVolumeSlider.cpp" "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\Widgets_automoc.cpp"
+         ControlAudio.cpp
+         ControlVideo.cpp
+         WidgetSeek.cpp
+         WidgetSeekProgress.cpp
+         WidgetVideo.cpp
+         WidgetVolumeSlider.cpp
+         Widgets_automoc.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _DEBUG /D VLCQT_WIDGETS_LIBRARY /D QT_SHARED /D _REENTRANT /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\\\"Debug\\\"" /D Widgets_EXPORTS /l"0x0409" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\widgets" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include" /I"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\windows\msvc" /IC:\Qt\5.5\msvc2013_64\include /IC:\Qt\5.5\msvc2013_64\include\QtWidgets /IC:\Qt\5.5\msvc2013_64\include\QtGui /IC:\Qt\5.5\msvc2013_64\include\QtCore /I"C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013" /nologo /fo"Widgets.dir\Debug\widgets.res" C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\platform\windows\widgets.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\Debug\VLCQtWidgets.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\core\VLCQtCore.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Widgetsd.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Guid.lib C:\Qt\5.5\msvc2013_64\lib\Qt5Cored.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/Debug/VLCQtWidgets.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/VLCQtWidgets.lib" /MACHINE:X64  /machine:x64 /DLL Widgets.dir\Debug\widgets.res
+         Widgets.dir\Debug\ControlAudio.obj
+         Widgets.dir\Debug\ControlVideo.obj
+         Widgets.dir\Debug\WidgetSeek.obj
+         Widgets.dir\Debug\WidgetSeekProgress.obj
+         Widgets.dir\Debug\WidgetVideo.obj
+         Widgets.dir\Debug\WidgetVolumeSlider.obj
+         Widgets.dir\Debug\Widgets_automoc.obj
+            Creating library C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/VLCQtWidgets.lib and object C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/VLCQtWidgets.exp
+         Widgets.vcxproj -> C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\Debug\VLCQtWidgets.dll
+     1>Done Building Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\widgets\Widgets.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.81

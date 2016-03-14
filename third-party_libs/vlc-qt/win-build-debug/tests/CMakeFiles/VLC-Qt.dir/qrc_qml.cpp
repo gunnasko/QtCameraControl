@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // C:/Users/gas/Documents/QtCameraControl/vlc-qt/tests/qml/video.qml
+  // C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/tests/qml/video.qml
   0x0,0x0,0x5,0x65,
   0x2f,
   0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,0x2a,

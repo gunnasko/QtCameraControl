@@ -44,29 +44,29 @@ add_library(VLCQt::Core SHARED IMPORTED)
 # Import target "VLCQt::Core" for configuration "Debug"
 set_property(TARGET VLCQt::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(VLCQt::Core PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/Debug/VLCQtCore.dll"
+  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/Debug/VLCQtCore.dll"
   )
 
 # Import target "VLCQt::Core" for configuration "Release"
 set_property(TARGET VLCQt::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(VLCQt::Core PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/Release/VLCQtCore.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/Release/VLCQtCore.dll"
   )
 
 # Import target "VLCQt::Core" for configuration "MinSizeRel"
 set_property(TARGET VLCQt::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(VLCQt::Core PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/MinSizeRel/VLCQtCore.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/VLCQtCore.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/MinSizeRel/VLCQtCore.dll"
   )
 
 # Import target "VLCQt::Core" for configuration "RelWithDebInfo"
 set_property(TARGET VLCQt::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(VLCQt::Core PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/RelWithDebInfo/VLCQtCore.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/RelWithDebInfo/VLCQtCore.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/RelWithDebInfo/VLCQtCore.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/RelWithDebInfo/VLCQtCore.dll"
   )
 
 # This file does not depend on other imported targets which have

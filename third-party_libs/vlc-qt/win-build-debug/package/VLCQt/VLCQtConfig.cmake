@@ -17,7 +17,7 @@ IF (VLCQt_FIND_QUIETLY)
     SET(_VLCQt_FIND_PARTS_QUIET QUIET)
 ENDIF()
 
-GET_FILENAME_COMPONENT(_VLCQt_install_prefix "C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/.." ABSOLUTE)
+GET_FILENAME_COMPONENT(_VLCQt_install_prefix "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/.." ABSOLUTE)
 
 SET(_VLCQt_NOTFOUND_MESSAGE)
 

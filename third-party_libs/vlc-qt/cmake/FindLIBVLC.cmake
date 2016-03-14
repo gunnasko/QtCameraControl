@@ -34,8 +34,8 @@ FIND_PATH(LIBVLC_INCLUDE_DIR vlc/vlc.h
   HINTS "$ENV{LIBVLC_INCLUDE_PATH}"
   PATHS
     #Mac OS and Contribs
-    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/vlc"
+   # "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/"
+    #"${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/include/vlc"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/include/vlc"
     "/Applications/VLC.app/Contents/MacOS/include"
@@ -64,7 +64,6 @@ FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc vlc
 	"/usr/local/lib/vlc"
     "$ENV{LIB_DIR}/lib"
     #Mac OS
-    "${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/lib"
     "${CMAKE_CURRENT_SOURCE_DIR}/contribs/plugins"
     "/Applications/VLC.app/Contents/MacOS/lib"
@@ -73,6 +72,8 @@ FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc vlc
     c:/msys/local/lib
     "c:/Program Files (x86)/VideoLAN/VLC/sdk/lib"
     "c:/Program Files/VideoLAN/VLC/sdk/lib"
+	#Mac OS
+	#"${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/lib"
   )
 FIND_LIBRARY(LIBVLC_LIBRARY NAMES libvlc)
 FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore vlccore
@@ -90,6 +91,8 @@ FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore vlccore
     c:/msys/local/lib
     "c:/Program Files (x86)/VideoLAN/VLC/sdk/lib"
 	"c:/Program Files/VideoLAN/VLC/sdk/lib"
+	#Mac OS
+    #"${CMAKE_CURRENT_SOURCE_DIR}/../vlc-sdk/osx/64bit/lib"
   )
 FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES libvlccore)
 

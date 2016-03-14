@@ -44,29 +44,29 @@ add_library(VLCQt::Qml SHARED IMPORTED)
 # Import target "VLCQt::Qml" for configuration "Debug"
 set_property(TARGET VLCQt::Qml APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(VLCQt::Qml PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/Debug/VLCQtQml.dll"
+  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/Debug/VLCQtQml.dll"
   )
 
 # Import target "VLCQt::Qml" for configuration "Release"
 set_property(TARGET VLCQt::Qml APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(VLCQt::Qml PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/Release/VLCQtQml.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/Release/VLCQtQml.dll"
   )
 
 # Import target "VLCQt::Qml" for configuration "MinSizeRel"
 set_property(TARGET VLCQt::Qml APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(VLCQt::Qml PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/MinSizeRel/VLCQtQml.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/MinSizeRel/VLCQtQml.dll"
   )
 
 # Import target "VLCQt::Qml" for configuration "RelWithDebInfo"
 set_property(TARGET VLCQt::Qml APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(VLCQt::Qml PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.dll"
   )
 
 # This file does not depend on other imported targets which have

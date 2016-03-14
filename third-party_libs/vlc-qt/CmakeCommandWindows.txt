@@ -1,1 +1,1 @@
-cmake -G"Visual Studio 12 Win64" -DBUILD_TESTS=ON -DCMAKE_PREFIX_PATH="C:\Qt\5.5\msvc2013_64\lib\cmake" -DSTATIC=OFF -DCMAKE_INSTALL_PREFIX="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\install" ../
+cmake -G"Visual Studio 12 Win64" -DBUILD_TESTS=ON -DCMAKE_PREFIX_PATH="C:\Qt\5.5\msvc2013_64\lib\cmake" -DSTATIC=OFF -DCMAKE_INSTALL_PREFIX="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\install" ../

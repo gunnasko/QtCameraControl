@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core
+# Install script for directory: C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,49 +29,49 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/VLCQtCore.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/VLCQtCore.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/VLCQtCore.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/VLCQtCore.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/VLCQtCore.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/VLCQtCore.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/RelWithDebInfo/VLCQtCore.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/RelWithDebInfo/VLCQtCore.lib")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/Debug/VLCQtCore.dll")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/Debug/VLCQtCore.dll")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/Release/VLCQtCore.dll")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/Release/VLCQtCore.dll")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/MinSizeRel/VLCQtCore.dll")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/MinSizeRel/VLCQtCore.dll")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/RelWithDebInfo/VLCQtCore.dll")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/RelWithDebInfo/VLCQtCore.dll")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/VLCQtCore" TYPE FILE FILES
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Audio.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Common.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Enums.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Error.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Instance.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Media.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/MediaList.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/MediaListPlayer.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/MediaPlayer.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/MetaManager.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/ModuleDescription.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/SharedExportCore.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Stats.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Video.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/VideoDelegate.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/VideoFrame.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/VideoMemoryStream.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/Config.h"
-    "C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/core/Equalizer.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Audio.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Common.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Enums.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Error.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Instance.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Media.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/MediaList.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/MediaListPlayer.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/MediaPlayer.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/MetaManager.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/ModuleDescription.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/SharedExportCore.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Stats.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Video.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/VideoDelegate.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/VideoFrame.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/VideoMemoryStream.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/Config.h"
+    "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/core/Equalizer.h"
     )
 endif()
 

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{15FB5EB9-2FE9-393E-B116-951E596BFC39}</ProjectGUID>
+    <ProjectGUID>{5431CE58-6E0C-3976-B952-DC5BD2671214}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>Qml</ProjectName>
@@ -58,25 +58,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Qml.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VLCQtQml</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Qml.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VLCQtQml</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Qml.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">VLCQtQml</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Qml.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">VLCQtQml</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -86,7 +86,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -105,10 +105,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;VLCQT_QML_LIBRARY;QT_SHARED;_REENTRANT;NOMINMAX;QT_QUICK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_QML_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Debug\";Qml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -118,11 +118,11 @@
     <PreBuildEvent>
       <Message>Automatic moc, uic and rcc for target Qml</Message>
       <Command>setlocal
-cd C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml
+cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ Debug
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -137,8 +137,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/Debug/VLCQtQml.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/Debug/VLCQtQml.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -149,7 +149,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions> -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -167,10 +167,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VLCQT_QML_LIBRARY;QT_SHARED;_REENTRANT;NOMINMAX;QT_QUICK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_QML_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Release\";Qml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,11 +180,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automatic moc, uic and rcc for target Qml</Message>
       <Command>setlocal
-cd C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml
+cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ Release
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ Release
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -199,8 +199,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/Release/VLCQtQml.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/Release/VLCQtQml.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -211,7 +211,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalOptions> -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -229,10 +229,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VLCQT_QML_LIBRARY;QT_SHARED;_REENTRANT;NOMINMAX;QT_QUICK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_QML_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"MinSizeRel\";Qml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -242,11 +242,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automatic moc, uic and rcc for target Qml</Message>
       <Command>setlocal
-cd C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml
+cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ MinSizeRel
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -261,8 +261,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/MinSizeRel/VLCQtQml.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/VLCQtQml.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/MinSizeRel/VLCQtQml.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -273,7 +273,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalOptions> -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -291,10 +291,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VLCQT_QML_LIBRARY;QT_SHARED;_REENTRANT;NOMINMAX;QT_QUICK_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_QML_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";Qml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\include;C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Qt\5.5\msvc2013_64\include;C:\Qt\5.5\msvc2013_64\include\QtQuick;C:\Qt\5.5\msvc2013_64\include\QtGui;C:\Qt\5.5\msvc2013_64\include\QtCore;C:\Qt\5.5\msvc2013_64\.\mkspecs\win32-msvc2013;C:\Qt\5.5\msvc2013_64\include\QtQml;C:\Qt\5.5\msvc2013_64\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -304,11 +304,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automatic moc, uic and rcc for target Qml</Message>
       <Command>setlocal
-cd C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml
+cd C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ RelWithDebInfo
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/CMakeFiles/Qml_automoc.dir/ RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,8 +323,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/RelWithDebInfo/VLCQtQml.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -333,10 +333,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -344,12 +344,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -357,12 +357,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -370,12 +370,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt -BC:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug --check-stamp-file C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -383,28 +383,28 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src/qml/CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\platform\windows\qml.rc.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\AutogenInfo.cmake.in;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\SharedExportQml.h" />
-    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoObject.h" />
-    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoPlayer.h" />
-    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoObject.cpp"  />
-    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\QmlVideoPlayer.cpp"  />
-    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\painter\GlPainter.cpp"  />
-    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\qml\painter\GlslPainter.cpp"  />
-    <ResourceCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\platform\windows\qml.rc"  />
-    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\qml\Qml_automoc.cpp"  />
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\SharedExportQml.h" />
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoObject.h" />
+    <ClInclude Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoPlayer.h" />
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoObject.cpp"  />
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\QmlVideoPlayer.cpp"  />
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlPainter.cpp"  />
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\qml\painter\GlslPainter.cpp"  />
+    <ResourceCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\platform\windows\qml.rc"  />
+    <ClCompile Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\qml\Qml_automoc.cpp"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/ZERO_CHECK.vcxproj">
-      <Project>07A1839F-01CE-3A48-9FEB-2B34CD1B7A3D</Project>
+    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/ZERO_CHECK.vcxproj">
+      <Project>8EB3B83A-BC3C-3DA1-BCCB-4D11E959EF63</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/src/core/Core.vcxproj">
-      <Project>02EEED55-B6DF-3873-BFFB-46D4CAE0B719</Project>
+    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/Core.vcxproj">
+      <Project>E1CD3A4A-3734-3594-A3AB-AE751B69C8C3</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

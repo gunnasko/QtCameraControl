@@ -1,0 +1,16 @@
+﻿Build started 04.03.2016 15.50.56.
+     1>Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\ZERO_CHECK.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/core/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/widgets/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/src/qml/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/docs/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/tests/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\ZERO_CHECK.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.31

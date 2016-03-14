@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/gas/Documents/QtCameraControl/vlc-qt/src
+# Install script for directory: C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,9 +29,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/core/cmake_install.cmake")
-  include("C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/cmake_install.cmake")
-  include("C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/qml/cmake_install.cmake")
+  include("C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/core/cmake_install.cmake")
+  include("C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/cmake_install.cmake")
+  include("C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/qml/cmake_install.cmake")
 
 endif()
 

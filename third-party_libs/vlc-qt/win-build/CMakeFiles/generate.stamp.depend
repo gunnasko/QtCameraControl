@@ -1,9 +1,9 @@
 # CMake generation dependency list for this directory.
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/CMakeLists.txt
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/ParseVersion.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/CMakeLists.txt
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/ParseVersion.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineSystem.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeSystem.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeSystem.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeSystem.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeSystemSpecificInitialize.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCompiler.cmake
@@ -46,7 +46,7 @@ C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Compiler/IBMCPP-C-Determine
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CompilerId/VS-10.vcxproj.in
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeFindBinUtils.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCCompiler.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCCompiler.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCXXCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-CXX.cmake
@@ -88,7 +88,7 @@ C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Compiler/IBMCPP-CXX-Determi
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CompilerId/VS-10.vcxproj.in
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeFindBinUtils.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCXXCompiler.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCXXCompiler.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCXXCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeSystemSpecificInformation.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeGenericSystem.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows.cmake
@@ -99,7 +99,7 @@ C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC-C.cma
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineRCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeRCCompiler.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeRCCompiler.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeRCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeRCInformation.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeTestRCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCommonLanguageInclude.cmake
@@ -110,7 +110,7 @@ C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeParseImplicitLinkInfo.
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCCompilerABI.c
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCompileFeatures.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCCompiler.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCCompiler.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCCompiler.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCXXInformation.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeLanguageInformation.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Compiler/MSVC-CXX.cmake
@@ -125,13 +125,13 @@ C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeDetermineCompileFeatures.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Internal/FeatureTesting.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Compiler/MSVC-CXX-FeatureTests.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/feature_tests.cxx
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/feature_tests.cxx
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCXXCompiler.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCXXCompiler.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/CustomTargets.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/cmake_uninstall.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/CompilerConfig.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/Dependencies.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/CMakeFiles/3.5.0-rc3/CMakeCXXCompiler.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/CustomTargets.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/cmake_uninstall.cmake.in
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/CompilerConfig.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/Dependencies.cmake
 C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
 C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
 C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
@@ -170,18 +170,18 @@ C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake
 C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake
 C:/Qt/5.5/msvc2013_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeParseArguments.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/cmake/FindLIBVLC.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/platform/Windows.cmake
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/Package.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/cmake/FindLIBVLC.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/platform/Windows.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/Package.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakePackageConfigHelpers.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeParseArguments.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/WriteBasicConfigVersionFile.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeParseArguments.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/package/VLCQtConfig.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/package/VLCQtConfig.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/package/VLCQtCoreConfig.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/package/VLCQtCoreConfig.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/package/VLCQtWidgetsConfig.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/package/VLCQtWidgetsConfig.cmake
 C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
-C:/Users/gas/Documents/QtCameraControl/vlc-qt/config/package/VLCQtQmlConfig.cmake
+C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/config/package/VLCQtQmlConfig.cmake

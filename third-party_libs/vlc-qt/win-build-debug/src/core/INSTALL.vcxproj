@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{14DC35DD-2AED-32CF-BE04-CC9C7C54BF38}</ProjectGUID>
+    <ProjectGUID>{96AE7AC8-5086-3EAA-832B-7F29FF7168DC}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -65,7 +65,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -87,7 +87,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -109,7 +109,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -131,7 +131,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\VideoLAN\VLC\sdk\include;C:\Program Files\VideoLAN\VLC\sdk\include\vlc\plugins;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\src\core;C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -152,7 +152,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\CMakeFiles\3d72f8de60223b6560a2fd7bd04e606c\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\CMakeFiles\aec48e823b28e8ad1198b72254904e13\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd .
@@ -163,8 +163,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/CMakeFiles/3d72f8de60223b6560a2fd7bd04e606c/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/CMakeFiles/aec48e823b28e8ad1198b72254904e13/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -176,8 +176,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/CMakeFiles/3d72f8de60223b6560a2fd7bd04e606c/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/CMakeFiles/aec48e823b28e8ad1198b72254904e13/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -189,8 +189,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/CMakeFiles/3d72f8de60223b6560a2fd7bd04e606c/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/CMakeFiles/aec48e823b28e8ad1198b72254904e13/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -202,17 +202,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/CMakeFiles/3d72f8de60223b6560a2fd7bd04e606c/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/CMakeFiles/aec48e823b28e8ad1198b72254904e13/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\gas\Documents\QtCameraControl\third-party_libs\vlc-qt\win-build-debug\src\core\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/ZERO_CHECK.vcxproj">
-      <Project>07A1839F-01CE-3A48-9FEB-2B34CD1B7A3D</Project>
+    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/ZERO_CHECK.vcxproj">
+      <Project>8EB3B83A-BC3C-3DA1-BCCB-4D11E959EF63</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build-debug/ALL_BUILD.vcxproj">
-      <Project>CACA2F65-B648-31E1-B8DF-3F7634106FD6</Project>
+    <ProjectReference Include="C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build-debug/ALL_BUILD.vcxproj">
+      <Project>010E7B89-608D-3BFC-9A71-09D2C38E842B</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

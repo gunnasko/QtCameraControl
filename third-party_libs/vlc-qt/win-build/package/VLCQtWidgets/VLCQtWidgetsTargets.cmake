@@ -44,29 +44,29 @@ add_library(VLCQt::Widgets SHARED IMPORTED)
 # Import target "VLCQt::Widgets" for configuration "Debug"
 set_property(TARGET VLCQt::Widgets APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(VLCQt::Widgets PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/Debug/VLCQtWidgets.dll"
+  IMPORTED_IMPLIB_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/Debug/VLCQtWidgets.dll"
   )
 
 # Import target "VLCQt::Widgets" for configuration "Release"
 set_property(TARGET VLCQt::Widgets APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(VLCQt::Widgets PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/Release/VLCQtWidgets.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/Release/VLCQtWidgets.dll"
   )
 
 # Import target "VLCQt::Widgets" for configuration "MinSizeRel"
 set_property(TARGET VLCQt::Widgets APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(VLCQt::Widgets PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/MinSizeRel/VLCQtWidgets.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/VLCQtWidgets.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/MinSizeRel/VLCQtWidgets.dll"
   )
 
 # Import target "VLCQt::Widgets" for configuration "RelWithDebInfo"
 set_property(TARGET VLCQt::Widgets APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(VLCQt::Widgets PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/RelWithDebInfo/VLCQtWidgets.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/vlc-qt/win-build/src/widgets/RelWithDebInfo/VLCQtWidgets.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/RelWithDebInfo/VLCQtWidgets.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/gas/Documents/QtCameraControl/third-party_libs/vlc-qt/win-build/src/widgets/RelWithDebInfo/VLCQtWidgets.dll"
   )
 
 # This file does not depend on other imported targets which have
