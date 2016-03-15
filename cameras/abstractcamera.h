@@ -61,6 +61,7 @@ signals:
     void imageCaptureError(QString);
 
     void imageSaved(QString);
+    void recordingStarted(QString);
     void recordingSaved(QString);
 
     void statusChanged(QString);

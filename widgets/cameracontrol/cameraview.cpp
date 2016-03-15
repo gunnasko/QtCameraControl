@@ -33,11 +33,9 @@ CameraView::CameraView(QWidget *parent) :
     viewStack_->addWidget(placeHolder_);
 
     connect(camControl_, &CameraControlWidget::toggleCam, this, &CameraView::toggleCamera);
-
     connect(camControl_, &CameraControlWidget::toggleRecord, this, &CameraView::toggleRecording);
     connect(camControl_, &CameraControlWidget::picturePressed, this, &CameraView::picturePressed);
     connect(camControl_, &CameraControlWidget::pictureReleased, this, &CameraView::pictureReleased);
-
     connect(camControl_, &CameraControlWidget::toggleCam, this, &CameraView::changeViewStack);
 
     layout_->addWidget(camName_);
@@ -61,29 +59,30 @@ void CameraView::initCam(QSharedPointer<AbstractCamera> camera)
     }
     camera_ = camera;
     updateName(camera_->userDefinedName());
-    currentStream_ = camera_->cameraStream();
-    viewStack_->addWidget(currentStream_);
-    viewStack_->dumpObjectTree();
-    camConnections_.append(connect(camera_.data(), &AbstractCamera::imageSaved, [=] (QString filename){
+    viewStack_->addWidget(camera_->cameraStream());
+    connect(camera_.data(), &AbstractCamera::imageSaved, [=] (QString filename){
         updateRecordingStatus(QString("Image saved to :") + filename);
-    } ));
+    } );
+    connect(camera_.data(), &AbstractCamera::recordingStarted, [=] (QString filename){
+        updateRecordingStatus(QString("Recording started to: ") + filename);
+    } );
+    connect(camera_.data(), &AbstractCamera::recordingSaved, [=] (QString filename){
+        updateRecordingStatus(QString("Recording saved to :") + filename);
+    } );
 
-    camConnections_.append(connect(camera_.data(), &AbstractCamera::statusChanged, this, &CameraView::updateStreamStatus));
-    camConnections_.append(connect(camera_.data(), &AbstractCamera::cameraError, this, &CameraView::updateStreamStatus));
-    camConnections_.append(connect(camera_.data(), &AbstractCamera::recordingError, this, &CameraView::updateStreamStatus));
+    connect(camera_.data(), &AbstractCamera::statusChanged, this, &CameraView::updateStreamStatus);
+    connect(camera_.data(), &AbstractCamera::cameraError, this, &CameraView::updateStreamStatus);
+    connect(camera_.data(), &AbstractCamera::recordingError, this, &CameraView::updateStreamStatus);
 
-    camConnections_.append(connect(camera_.data(), &AbstractCamera::userDefinedNameChanged, [=] {
+    connect(camera_.data(), &AbstractCamera::userDefinedNameChanged, [=] {
         updateName(camera_->userDefinedName());
-    } ));
+    } );
 }
 
 void CameraView::reset()
 {
-    foreach(auto connection, camConnections_) {
-        disconnect(connection);
-    }
-    if(currentStream_) {
-        viewStack_->removeWidget(currentStream_);
+    if(camera_) {
+        viewStack_->removeWidget(camera_->cameraStream());
     }
     camera_->stopCamera();
     camControl_->setToggleCam(false);

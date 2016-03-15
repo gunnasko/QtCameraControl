@@ -122,7 +122,9 @@ void QtLocalCamera::focusCamera()
 
 void QtLocalCamera::startRecording()
 {
+#ifndef Q_OS_WIN
     camera_->setCaptureMode(QCamera::CaptureVideo);
+#endif
     QtCamera::startRecording();
 }
 

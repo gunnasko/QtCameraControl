@@ -26,6 +26,7 @@ protected:
     QImageEncoderSettings imageEncodeSettings_;
     QSharedPointer<QMediaRecorder> videoRecorder_;
     QSharedPointer<QCameraImageCapture> imageCapture_;
+    QString recordingLocation_;
 
 };
 

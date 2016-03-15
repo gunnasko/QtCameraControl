@@ -11,15 +11,23 @@ QtCamera::QtCamera(QObject *parent) : AbstractCamera(parent)
 
 void QtCamera::startRecording()
 {
+#ifdef Q_OS_WIN
+    emit(recordingStarted(QString("Recording not supported in windows!")));
+#else
     QSettings settings;
-    auto vidLocation = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
-    videoRecorder_->setOutputLocation(vidLocation);
+    auto recordingLocation_ = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    videoRecorder_->setOutputLocation(recordingLocation_);
     videoRecorder_->record();
+    emit(recordingStarted(recordingLocation_);
+#endif
 }
 
 void QtCamera::stopRecording()
 {
+#ifndef Q_OS_WIN
     videoRecorder_->stop();
+    emit(recordingSaved(recordingLocation_));
+#endif
 }
 
 void QtCamera::captureImage()

@@ -35,7 +35,6 @@ private:
     CameraNameLabel *camName_;
     CameraControlWidget *camControl_;
     QWidget *placeHolder_;
-    QWidget *currentStream_;
 
     QLabel *streamStatusLabel_;
     QLabel *recordingStatusLabel_;
@@ -48,8 +47,6 @@ private:
 protected:
     QStackedWidget *viewStack_;
     QSharedPointer<AbstractCamera> camera_;
-    QList<QMetaObject::Connection> camConnections_;
-
 };
 
 #endif // ABSTRACTCAMERAVIEW_H
