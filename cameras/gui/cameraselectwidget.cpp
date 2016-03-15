@@ -8,7 +8,7 @@
 
 #include "cameraselectdelegate.h"
 
-CameraSelectWidget::CameraSelectWidget(QSharedPointer <CameraModel> camModel, QWidget *parent) : QWidget(parent), camModel_(camModel)
+CameraSelectWidget::CameraSelectWidget(QSharedPointer <CamerasModel> camModel, QWidget *parent) : QWidget(parent), camModel_(camModel)
 {
     auto camSelectLabel = new QLabel("Camera Select", this);
     auto camListView = new QListView(this);

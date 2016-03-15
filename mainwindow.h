@@ -5,8 +5,7 @@
 #include <QToolBar>
 #include <QHBoxLayout>
 
-#include "cameras/cameras.h"
-#include "cameras/gui/cameramodel.h"
+#include "cameras/camerasmodel.h"
 #include "cameras/gui/cameraselectwidget.h"
 #include "cameras/camerarepository.h"
 #include "cameras/gui/cameraview.h"
@@ -35,8 +34,7 @@ private:
     void writeSettings();
     void buildToolbar();
 
-    QSharedPointer<Cameras> cameras_;
-    QSharedPointer<CameraModel> camerasModel_;
+    QSharedPointer<CamerasModel> camerasModel_;
     QSharedPointer<CameraSelectWidget> cameraSelectWidget_;
     QSharedPointer<CameraView> cameraView_;
     int currentViewIndex_;

@@ -1,6 +1,7 @@
 #include "cameraselectdelegate.h"
 
 #include <QPainter>
+#include "../camerasmodel.h"
 
 CameraSelectDelegate::CameraSelectDelegate(QWidget *parent) : QStyledItemDelegate(parent)
 {
@@ -9,9 +10,9 @@ CameraSelectDelegate::CameraSelectDelegate(QWidget *parent) : QStyledItemDelegat
 
 void CameraSelectDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if(index.data(CameraModel::CameraModelEnum::EnabledRole).isValid()) {
-        bool enabled = index.data(CameraModel::CameraModelEnum::EnabledRole).toBool();
-        QString name = index.data(CameraModel::CameraModelEnum::UserDefinedNameRole).toString();
+    if(index.data(CamerasModel::CameraModelEnum::EnabledRole).isValid()) {
+        bool enabled = index.data(CamerasModel::CameraModelEnum::EnabledRole).toBool();
+        QString name = index.data(CamerasModel::CameraModelEnum::UserDefinedNameRole).toString();
 
         if(option.state & QStyle::State_Selected)
             painter->fillRect(option.rect, option.palette.highlight());

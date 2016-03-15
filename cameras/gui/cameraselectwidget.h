@@ -4,13 +4,13 @@
 #include <QWidget>
 #include <QItemSelectionModel>
 
-#include "cameramodel.h"
+#include "../camerasmodel.h"
 
 class CameraSelectWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CameraSelectWidget(QSharedPointer <CameraModel> camModel, QWidget *parent = 0);
+    explicit CameraSelectWidget(QSharedPointer <CamerasModel> camModel, QWidget *parent = 0);
 
 signals:
     void selectionChanged(int index);
@@ -18,7 +18,7 @@ signals:
     void deleteCamera(int index);
 
 private:
-    QSharedPointer<CameraModel> camModel_;
+    QSharedPointer<CamerasModel> camModel_;
 
 };
 
