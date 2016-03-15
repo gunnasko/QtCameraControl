@@ -1,4 +1,4 @@
-#include "CamerasModel.h"
+#include "camerasmodel.h"
 
 #include <QCameraInfo>
 #include "data/qtlocalcamera.h"

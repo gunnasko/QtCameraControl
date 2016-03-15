@@ -83,8 +83,8 @@ void CameraView::reset()
 {
     if(camera_) {
         viewStack_->removeWidget(camera_->cameraStream());
+        camera_->stopCamera();
     }
-    camera_->stopCamera();
     camControl_->setToggleCam(false);
     camera_.reset();
 }

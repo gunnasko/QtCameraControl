@@ -20,8 +20,10 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
 VlcNetworkCamera::~VlcNetworkCamera()
 {
     delete mediaPlayer_;
+    delete cameraStream_;
     delete media_;
     delete instance_;
+    qDebug()<<"Deleting VLC Camera";
 }
 
 bool VlcNetworkCamera::available()

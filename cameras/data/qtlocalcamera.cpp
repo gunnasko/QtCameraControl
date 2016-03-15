@@ -21,7 +21,7 @@ QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : Abst
 
 QtLocalCamera::~QtLocalCamera()
 {
-    //delete cameraStream_;
+    delete cameraStream_;
     qDebug()<<"Deleted local camera!";
 }
 
