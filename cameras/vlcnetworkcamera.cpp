@@ -79,6 +79,12 @@ void VlcNetworkCamera::takePicture()
     mediaPlayer_->video()->takeSnapshot(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png");
 }
 
+QList<QSize> VlcNetworkCamera::supportedResolutions()
+{
+    qDebug()<< "VlcNetworkCamera::supportedResolutions is not implemented";
+    return QList<QSize>();
+}
+
 QWidget *VlcNetworkCamera::cameraStream()
 {
     return cameraStream_;

@@ -30,7 +30,7 @@ public:
     void setImageResolutionH(int);
     void setImageResolutionW(int);
 
-    QList<QSize> supportedResolutions();
+    virtual QList<QSize> supportedResolutions() = 0;
 
     virtual bool available() = 0;
     virtual bool isRunning() = 0;

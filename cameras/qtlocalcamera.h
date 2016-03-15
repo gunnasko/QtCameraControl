@@ -5,11 +5,11 @@
 #include <QCamera>
 #include <QCameraViewfinder>
 #include <QImageEncoderSettings>
+#include <QMediaRecorder>
+#include <QCameraImageCapture>
+#include "abstractcamera.h"
 
-#include "qtcamera.h"
-
-
-class QtLocalCamera : public QtCamera
+class QtLocalCamera : public AbstractCamera
 {
     Q_OBJECT
 public:
@@ -24,20 +24,31 @@ public:
     void startCamera();
     void stopCamera();
     void startRecording();
+    void stopRecording();
 
     void focusCamera();
     void takePicture();
     QWidget *cameraStream();
     void setCameraView(QCameraViewfinder *view);
 
+    QList<QSize> supportedResolutions();
+
+private slots:
+    void updateImageResolution();
+
 private:
     void init();
     QString statusToString(QCamera::Status status);
+
+
+    QImageEncoderSettings imageEncodeSettings_;
+    QSharedPointer<QMediaRecorder> videoRecorder_;
+    QSharedPointer<QCameraImageCapture> imageCapture_;
+    QString recordingLocation_;
+
     QSharedPointer<QCamera> camera_;
     QList<QMetaObject::Connection> connections_;
-
     QCameraViewfinder *cameraStream_;
-
 
 };
 

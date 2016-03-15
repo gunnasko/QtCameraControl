@@ -29,6 +29,8 @@ public:
     void focusCamera();
     void takePicture();
 
+    QList<QSize> supportedResolutions();
+
     QWidget *cameraStream();
 
     VlcMediaPlayer *mediaPlayer();

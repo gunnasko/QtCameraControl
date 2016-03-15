@@ -6,14 +6,14 @@
 #include <QSettings>
 #include "settingskeys.h"
 
-QtLocalCamera::QtLocalCamera(const QByteArray &deviceId, QObject *parent) : QtCamera(parent)
+QtLocalCamera::QtLocalCamera(const QByteArray &deviceId, QObject *parent) : AbstractCamera(parent)
 {
     deviceId_ = QString(deviceId);
     camera_ = QSharedPointer<QCamera>(new QCamera(deviceId, this));
     init();
 }
 
-QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : QtCamera(parent)
+QtLocalCamera::QtLocalCamera(const QCameraInfo &camInfo, QObject *parent) : AbstractCamera(parent)
 {
     camera_ = QSharedPointer<QCamera>(new QCamera(camInfo, this));
     deviceId_ = camInfo.deviceName();
@@ -61,6 +61,8 @@ void QtLocalCamera::init()
         emit(cameraError(camera_->errorString()));
     } );
 
+    connect(this, &AbstractCamera::imageResolutionChanged, this, &QtLocalCamera::updateImageResolution);
+
     camera_->load();
 }
 
@@ -90,8 +92,6 @@ QString QtLocalCamera::statusToString(QCamera::Status status)
     }
 }
 
-
-
 bool QtLocalCamera::available()
 {
     return (camera_->state() == QCamera::ActiveState);
@@ -120,18 +120,13 @@ void QtLocalCamera::focusCamera()
     }
 }
 
-void QtLocalCamera::startRecording()
-{
-#ifndef Q_OS_WIN
-    camera_->setCaptureMode(QCamera::CaptureVideo);
-#endif
-    QtCamera::startRecording();
-}
-
 void QtLocalCamera::takePicture()
 {
     if(isRunning()) {
-        captureImage();
+        QSettings settings;
+        imageCapture_->setCaptureDestination(QCameraImageCapture::CaptureToFile);
+        auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
+        imageCapture_->capture(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".jpg");
         camera_->unlock();
     }
 }
@@ -145,3 +140,36 @@ void QtLocalCamera::setCameraView(QCameraViewfinder *view)
 {
     camera_->setViewfinder(view);
 }
+
+void QtLocalCamera::startRecording()
+{
+#ifdef Q_OS_WIN
+    emit(recordingStarted(QString("Recording not supported in windows!")));
+#else
+    camera_->setCaptureMode(QCamera::CaptureVideo);
+    QSettings settings;
+    auto recordingLocation_ = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    videoRecorder_->setOutputLocation(recordingLocation_);
+    videoRecorder_->record();
+    emit(recordingStarted(recordingLocation_);
+#endif
+}
+
+void QtLocalCamera::stopRecording()
+{
+#ifndef Q_OS_WIN
+    videoRecorder_->stop();
+    emit(recordingSaved(recordingLocation_));
+#endif
+}
+
+QList<QSize> QtLocalCamera::supportedResolutions()
+{
+    return imageCapture_->supportedResolutions();
+}
+
+void QtLocalCamera::updateImageResolution()
+{
+    imageEncodeSettings_.setResolution(imageResolution_);
+}
+

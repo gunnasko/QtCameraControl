@@ -1,6 +1,5 @@
 #include "cameras.h"
 #include "qtlocalcamera.h"
-#include "qtnetworkcamera.h"
 #include "vlcnetworkcamera.h"
 
 Cameras::Cameras(QSharedPointer<DataBase> db, QObject *parent) : QObject(parent)

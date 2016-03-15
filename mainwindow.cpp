@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 
-#include "dialogs/abstractcamerasettingsdialog.h"
-
 #include <QDebug>
 #include <QHBoxLayout>
 #include <QAction>
 #include <QCloseEvent>
 #include <QInputDialog>
+
+#include "dialogs/camerasettingsdialog.h"
 
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     : QMainWindow(parent), currentViewIndex_(0), db_(db)
@@ -20,6 +20,7 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     cameraView_ = QSharedPointer<CameraView>(new CameraView(this));
 
     appSettings_ = QSharedPointer<AppSettingsDialog>(new AppSettingsDialog(this));
+
 
     buildToolbar();
 
@@ -40,10 +41,15 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
 void MainWindow::openCamSettings(int index)
 {
     auto cam = cameras_->getCamera(index);
-    /*if(cam) {
-        auto settingsDialog = cam->cameraSettings();
-        settingsDialog->show();
-    }*/
+    if(cam) {
+        auto  currentSettings = CameraSettings::loadSettings(cam);
+        auto camSettings = new CameraSettingsDialog(currentSettings);
+        camSettings->show();
+        connect(camSettings, &CameraSettingsDialog::accepted, [=] {
+            CameraSettings::saveSettings(camSettings->settings(), cam);
+        });
+        camSettings->setAttribute(Qt::WA_DeleteOnClose);
+    }
 }
 
 void MainWindow::changeView(int index)
