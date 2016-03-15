@@ -6,7 +6,7 @@
 #include <QCloseEvent>
 #include <QInputDialog>
 
-#include "dialogs/camerasettingsdialog.h"
+#include "cameras/gui/camerasettingsdialog.h"
 
 MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     : QMainWindow(parent), currentViewIndex_(0), db_(db)

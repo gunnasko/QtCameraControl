@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QItemSelectionModel>
 
-#include "models/cameramodel.h"
+#include "cameramodel.h"
 
 class CameraSelectWidget : public QWidget
 {

@@ -7,7 +7,7 @@
 
 #include "cameranamelabel.h"
 #include "cameracontrolwidget.h"
-#include "../../cameras/abstractcamera.h"
+#include "../data/abstractcamera.h"
 
 class CameraView : public QWidget
 {

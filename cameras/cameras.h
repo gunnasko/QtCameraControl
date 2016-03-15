@@ -4,8 +4,8 @@
 #include <QObject>
 #include <QSharedPointer>
 
-#include "repository/camerarepository.h"
-#include "cameras/abstractcamera.h"
+#include "camerarepository.h"
+#include "data/abstractcamera.h"
 
 class Cameras : public QObject
 {

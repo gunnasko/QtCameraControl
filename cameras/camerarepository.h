@@ -1,8 +1,8 @@
 #ifndef CAMERAREPOSITORY_H
 #define CAMERAREPOSITORY_H
 
-#include "cameras/abstractcamera.h"
-#include "database.h"
+#include "data/abstractcamera.h"
+#include "../repository/database.h"
 
 
 #define TABLE_NAME "cameras"

@@ -7,7 +7,7 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
-#include "../cameras/camerasettings.h"
+#include "../data/camerasettings.h"
 
 class CameraSettingsDialog : public QDialog
 {

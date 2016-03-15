@@ -39,10 +39,7 @@ macx{
 }
 
 include (cameras/cameras.pri)
-include (dialogs/dialogs.pri)
-include (models/models.pri)
 include (repository/repository.pri)
-include (widgets/widgets.pri)
 
 CONFIG += c++11
 
@@ -50,10 +47,12 @@ TARGET = CameraControl
 TEMPLATE = app
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    appsettingsdialog.cpp
 
 HEADERS  += mainwindow.h \
-    settingskeys.h
+    settingskeys.h \
+    appsettingsdialog.h
 
 RESOURCES += \
     images.qrc

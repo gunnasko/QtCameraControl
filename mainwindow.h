@@ -6,12 +6,12 @@
 #include <QHBoxLayout>
 
 #include "cameras/cameras.h"
-#include "models/cameramodel.h"
-#include "widgets/cameraselect/cameraselectwidget.h"
-#include "repository/camerarepository.h"
-#include "widgets/cameracontrol/cameraview.h"
+#include "cameras/gui/cameramodel.h"
+#include "cameras/gui/cameraselectwidget.h"
+#include "cameras/camerarepository.h"
+#include "cameras/gui/cameraview.h"
 
-#include "dialogs/appsettingsdialog.h"
+#include "appsettingsdialog.h"
 
 class MainWindow : public QMainWindow
 {
