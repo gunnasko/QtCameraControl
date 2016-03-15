@@ -7,6 +7,8 @@
 #include <QImageEncoderSettings>
 #include <QMediaRecorder>
 #include <QCameraImageCapture>
+#include <QUrl>
+
 #include "abstractcamera.h"
 
 class QtLocalCamera : public AbstractCamera
@@ -44,7 +46,7 @@ private:
     QImageEncoderSettings imageEncodeSettings_;
     QSharedPointer<QMediaRecorder> videoRecorder_;
     QSharedPointer<QCameraImageCapture> imageCapture_;
-    QString recordingLocation_;
+    QUrl recordingLocation_;
 
     QSharedPointer<QCamera> camera_;
     QList<QMetaObject::Connection> connections_;

@@ -2,7 +2,6 @@
 
 #include <QtGlobal>
 #include <QDir>
-#include <QUrl>
 #include <QSettings>
 #include "settingskeys.h"
 
@@ -148,10 +147,10 @@ void QtLocalCamera::startRecording()
 #else
     camera_->setCaptureMode(QCamera::CaptureVideo);
     QSettings settings;
-    auto recordingLocation_ = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
+    recordingLocation_ = QUrl(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
     videoRecorder_->setOutputLocation(recordingLocation_);
     videoRecorder_->record();
-    emit(recordingStarted(recordingLocation_);
+    emit(recordingStarted(recordingLocation_.toString()));
 #endif
 }
 
@@ -159,7 +158,7 @@ void QtLocalCamera::stopRecording()
 {
 #ifndef Q_OS_WIN
     videoRecorder_->stop();
-    emit(recordingSaved(recordingLocation_));
+    emit(recordingSaved(recordingLocation_.toString()));
 #endif
 }
 
