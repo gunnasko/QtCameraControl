@@ -14,6 +14,7 @@ VlcNetworkCamera::VlcNetworkCamera(QUrl cameraAddress, QObject *parent) : Abstra
     mediaPlayer_ = new VlcMediaPlayer(instance_);
     media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
     cameraStream_ = new VlcWidgetVideo(mediaPlayer_);
+    mediaPlayer_->setVideoWidget(cameraStream_);
 }
 
 VlcNetworkCamera::~VlcNetworkCamera()
@@ -49,8 +50,10 @@ void VlcNetworkCamera::startRecording()
 
     QSettings settings;
     auto vidLocation = QDir(settings.value(VIDEO_LOCATION, QDir::current().absolutePath()).toString());
-    media_->record(getNewFileName("VID", vidLocation), vidLocation.absolutePath(), Vlc::MP4, true);
-
+    auto fileName = getNewFileName("VID", vidLocation);
+    media_->record(fileName, vidLocation.absolutePath(), Vlc::MP4, true);
+    vidRecordingLocation_ = vidLocation.absolutePath() + "/" + fileName + ".mp4";
+    emit(recordingStarted(QString("VLC Recording")));
     runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
 }
 
@@ -59,6 +62,7 @@ void VlcNetworkCamera::stopRecording()
     mediaPlayer_->stop();
     delete media_;
     media_ = new VlcMedia(cameraAddress_.toString(), false, instance_);
+    emit(recordingSaved(vidRecordingLocation_));
     runFunctionWhenInState(Vlc::Stopped, &VlcNetworkCamera::startCamera, 1000);
 }
 
@@ -76,7 +80,9 @@ void VlcNetworkCamera::takePicture()
 {
     QSettings settings;
     auto imageLocation = QDir(settings.value(IMAGE_LOCATION, QDir::current().absolutePath()).toString());
-    mediaPlayer_->video()->takeSnapshot(imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png");
+    auto imagePath = imageLocation.absolutePath() + "/" + getNewFileName("IMG", imageLocation) + ".png";
+    mediaPlayer_->video()->takeSnapshot(imagePath);
+    emit(imageSaved(imagePath));
 }
 
 QList<QSize> VlcNetworkCamera::supportedResolutions()

@@ -43,6 +43,7 @@ private:
     VlcMedia *media_;
 
     VlcWidgetVideo *cameraStream_;
+    QString vidRecordingLocation_;
 
     void runFunctionWhenInState(Vlc::State, void (VlcNetworkCamera::*funcptr)(), int timeoutInMs);
     bool checkState(Vlc::State state, QTimer* timer, void (VlcNetworkCamera::*funcptr)());

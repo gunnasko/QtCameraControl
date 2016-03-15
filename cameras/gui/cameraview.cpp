@@ -61,13 +61,13 @@ void CameraView::initCam(QSharedPointer<AbstractCamera> camera)
     updateName(camera_->userDefinedName());
     viewStack_->addWidget(camera_->cameraStream());
     connect(camera_.data(), &AbstractCamera::imageSaved, [=] (QString filename){
-        updateRecordingStatus(QString("Image saved to :") + filename);
+        updateRecordingStatus(QString("Image saved to: ") + filename);
     } );
     connect(camera_.data(), &AbstractCamera::recordingStarted, [=] (QString filename){
-        updateRecordingStatus(QString("Recording started to: ") + filename);
+        updateRecordingStatus(QString("Recording started - ") + filename);
     } );
     connect(camera_.data(), &AbstractCamera::recordingSaved, [=] (QString filename){
-        updateRecordingStatus(QString("Recording saved to :") + filename);
+        updateRecordingStatus(QString("Recording saved to: ") + filename);
     } );
 
     connect(camera_.data(), &AbstractCamera::statusChanged, this, &CameraView::updateStreamStatus);
