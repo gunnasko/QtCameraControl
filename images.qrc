@@ -9,5 +9,6 @@
         <file>images/camera.png</file>
         <file>images/cameraInverted.png</file>
         <file>images/addCamera.png</file>
+        <file>images/seperator.png</file>
     </qresource>
 </RCC>

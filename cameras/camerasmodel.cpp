@@ -32,9 +32,9 @@ void CamerasModel::searchAndAddLocalCameras()
 void CamerasModel::deleteCamera(int index)
 {
     if(index >= 0 && index < cameras_.count()) {
-        beginRemoveColumns(QModelIndex(),index, index);
+        beginRemoveRows(QModelIndex(),index, index);
         auto cam = cameras_.takeAt(index);
-        endRemoveColumns();
+        endRemoveRows();
 
         cam.clear();
         if(index < dbConnections_.count()) {
@@ -57,12 +57,12 @@ void CamerasModel::addCamera(const QSharedPointer<AbstractCamera> camera)
     dbConnections_.append(dbConnect);
 
     auto element = QSharedPointer<CameraModelElement>(new CameraModelElement(camera, QModelIndex()));
-    element->index_ = this->index(rowCount()-1, 0, QModelIndex());
-    connect(element.data(), &CameraModelElement::changed, this, &CamerasModel::refreshModel);
-
     beginInsertRows(QModelIndex(),rowCount(), rowCount());
     cameras_.append(element);
     endInsertRows();
+
+    element->index_ = this->index(rowCount()-1);
+    connect(element.data(), &CameraModelElement::changed, this, &CamerasModel::refreshModel);
 }
 
 void CamerasModel::clearNotAvailable()

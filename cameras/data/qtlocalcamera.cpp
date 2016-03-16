@@ -93,6 +93,7 @@ QString QtLocalCamera::statusToString(QCamera::Status status)
 
 bool QtLocalCamera::available()
 {
+    qDebug()<< this->userDefinedName() << camera_->state() << camera_->status();
     return (camera_->state() == QCamera::ActiveState);
 }
 

@@ -1,5 +1,6 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.2
 
 ApplicationWindow {
     visible: true
@@ -8,32 +9,64 @@ ApplicationWindow {
     title: qsTr("Camera Control")
     id: main
 
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("File")
-            MenuItem {
-                text: qsTr("&Open")
-                onTriggered: console.log("Open action triggered");
+    toolBar: ToolBar {
+        RowLayout {
+            anchors.fill: parent
+            ToolButton {
+                iconSource: "qrc:/toolbar/images/camera.png"
+                onClicked: {
+                        mainStack.pop(mainCamView)
+                }
             }
-            MenuItem {
-                text: qsTr("Exit")
-                onTriggered: Qt.quit();
+            ToolButton {
+                iconSource: "qrc:/toolbar/images/settings.png"
+                onClicked: {
+                        mainStack.push(camSettings)
+                }
+            }
+            Image {
+                anchors.right: rightMost.left
+                source: icon.url("qrc:/toolbar/images/seperator.png")
+
+            }
+            ToolButton {
+                id: rightMost
+                iconSource: "qrc:/toolbar/images/refresh_original.png"
+                onClicked: {
+                    cameras.searchAndAddLocalCameras()
+                }
+                Layout.alignment: Qt.AlignRight
             }
         }
     }
 
-    CamSelect {
-        id: camselect
-        anchors.right: parent.right
-        height: parent.height
-        width: parent.width/4
-    }
-    CamView {
-        id: camview
-        anchors.left: parent.left
-        height: parent.height
-        width: parent.width - camselect.width
+    StackView {
+        id: mainStack
+        anchors.fill: parent
 
-        currentIndex: camselect.currentIndex
+        Rectangle {
+            id: mainCamView
+            height: parent.height
+            width: parent.width
+            z: 1
+            CamView {
+                height: parent.height
+                width: parent.width - camselect.width
+                id: camview
+                currentIndex: camselect.currentIndex
+                anchors.left: parent.left
+            }
+            CamSelect {
+                id: camselect
+                anchors.right: parent.right
+                height: parent.height
+                width: parent.width/4
+            }
+
+        }
+        CamSettings {
+            id: camSettings
+        }
+        initialItem: mainCamView
     }
 }
