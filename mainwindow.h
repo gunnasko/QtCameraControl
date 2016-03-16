@@ -20,7 +20,7 @@ protected:
     void closeEvent(QCloseEvent *event) Q_DECL_OVERRIDE;
 
 public:
-    MainWindow(QSharedPointer<DataBase> db, QWidget *parent = 0);
+    MainWindow(QSharedPointer<CamerasModel> cameras, QSharedPointer<DataBase> db, QWidget *parent = 0);
     ~MainWindow();
 
 private slots:

@@ -9,7 +9,7 @@ contains( CONFIG, RPI ) {
     INSTALLS += target
 }
 
-QT       += core gui
+QT       += core gui qml quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -55,5 +55,6 @@ HEADERS  += mainwindow.h \
     appsettingsdialog.h
 
 RESOURCES += \
-    images.qrc
+    images.qrc \
+    qml.qrc
 

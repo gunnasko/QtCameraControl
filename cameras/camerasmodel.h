@@ -45,6 +45,8 @@ public:
     QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;
     bool setData (const QModelIndex & index, const QVariant & value, int role = Qt::EditRole);
 
+    QHash<int, QByteArray> roleNames() const;
+    Q_INVOKABLE QString getCameraId(int index);
 public slots:
     void searchAndAddLocalCameras();
     void addNetworkCamera(QUrl address);

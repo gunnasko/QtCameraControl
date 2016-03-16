@@ -159,6 +159,23 @@ QVariant CamerasModel::data(const QModelIndex & index, int role) const
     }
 }
 
+QHash<int, QByteArray> CamerasModel::roleNames() const
+{
+    QHash<int, QByteArray> roles;
+    roles[DeviceNameRole] = "camId";
+    roles[UserDefinedNameRole] = "camName";
+    roles[EnabledRole] = "camEnabled";
+    return roles;
+}
+
+QString CamerasModel::getCameraId(int index)
+{
+    if(index < cameras_.count() && index >= 0)
+        return cameras_.at(index)->camera_->deviceId();
+    else
+        return QString();
+}
+
 bool CamerasModel::setData (const QModelIndex & index, const QVariant & value, int role)
 {
     if (!index.isValid() || index.row() >= cameras_.count())

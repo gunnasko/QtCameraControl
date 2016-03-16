@@ -8,12 +8,10 @@
 
 #include "cameras/gui/camerasettingsdialog.h"
 
-MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
-    : QMainWindow(parent), currentViewIndex_(0), db_(db)
+MainWindow::MainWindow(QSharedPointer<CamerasModel> cameras, QSharedPointer<DataBase> db, QWidget *parent)
+    : QMainWindow(parent), currentViewIndex_(0), db_(db), camerasModel_(cameras)
 {
     readSettings();
-
-    camerasModel_= QSharedPointer<CamerasModel>(new CamerasModel(db_, this));
 
     cameraSelectWidget_ = QSharedPointer<CameraSelectWidget>(new CameraSelectWidget(camerasModel_));
     cameraView_ = QSharedPointer<CameraView>(new CameraView(this));
@@ -25,8 +23,6 @@ MainWindow::MainWindow(QSharedPointer<DataBase> db, QWidget *parent)
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::selectionChanged, this, &MainWindow::changeView);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::openSettings, this, &MainWindow::openCamSettings);
     connect(cameraSelectWidget_.data(), &CameraSelectWidget::deleteCamera, this, &MainWindow::deleteCamera);
-
-    camerasModel_->searchAndAddLocalCameras();
 
     auto mainWindowWidget = new QWidget(this);
     layout_ = new QHBoxLayout(mainWindowWidget);

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/CamSelect.qml</file>
+        <file>qml/CamView.qml</file>
+    </qresource>
+</RCC>
