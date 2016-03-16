@@ -1,6 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
+import Qt.labs.settings 1.0
 
 ApplicationWindow {
     visible: true
@@ -9,33 +10,31 @@ ApplicationWindow {
     title: qsTr("Camera Control")
     id: main
 
+    Settings {
+        property alias qmlMainX: main.x
+        property alias qmlMainY: main.y
+        property alias qmlMainWidth: main.width
+        property alias qmlMainHeight: main.height
+    }
+
     toolBar: ToolBar {
         RowLayout {
             anchors.fill: parent
             ToolButton {
                 iconSource: "qrc:/toolbar/images/camera.png"
                 onClicked: {
-                        mainStack.pop(mainCamView)
+                    mainStack.pop(mainCamView)
                 }
             }
             ToolButton {
                 iconSource: "qrc:/toolbar/images/settings.png"
                 onClicked: {
+                    if(mainStack.currentItem === mainCamView) {
                         mainStack.push(camSettings)
+                    } else {
+                        mainStack.pop(camSettings)
+                    }
                 }
-            }
-            Image {
-                anchors.right: rightMost.left
-                source: icon.url("qrc:/toolbar/images/seperator.png")
-
-            }
-            ToolButton {
-                id: rightMost
-                iconSource: "qrc:/toolbar/images/refresh_original.png"
-                onClicked: {
-                    cameras.searchAndAddLocalCameras()
-                }
-                Layout.alignment: Qt.AlignRight
             }
         }
     }
@@ -48,7 +47,7 @@ ApplicationWindow {
             id: mainCamView
             height: parent.height
             width: parent.width
-            z: 1
+            z: 2
             CamView {
                 height: parent.height
                 width: parent.width - camselect.width
@@ -65,6 +64,7 @@ ApplicationWindow {
 
         }
         CamSettings {
+            z:1
             id: camSettings
         }
         initialItem: mainCamView

@@ -1,4 +1,6 @@
 import QtQuick 2.5
+import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.1
 
 Rectangle {
     property int currentIndex: cameraList.currentIndex
@@ -41,15 +43,31 @@ Rectangle {
             }
         }
     }
-
-    ListView {
-        id: cameraList
+    ColumnLayout {
         anchors.fill: parent
-        model: cameras
-        delegate: cameraDelegate
-        highlight: Rectangle {
-            width: parent.width
-            color: "lightgray"
+        spacing: 0
+        Button {
+            z:1
+            iconSource: "qrc:/toolbar/images/refresh_original.png"
+            Layout.fillWidth: true
+            Layout.preferredHeight: 40
+            onClicked: {
+                cameras.searchAndAddLocalCameras()
+            }
         }
+
+        ListView {
+            id: cameraList
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: cameras
+            delegate: cameraDelegate
+            highlight: Rectangle {
+                width: parent.width
+                color: "lightgray"
+            }
+        }
+
     }
+
 }

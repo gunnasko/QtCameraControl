@@ -4,5 +4,6 @@
         <file>qml/CamSelect.qml</file>
         <file>qml/CamView.qml</file>
         <file>qml/CamSettings.qml</file>
+        <file>qml/AppSettings.qml</file>
     </qresource>
 </RCC>
